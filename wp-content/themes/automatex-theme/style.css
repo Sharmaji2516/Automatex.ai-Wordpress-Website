@@ -1,0 +1,40 @@
+/*
+Theme Name: AutomateX Custom Theme
+Theme URI: https://automatex.ai/
+Author: Digify Soft Solutions
+Author URI: https://digifysoft.com/
+Description: A premium, fast, custom-coded WordPress theme for AutomateX.ai featuring custom animations, city-specific landing pages, and ERP database integration.
+Version: 1.0.0
+Text Domain: automatex
+*/
+
+/* WordPress Core Alignment Styles */
+.aligncenter {
+    display: block;
+    margin: 0 auto;
+}
+.alignleft {
+    float: left;
+    margin: 0 20px 20px 0;
+}
+.alignright {
+    float: right;
+    margin: 0 0 20px 20px;
+}
+.wp-caption {
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    max-width: 100%;
+    padding: 5px 3px 10px;
+    text-align: center;
+}
+.wp-caption img {
+    margin: 0;
+    max-width: 100%;
+    height: auto;
+}
+.wp-caption-text {
+    font-size: 0.85rem;
+    margin: 5px 0 0;
+    color: #666;
+}

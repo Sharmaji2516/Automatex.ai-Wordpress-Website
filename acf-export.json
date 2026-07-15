@@ -1,0 +1,117 @@
+[
+  {
+    "key": "group_65b2fa89012a4",
+    "title": "AutomateX City Landing Page Configuration",
+    "fields": [
+      {
+        "key": "field_65b2fa8912341",
+        "label": "Hero Badge Override",
+        "name": "hero_badge",
+        "type": "text",
+        "instructions": "Custom ribbon text at the very top of the hero section. Default is: #No.1 ERP Solution in [City Name]",
+        "required": 0,
+        "default_value": "",
+        "placeholder": ""
+      },
+      {
+        "key": "field_65b2fa8912342",
+        "label": "Hero Description Override",
+        "name": "hero_description",
+        "type": "textarea",
+        "instructions": "Lead text description under the main heading. Will fallback to a generated description if blank.",
+        "required": 0,
+        "default_value": "",
+        "placeholder": ""
+      },
+      {
+        "key": "field_65b2fa8912343",
+        "label": "Manufacturing Section Lead Text",
+        "name": "mfg_lead_text",
+        "type": "text",
+        "instructions": "Lead text under the Manufacturing section title. e.g. From footwear factories to marble workshops and iron foundries.",
+        "required": 0,
+        "default_value": "",
+        "placeholder": ""
+      },
+      {
+        "key": "field_65b2fa8912344",
+        "label": "Manufacturing Specialty Title",
+        "name": "mfg_specialty_title",
+        "type": "text",
+        "instructions": "Heading of the first manufacturing specialty card. Default: Industrial Specialty (e.g. Footwear Specialty, Textile Specialty).",
+        "required": 0,
+        "default_value": "",
+        "placeholder": ""
+      },
+      {
+        "key": "field_65b2fa8912345",
+        "label": "Manufacturing Specialty List Items",
+        "name": "mfg_specialty_list",
+        "type": "textarea",
+        "instructions": "Enter lists of manufacturing specialty items, one per line. If blank, standard fallback list will show.",
+        "required": 0,
+        "default_value": "",
+        "placeholder": ""
+      },
+      {
+        "key": "field_65b2fa8912346",
+        "label": "Retail Section Lead Text",
+        "name": "retail_lead_text",
+        "type": "text",
+        "instructions": "Lead text under the Retail section title. e.g. Dominating local markets from main roads to hubs.",
+        "required": 0,
+        "default_value": "",
+        "placeholder": ""
+      },
+      {
+        "key": "field_65b2fa8912347",
+        "label": "Retail Specialty List Items",
+        "name": "retail_specialty_list",
+        "type": "textarea",
+        "instructions": "Enter list items for retail/POS features, one per line. If blank, standard fallback list will show.",
+        "required": 0,
+        "default_value": "",
+        "placeholder": ""
+      },
+      {
+        "key": "field_65b2fa8912348",
+        "label": "Custom FAQs List",
+        "name": "faqs_repeater",
+        "type": "repeater",
+        "instructions": "Add custom questions and answers for this city. Leaving this empty uses default dynamic FAQs.",
+        "required": 0,
+        "sub_fields": [
+          {
+            "key": "field_65b2fa8956781",
+            "label": "Question",
+            "name": "question",
+            "type": "text",
+            "required": 1
+          },
+          {
+            "key": "field_65b2fa8956782",
+            "label": "Answer",
+            "name": "answer",
+            "type": "textarea",
+            "required": 1
+          }
+        ]
+      }
+    ],
+    "location": [
+      [
+        {
+          "param": "post_type",
+          "operator": "==",
+          "value": "cities"
+        }
+      ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": ""
+  }
+]

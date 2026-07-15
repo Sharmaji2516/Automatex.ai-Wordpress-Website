@@ -1,0 +1,66 @@
+# =========================================================================
+# AutomateX.ai PHP to WordPress 301 Redirect Rules
+# Append these rules to your WordPress .htaccess file (above WordPress block)
+# =========================================================================
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    # 1. Wildcard Redirect for the 72 City landing pages:
+    # Redirects: domain.com/cities/agra.php -> domain.com/cities/agra/
+    RewriteRule ^cities/([a-zA-Z0-9_-]+)\.php$ /cities/$1/ [R=301,L,NC]
+
+    # 2. Main Page Redirect (if applicable):
+    RewriteRule ^index\.php$ / [R=301,L,NC]
+
+    # 3. Core & Industry Landing Pages:
+    Redirect 301 /about-us.php /about-us/
+    Redirect 301 /contact-us.php /contact-us/
+    Redirect 301 /accounting.php /accounting/
+    Redirect 301 /ai-business.php /ai-business/
+    Redirect 301 /ai-manufacturing.php /ai-manufacturing/
+    Redirect 301 /android-application.php /android-application/
+    Redirect 301 /book-store.php /book-store/
+    Redirect 301 /boutique-store.php /boutique-store/
+    Redirect 301 /bridal-store.php /bridal-store/
+    Redirect 301 /convenience-store.php /convenience-store/
+    Redirect 301 /cosmetic-store.php /cosmetic-store/
+    Redirect 301 /crm.php /crm/
+    Redirect 301 /custom-crm-solutions.php /custom-crm-solutions/
+    Redirect 301 /departmental-hypermarket-store.php /departmental-hypermarket-store/
+    Redirect 301 /departmental-store.php /departmental-store/
+    Redirect 301 /digital-marketing-services.php /digital-marketing-services/
+    Redirect 301 /e-commerce-website-development.php /e-commerce-website-development/
+    Redirect 301 /education.php /education/
+    Redirect 301 /electronics-smartphones.php /electronics-smartphones/
+    Redirect 301 /employee-background-verification.php /employee-background-verification/
+    Redirect 301 /erp.php /erp/
+    Redirect 301 /footwear-store.php /footwear-store/
+    Redirect 301 /fruits-vegetable-shop.php /fruits-vegetable-shop/
+    Redirect 301 /kirana-store.php /kirana-store/
+    Redirect 301 /lead-management.php /lead-management/
+    Redirect 301 /liquor-store.php /liquor-store/
+    Redirect 301 /minimart.php /minimart/
+    Redirect 301 /modern-responsive-website-design.php /modern-responsive-website-design/
+    Redirect 301 /off-page-seo-services.php /off-page-seo-services/
+    Redirect 301 /omnichannel.php /omnichannel/
+    Redirect 301 /on-page-seo-services.php /on-page-seo-services/
+    Redirect 301 /payroll.php /payroll/
+    Redirect 301 /pet-shop.php /pet-shop/
+    Redirect 301 /pharma.php /pharma/
+    Redirect 301 /pos.php /pos/
+    Redirect 301 /readymade-garment.php /readymade-garment/
+    Redirect 301 /retaile-store.php /retaile-store/
+    Redirect 301 /shopping-mall.php /shopping-mall/
+    Redirect 301 /smart-retail.php /smart-retail/
+    Redirect 301 /social-media-optimization.php /social-media-optimization/
+    Redirect 301 /sports-shop.php /sports-shop/
+    Redirect 301 /stationery-store.php /stationery-store/
+    Redirect 301 /supermarket.php /supermarket/
+    Redirect 301 /technical-seo-services.php /technical-seo-services/
+    Redirect 301 /textile.php /textile/
+    Redirect 301 /toy-store.php /toy-store/
+    Redirect 301 /trading-overview.php /trading-overview/
+    Redirect 301 /web-development-services.php /web-development-services/
+</IfModule>
