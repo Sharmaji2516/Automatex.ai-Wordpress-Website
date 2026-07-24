@@ -14,74 +14,63 @@ get_header(); ?>
             <div class="row align-items-center g-5">
                 <div class="col-lg-6 text-center text-lg-start">
                     <span class="hero-badge gsap-hero-item">
-                        <i class="fas fa-fire me-1"></i> No. 1 B2B Retail ERP Suite
+                        <i class="fas fa-robot me-1"></i> ✔ Free 14-Day Trial • No Credit Card Required • Setup in Under 10 Mins
                     </span>
                     <h1 class="hero-title mt-4 gsap-hero-item">
-                        Smarter Billing.<br><span>Zero Mistakes.</span>
+                        AutomateX AI ChatBot That Supports Customers &<br><span>Increases Sales 24/7.</span>
                     </h1>
                     <p class="hero-subtitle mt-3 mx-auto mx-lg-0 gsap-hero-item">
-                        Jaipur & Delhi's most trusted AI-powered POS, real-time inventory tracking, and smart ERP suite designed for fast-growing businesses.
+                        Transform your website into an intelligent sales and customer support platform with AutomateX AI ChatBot. Train your AI assistant using your website, product catalog, FAQs, and business documents. Within minutes, your chatbot is ready to answer questions, recommend products, capture leads, and boost conversions automatically.
                     </p>
                     <div class="hero-ctas mt-4 justify-content-center justify-content-lg-start gsap-hero-item">
-                        <a href="<?php echo esc_url( home_url( '/contact-us/' ) ); ?>" class="btn btn-hero-primary">
-                            <i class="fas fa-calendar-alt me-2"></i> Book Free Demo
-                        </a>
-                        <a href="#solutions" class="btn btn-hero-secondary">
-                            Explore Solutions <i class="fas fa-arrow-down ms-2"></i>
-                        </a>
+                        <button type="button" data-bs-toggle="modal" data-bs-target="#trialModal" class="btn btn-hero-primary">
+                            <i class="fas fa-rocket me-2"></i> Start Free Trial
+                        </button>
+                        <button type="button" data-bs-toggle="modal" data-bs-target="#trialModal" class="btn btn-hero-secondary">
+                            <i class="fas fa-calendar-check me-2"></i> Book Free Demo
+                        </button>
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <!-- Hero Dashboard Mockup -->
-                    <div class="hero-mockup-wrapper mt-5 mt-lg-0 gsap-hero-dashboard">
-                        <div class="tilt-wrapper">
-                            <div class="glass-dashboard-card inner-tilt">
-                                <div class="dashboard-header d-flex justify-content-between align-items-center">
-                                <div class="d-flex align-items-center">
-                                    <span class="dot-indicator green"></span>
-                                    <span class="dashboard-title ms-2">Automatex.ai AI Analytics</span>
-                                </div>
-                                <span class="live-badge">LIVE</span>
+                    <!-- 5-Second Auto-Changing Banner Carousel Slider -->
+                    <div id="heroBannerCarousel" class="carousel slide carousel-fade hero-banner-slider mt-4 mt-lg-0 shadow-lg rounded-4 overflow-hidden" data-bs-ride="carousel" data-bs-interval="5000">
+                        <!-- Carousel Indicators -->
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#heroBannerCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#heroBannerCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#heroBannerCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#heroBannerCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                            <button type="button" data-bs-target="#heroBannerCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                        </div>
+
+                        <!-- Carousel Items -->
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/banner-restaurant.jpg" class="d-block w-100 img-fluid rounded-4" alt="AutomateX AI Chatbot Assistant">
                             </div>
-                            <div class="dashboard-body mt-4">
-                                <div class="row g-3">
-                                    <div class="col-6">
-                                        <div class="metric-card">
-                                            <span class="lbl"><i class="fas fa-arrow-trend-up text-success me-1"></i> Sales Today</span>
-                                            <span class="val">₹48,250</span>
-                                            <span class="metric-change text-success">+18.4%</span>
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="metric-card">
-                                            <span class="lbl"><i class="fas fa-receipt text-primary me-1"></i> Invoices</span>
-                                            <span class="val">182 Bills</span>
-                                            <span class="metric-change text-primary">Active</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <!-- Glowing Mini SVG Analytics Line Chart -->
-                                <div class="dashboard-chart mt-4">
-                                    <svg viewBox="0 0 300 80" class="chart-svg">
-                                        <defs>
-                                            <linearGradient id="chart-glow" x1="0" y1="0" x2="0" y2="1">
-                                                <stop offset="0%" stop-color="#e06930" stop-opacity="0.35"/>
-                                                <stop offset="100%" stop-color="#e06930" stop-opacity="0"/>
-                                            </linearGradient>
-                                            <linearGradient id="stroke-gradient" x1="0" y1="0" x2="1" y2="0">
-                                                <stop offset="0%" stop-color="#e06930"/>
-                                                <stop offset="100%" stop-color="#fbc145"/>
-                                            </linearGradient>
-                                        </defs>
-                                        <path d="M 0 55 C 30 55, 50 65, 80 50 C 110 35, 130 48, 160 35 C 190 22, 210 52, 240 40 C 270 28, 285 12, 300 10 L 300 80 L 0 80 Z" fill="url(#chart-glow)"></path>
-                                        <path d="M 0 55 C 30 55, 50 65, 80 50 C 110 35, 130 48, 160 35 C 190 22, 210 52, 240 40 C 270 28, 285 12, 300 10" fill="none" stroke="url(#stroke-gradient)" stroke-width="4" stroke-linecap="round"></path>
-                                    </svg>
-                                </div>
+                            <div class="carousel-item">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/banner-ocr-retail.jpg" class="d-block w-100 img-fluid rounded-4" alt="AI Customer Service Bot">
                             </div>
-                                </div>
+                            <div class="carousel-item">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/banner-stock-loss.jpg" class="d-block w-100 img-fluid rounded-4" alt="Conversational AI Assistant">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/banner-manufacturing.jpg" class="d-block w-100 img-fluid rounded-4" alt="AI Product Recommendations">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/banner-boutique.jpg" class="d-block w-100 img-fluid rounded-4" alt="Omnichannel AI Support">
                             </div>
                         </div>
+
+                        <!-- Controls -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#heroBannerCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#heroBannerCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
                     </div>
                 </div>
         </div>
@@ -99,7 +88,7 @@ get_header(); ?>
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/c6.jpg" alt="Client 6">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/c7.jpg" alt="Client 7">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/c8.jpg" alt="Client 8">
-                <!-- Loop duplicates for seamless scrolling -->
+                <!-- Loop duplicates -->
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/c1.jpg" alt="Client 1">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/c2.png" alt="Client 2">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/c3.png" alt="Client 3">
@@ -115,152 +104,152 @@ get_header(); ?>
     <!-- 3. SMART SOLUTIONS GRID -->
     <section id="solutions" class="solutions-grid-sec py-5">
         <div class="container text-center py-3">
-            <h2 class="section-title">Smart <span>Solutions</span></h2>
-            <p class="section-desc">Tailor-made cloud automation for Jaipur, Delhi NCR, and growing businesses worldwide.</p>
+            <h2 class="section-title">AutomateX AI Chatbot <span>Solutions</span></h2>
+            <p class="section-desc">Automate customer support, generate leads, answer queries instantly, and boost sales with 24/7 AI assistance.</p>
             
             <div class="row g-4 mt-4 justify-content-center">
                 <div class="col-lg-2 col-md-4 col-6">
-                    <a href="<?php echo esc_url( home_url( '/pos/' ) ); ?>" class="category-card card-gradient-orange">
-                        <div class="category-icon"><i class="fa-solid fa-cash-register"></i></div>
-                        <h3>Smart POS</h3>
-                        <p>3-Sec Billing</p>
+                    <a href="#trialModal" data-bs-toggle="modal" class="category-card card-gradient-orange">
+                        <div class="category-icon"><i class="fa-solid fa-headset"></i></div>
+                        <h3>AI Support</h3>
+                        <p>24/7 Instant Answers</p>
                     </a>
                 </div>
                 <div class="col-lg-2 col-md-4 col-6">
-                    <a href="<?php echo esc_url( home_url( '/erp/' ) ); ?>" class="category-card card-gradient-blue">
-                        <div class="category-icon"><i class="fa-solid fa-network-wired"></i></div>
-                        <h3>AI ERP</h3>
-                        <p>B2B Automations</p>
+                    <a href="#trialModal" data-bs-toggle="modal" class="category-card card-gradient-blue">
+                        <div class="category-icon"><i class="fa-solid fa-brain"></i></div>
+                        <h3>Smart Learning</h3>
+                        <p>Web & Docs Training</p>
                     </a>
                 </div>
                 <div class="col-lg-2 col-md-4 col-6">
-                    <a href="<?php echo esc_url( home_url( '/accounting/' ) ); ?>" class="category-card card-gradient-green">
-                        <div class="category-icon"><i class="fa-solid fa-file-invoice-dollar"></i></div>
-                        <h3>Accounting</h3>
-                        <p>GST & Returns</p>
-                    </a>
-                </div>
-                <div class="col-lg-2 col-md-4 col-6">
-                    <a href="<?php echo esc_url( home_url( '/inventory/' ) ); ?>" class="category-card card-gradient-purple">
-                        <div class="category-icon"><i class="fa-solid fa-boxes-stacked"></i></div>
-                        <h3>Inventory</h3>
-                        <p>Real-Time Stock</p>
-                    </a>
-                </div>
-                <div class="col-lg-2 col-md-4 col-6">
-                    <a href="<?php echo esc_url( home_url( '/crm/' ) ); ?>" class="category-card card-gradient-cyan">
-                        <div class="category-icon"><i class="fa-solid fa-users"></i></div>
-                        <h3>CRM Tool</h3>
-                        <p>Loyalty Program</p>
-                    </a>
-                </div>
-                <div class="col-lg-2 col-md-4 col-6">
-                    <a href="<?php echo esc_url( home_url( '/omnichannel/' ) ); ?>" class="category-card card-gradient-red">
-                        <div class="category-icon"><i class="fa-solid fa-arrows-spin"></i></div>
+                    <a href="#trialModal" data-bs-toggle="modal" class="category-card card-gradient-green">
+                        <div class="category-icon"><i class="fa-solid fa-comments"></i></div>
                         <h3>Omnichannel</h3>
-                        <p>Store Syncing</p>
+                        <p>WhatsApp & Social</p>
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6">
+                    <a href="#trialModal" data-bs-toggle="modal" class="category-card card-gradient-purple">
+                        <div class="category-icon"><i class="fa-solid fa-cart-shopping"></i></div>
+                        <h3>AI Advisor</h3>
+                        <p>Smart Product Sync</p>
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6">
+                    <a href="#trialModal" data-bs-toggle="modal" class="category-card card-gradient-cyan">
+                        <div class="category-icon"><i class="fa-solid fa-chart-line"></i></div>
+                        <h3>Sales Assistant</h3>
+                        <p>Lead Qualification</p>
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6">
+                    <a href="#trialModal" data-bs-toggle="modal" class="category-card card-gradient-red">
+                        <div class="category-icon"><i class="fa-solid fa-arrows-spin"></i></div>
+                        <h3>ERP Integration</h3>
+                        <p>Real-Time Sync</p>
                     </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Automatex.ai AI ERP ADVANTAGES -->
+    <!-- WHY CHOOSE AUTOMATEX AI CHATBOT -->
     <section class="ai-erp-advantages-sec py-5" style="background-color:#fff;">
         <div class="container py-3">
             <div class="text-center mb-5">
-                <h2 class="section-title">Automatex.ai AI <span>ERP</span></h2>
-                <p class="section-desc mt-2">Smart ERP & POS Billing Software for Manufacturing & Retail Businesses.</p>
+                <h2 class="section-title">Why Choose AutomateX <span>AI ChatBot?</span></h2>
+                <p class="section-desc mt-2">Intelligent, context-aware AI customer assistance engineered to drive business growth and customer satisfaction.</p>
             </div>
             <div class="row g-4">
                 <!-- Card 1 -->
                 <div class="col-lg-4 col-md-6">
                     <div class="category-card" style="text-align:left; padding: 30px; border-radius: 10px; height:100%; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid #eee;">
                         <div class="icon-wrap mb-3" style="font-size: 40px; color: #e06930;">
-                            <i class="fa-solid fa-network-wired"></i>
+                            <i class="fa-solid fa-headset"></i>
                         </div>
-                        <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 15px; color: #333;">AI-Integrated ERP & POS Framework</h3>
-                        <p style="font-size: 14px; color: #666; line-height: 1.6;">Automatex.ai AI ERP is designed as a unified system where artificial intelligence connects POS billing, inventory, manufacturing, and accounting operations. AI ensures smooth coordination between modules and reduces dependency on manual processes.</p>
+                        <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 15px; color: #333;">🤖 AI-Powered Customer Support</h3>
+                        <p style="font-size: 14px; color: #666; line-height: 1.6;">Provide instant responses to customer queries 24 hours a day without increasing support staff. Deliver personalized, accurate answers around the clock.</p>
                     </div>
                 </div>
                 <!-- Card 2 -->
                 <div class="col-lg-4 col-md-6">
                     <div class="category-card" style="text-align:left; padding: 30px; border-radius: 10px; height:100%; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid #eee;">
                         <div class="icon-wrap mb-3" style="font-size: 40px; color: #3b82f6;">
-                            <i class="fa-solid fa-chart-line"></i>
+                            <i class="fa-solid fa-bolt"></i>
                         </div>
-                        <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 15px; color: #333;">AI-Driven Real-Time Data Flow</h3>
-                        <p style="font-size: 14px; color: #666; line-height: 1.6;">The platform uses AI to synchronize data instantly across departments and locations. Sales, stock, production, and financial data remain continuously updated, enabling accurate visibility and timely decision-making.</p>
+                        <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 15px; color: #333;">⚡ Deploy Within Minutes</h3>
+                        <p style="font-size: 14px; color: #666; line-height: 1.6;">Simply add your website URL and AutomateX automatically builds your AI knowledge base. No complex coding or lengthy setup required.</p>
                     </div>
                 </div>
                 <!-- Card 3 -->
                 <div class="col-lg-4 col-md-6">
                     <div class="category-card" style="text-align:left; padding: 30px; border-radius: 10px; height:100%; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid #eee;">
                         <div class="icon-wrap mb-3" style="font-size: 40px; color: #10b981;">
-                            <i class="fa-solid fa-cash-register"></i>
+                            <i class="fa-solid fa-comments"></i>
                         </div>
-                        <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 15px; color: #333;">Intelligent POS Billing Operations</h3>
-                        <p style="font-size: 14px; color: #666; line-height: 1.6;">AI enhances POS billing by improving transaction speed, reducing errors, and supporting dynamic pricing, discounts, and GST compliance. The system adapts to transaction patterns and ensures consistent billing accuracy.</p>
+                        <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 15px; color: #333;">💬 Omnichannel Communication</h3>
+                        <p style="font-size: 14px; color: #666; line-height: 1.6;">Support customers across your website, WhatsApp, Facebook Messenger, Instagram, Live Chat, and custom web widgets from a single platform.</p>
                     </div>
                 </div>
                 <!-- Card 4 -->
                 <div class="col-lg-4 col-md-6">
                     <div class="category-card" style="text-align:left; padding: 30px; border-radius: 10px; height:100%; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid #eee;">
                         <div class="icon-wrap mb-3" style="font-size: 40px; color: #fbc145;">
-                            <i class="fa-solid fa-boxes-stacked"></i>
+                            <i class="fa-solid fa-brain"></i>
                         </div>
-                        <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 15px; color: #333;">Smart Inventory Optimization</h3>
-                        <p style="font-size: 14px; color: #666; line-height: 1.6;">Artificial intelligence analyzes stock movement, consumption patterns, and demand trends. This enables optimized inventory levels, early identification of slow-moving items, and reduced stock shortages or overstocking.</p>
+                        <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 15px; color: #333;">🧠 Smart AI Learning</h3>
+                        <p style="font-size: 14px; color: #666; line-height: 1.6;">Train your chatbot using website pages, product catalogs, FAQs, PDFs, company policies, and support documentation for context-aware responses.</p>
                     </div>
                 </div>
                 <!-- Card 5 -->
                 <div class="col-lg-4 col-md-6">
                     <div class="category-card" style="text-align:left; padding: 30px; border-radius: 10px; height:100%; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid #eee;">
                         <div class="icon-wrap mb-3" style="font-size: 40px; color: #8b5cf6;">
-                            <i class="fa-solid fa-industry"></i>
+                            <i class="fa-solid fa-cart-shopping"></i>
                         </div>
-                        <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 15px; color: #333;">AI-Enabled Manufacturing Control</h3>
-                        <p style="font-size: 14px; color: #666; line-height: 1.6;">In manufacturing environments, AI supports production planning, material usage analysis, and process monitoring. It helps identify inefficiencies, control wastage, and improve overall production accuracy.</p>
+                        <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 15px; color: #333;">🛒 AI Product Recommendations</h3>
+                        <p style="font-size: 14px; color: #666; line-height: 1.6;">Increase online store conversions by recommending relevant products based on real-time customer interests and purchase intent.</p>
                     </div>
                 </div>
                 <!-- Card 6 -->
                 <div class="col-lg-4 col-md-6">
                     <div class="category-card" style="text-align:left; padding: 30px; border-radius: 10px; height:100%; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid #eee;">
                         <div class="icon-wrap mb-3" style="font-size: 40px; color: #06b6d4;">
-                            <i class="fa-solid fa-chart-pie"></i>
+                            <i class="fa-solid fa-chart-line"></i>
                         </div>
-                        <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 15px; color: #333;">Predictive Business Intelligence</h3>
-                        <p style="font-size: 14px; color: #666; line-height: 1.6;">Automatex.ai AI ERP uses AI algorithms to transform operational data into predictive insights. Sales forecasting, demand prediction, and profitability analysis assist businesses in strategic planning and risk reduction.</p>
+                        <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 15px; color: #333;">📈 AI Sales Assistant</h3>
+                        <p style="font-size: 14px; color: #666; line-height: 1.6;">Guide visitors through the buying journey, qualify prospects interactively, and convert more traffic into paying customers automatically.</p>
                     </div>
                 </div>
                 <!-- Card 7 -->
                 <div class="col-lg-4 col-md-6">
                     <div class="category-card" style="text-align:left; padding: 30px; border-radius: 10px; height:100%; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid #eee;">
                         <div class="icon-wrap mb-3" style="font-size: 40px; color: #ef4444;">
-                            <i class="fa-solid fa-file-invoice-dollar"></i>
+                            <i class="fa-solid fa-bag-shopping"></i>
                         </div>
-                        <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 15px; color: #333;">Automated Accounting & Compliance</h3>
-                        <p style="font-size: 14px; color: #666; line-height: 1.6;">AI automates accounting entries and continuously checks data for compliance accuracy. GST calculations, tax reporting, and financial statements are generated with reduced human intervention and higher reliability.</p>
+                        <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 15px; color: #333;">🛍️ Recover Abandoned Carts</h3>
+                        <p style="font-size: 14px; color: #666; line-height: 1.6;">Intelligently detect exiting visitors and trigger targeted discounts, answer objections, and recover lost sales opportunities automatically.</p>
                     </div>
                 </div>
                 <!-- Card 8 -->
                 <div class="col-lg-4 col-md-6">
                     <div class="category-card" style="text-align:left; padding: 30px; border-radius: 10px; height:100%; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid #eee;">
                         <div class="icon-wrap mb-3" style="font-size: 40px; color: #4576ba;">
-                            <i class="fa-solid fa-map-location-dot"></i>
+                            <i class="fa-solid fa-user-gear"></i>
                         </div>
-                        <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 15px; color: #333;">Centralized Multi-Location Management</h3>
-                        <p style="font-size: 14px; color: #666; line-height: 1.6;">AI helps manage multiple stores, warehouses, and manufacturing units from a single system. Data consistency is maintained across locations while supporting location-specific operations.</p>
+                        <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 15px; color: #333;">🤝 Human Agent Handover</h3>
+                        <p style="font-size: 14px; color: #666; line-height: 1.6;">When complex queries require human expertise, AutomateX seamlessly escalates chats to live agents without losing conversation history.</p>
                     </div>
                 </div>
                 <!-- Card 9 -->
                 <div class="col-lg-4 col-md-6">
                     <div class="category-card" style="text-align:left; padding: 30px; border-radius: 10px; height:100%; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid #eee;">
                         <div class="icon-wrap mb-3" style="font-size: 40px; color: #291fbc;">
-                            <i class="fa-solid fa-cloud"></i>
+                            <i class="fa-solid fa-chart-pie"></i>
                         </div>
-                        <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 15px; color: #333;">Adaptive Cloud & Offline Architecture</h3>
-                        <p style="font-size: 14px; color: #666; line-height: 1.6;">The system intelligently manages online and offline operations. AI controls data storage, syncing, and recovery to ensure uninterrupted workflow and data integrity.</p>
+                        <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 15px; color: #333;">📊 AI Analytics Dashboard</h3>
+                        <p style="font-size: 14px; color: #666; line-height: 1.6;">Monitor total conversations, customer satisfaction, lead capture rates, popular questions, and revenue generated with real-time AI insights.</p>
                     </div>
                 </div>
             </div>
@@ -273,69 +262,69 @@ get_header(); ?>
              <div class="row">
                  <div class="col-md-12">
                      <div class="heading-wrap">
-                        <span class="text-primary fw-bold mb-2 d-block">What We Offer</span>
-                        <h2>Our Premium<span> Services</span> </h2>
-                        <p>Empowering your business with smart, reliable, and customized digital solutions.</p>
+                        <span class="text-primary fw-bold mb-2 d-block">AI Chatbot Features</span>
+                        <h2>Visual AI Flow Builder & <span>Capabilities</span></h2>
+                        <p>Build no-code chatbot conversations, capture qualified leads, and recommend products in real time.</p>
                      </div>
                      <div class="row">
                          <div class="col-md-4 col-sm-6">
                              <div class="services-box">
                                  <div class="ser-icon">
-                                   <img src="<?php echo get_template_directory_uri(); ?>/assets/images/sol1.png" alt="Digital Marketing & SEO ">
+                                   <img src="<?php echo get_template_directory_uri(); ?>/assets/images/sol1.png" alt="Smart Knowledge Training">
                                  </div>
-                                 <h3>Digital Marketing & SEO </h3>
-                                 <p>Boost online visibility using meta‑tag optimization, social media engagement, reputation monitoring, content strategy, data analytics, and ongoing campaigns tailored to convert.</p>
-                                 <a href="<?php echo esc_url( home_url( '/digital-marketing-services/' ) ); ?>">Read More <i style="transform: rotateZ(45deg);" class="fa-solid fa-arrow-up"></i></a>
+                                 <h3>Smart Knowledge Training</h3>
+                                 <p>Train your AI chatbot using Website URLs, PDF Documents, Word Files, FAQs, Help Centers, and custom CRM databases within minutes.</p>
+                                 <a href="#trialModal" data-bs-toggle="modal">Learn More <i style="transform: rotateZ(45deg);" class="fa-solid fa-arrow-up"></i></a>
                              </div>
                          </div>
                          <div class="col-md-4 col-sm-6">
                              <div class="services-box">
                                  <div class="ser-icon">
-                                   <img src="<?php echo get_template_directory_uri(); ?>/assets/images/sol2.png" alt="Web Development">
+                                   <img src="<?php echo get_template_directory_uri(); ?>/assets/images/sol2.png" alt="Visual AI Flow Builder">
                                  </div>
-                                 <h3>Web Development</h3>
-                                 <p>Creating responsive, results‑oriented websites that convert traffic into customers. Custom builds for your brand identity, CMS integrations like WordPress, e‑commerce platforms, and ongoing support to maintain performance.</p>
-                                 <a href="<?php echo esc_url( home_url( '/e-commerce-website-development/' ) ); ?>">Read More <i style="transform: rotateZ(45deg);" class="fa-solid fa-arrow-up"></i></a>
+                                 <h3>Visual AI Flow Builder</h3>
+                                 <p>Build chatbot conversations without coding. Features include Drag & Drop Builder, Welcome Messages, Lead Capture Forms, and Appointment Booking.</p>
+                                 <a href="#trialModal" data-bs-toggle="modal">Learn More <i style="transform: rotateZ(45deg);" class="fa-solid fa-arrow-up"></i></a>
                              </div>
                          </div>
                          <div class="col-md-4 col-sm-6">
                              <div class="services-box">
                                  <div class="ser-icon">
-                                   <img src="<?php echo get_template_directory_uri(); ?>/assets/images/sol3.png" alt="Mobile App Development">
+                                   <img src="<?php echo get_template_directory_uri(); ?>/assets/images/sol3.png" alt="AI Recommendation Engine">
                                  </div>
-                                 <h3> Mobile App Development</h3>
-                                 <p>Building native (iOS/Android), hybrid, or React Native/Flutter apps that are user‑friendly and scalable for business growth. Expertise in grocery, education, e‑commerce, fitness, and more.</p>
-                                 <a href="<?php echo esc_url( home_url( '/android-application/' ) ); ?>">Read More <i style="transform: rotateZ(45deg);" class="fa-solid fa-arrow-up"></i></a>
+                                 <h3>AI Product Recommendation Engine</h3>
+                                 <p>AutomateX intelligently understands customer needs and recommends relevant products in real time for Ecommerce, Fashion, Electronics, and B2B.</p>
+                                 <a href="#trialModal" data-bs-toggle="modal">Learn More <i style="transform: rotateZ(45deg);" class="fa-solid fa-arrow-up"></i></a>
                              </div>
                          </div>
                          <div class="col-md-4 col-sm-6">
                              <div class="services-box">
                                  <div class="ser-icon">
-                                   <img src="<?php echo get_template_directory_uri(); ?>/assets/images/sol4.png" alt="Web Design">
+                                   <img src="<?php echo get_template_directory_uri(); ?>/assets/images/sol4.png" alt="Recover Abandoned Carts">
                                  </div>
-                                 <h3>Web Design</h3>
-                                 <p>Designing visually engaging site layouts focused on UX, clean navigation, SEO optimization, and mobile responsiveness—from mockups to final deployment.</p>
-                                 <a href="<?php echo esc_url( home_url( '/modern-responsive-website-design/' ) ); ?>">Read More <i style="transform: rotateZ(45deg);" class="fa-solid fa-arrow-up"></i></a>
+                                 <h3>Recover Abandoned Carts</h3>
+                                 <p>Detect visitors about to leave and automatically offer discounts, recommend alternative products, answer final objections, and boost sales revenue.</p>
+                                 <a href="#trialModal" data-bs-toggle="modal">Learn More <i style="transform: rotateZ(45deg);" class="fa-solid fa-arrow-up"></i></a>
                              </div>
                          </div>
                          <div class="col-md-4 col-sm-6">
                              <div class="services-box">
                                  <div class="ser-icon">
-                                   <img src="<?php echo get_template_directory_uri(); ?>/assets/images/sol5.png" alt="Social Media Marketing">
+                                   <img src="<?php echo get_template_directory_uri(); ?>/assets/images/sol5.png" alt="Human Handover">
                                  </div>
-                                 <h3>Social Media Marketing</h3>
-                                 <p>Automatex.ai Solutions leads Jaipur with effective social media strategies that increase your brand’s visibility, engagement, and sales across major platforms.</p>
-                                 <a href="<?php echo esc_url( home_url( '/social-media-optimization/' ) ); ?>">Read More <i style="transform: rotateZ(45deg);" class="fa-solid fa-arrow-up"></i></a>
+                                 <h3>Human Handover</h3>
+                                 <p>When conversations require human expertise, AutomateX seamlessly transfers chats to live support agents without losing chat history.</p>
+                                 <a href="#trialModal" data-bs-toggle="modal">Learn More <i style="transform: rotateZ(45deg);" class="fa-solid fa-arrow-up"></i></a>
                              </div>
                          </div>
                          <div class="col-md-4 col-sm-6">
                              <div class="services-box">
                                  <div class="ser-icon">
-                                   <img src="<?php echo get_template_directory_uri(); ?>/assets/images/sol6.png" alt="CRM Development">
+                                   <img src="<?php echo get_template_directory_uri(); ?>/assets/images/sol6.png" alt="ERP AI Chatbot Integration">
                                  </div>
-                                 <h3>CRM Development</h3>
-                                 <p>Customized Software Development, Product Development, Web Application Development..</p>
-                                 <a href="<?php echo esc_url( home_url( '/custom-crm-solutions/' ) ); ?>">Read More <i style="transform: rotateZ(45deg);" class="fa-solid fa-arrow-up"></i></a>
+                                 <h3>ERP AI Chatbot Integration</h3>
+                                 <p>Connect with ERP systems to provide real-time order tracking, invoice details, inventory status, shipping updates, and account information directly in chat.</p>
+                                 <a href="#trialModal" data-bs-toggle="modal">Learn More <i style="transform: rotateZ(45deg);" class="fa-solid fa-arrow-up"></i></a>
                              </div>
                          </div>
                      </div>
@@ -345,71 +334,38 @@ get_header(); ?>
     </section>
     <!-- services section end here -->
 
-    <!-- 4. CORE AUTOMATIONS -->
+    <!-- 4. HOW AUTOMATEX WORKS -->
     <section class="automations-sec py-5">
         <div class="container py-3">
-            <h2 class="section-title text-center">Core <span>Automations</span></h2>
-            <p class="section-desc text-center">Powering your daily retail and wholesale operations with advanced AI integrations.</p>
+            <h2 class="section-title text-center">How AutomateX AI Chatbot <span>Works</span></h2>
+            <p class="section-desc text-center">Deploy your intelligent AI assistant in 3 simple steps.</p>
             
-            <div class="swipe-container mt-4">
-                <div class="swipe-track">
-                    
-                    <!-- Card 1 -->
-                    <div class="swipe-item">
-                        <div class="swipe-card">
-                            <span class="card-badge ai">AI-Powered</span>
-                            <h3>Smart Image POS</h3>
-                            <p>AI automatically recognizes products on-screen for swift billing. Speed up your cash counters and prevent long checkout queues.</p>
-                            <a href="<?php echo esc_url( home_url( '/pos/' ) ); ?>" class="card-btn">Learn More <i class="fas fa-arrow-right"></i></a>
-                        </div>
+            <div class="row g-4 mt-4 justify-content-center">
+                <!-- Step 1 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="swipe-card text-center p-4">
+                        <span class="card-badge ai mb-3 d-inline-block">Step 1</span>
+                        <h3 class="mb-3">Train Your AI</h3>
+                        <p>Upload your website URL, product catalogs, FAQs, and business documents. AutomateX automatically builds your AI knowledge base within minutes.</p>
                     </div>
+                </div>
 
-                    <!-- Card 2 -->
-                    <div class="swipe-item">
-                        <div class="swipe-card">
-                            <span class="card-badge ocr">OCR Scanning</span>
-                            <h3>AI Bill Scanner</h3>
-                            <p>Instantly upload supplier bills. Our OCR tool reads line items automatically and registers stock without manual typing.</p>
-                            <a href="<?php echo esc_url( home_url( '/inventory/' ) ); ?>" class="card-btn">Learn More <i class="fas fa-arrow-right"></i></a>
-                        </div>
+                <!-- Step 2 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="swipe-card text-center p-4">
+                        <span class="card-badge ocr mb-3 d-inline-block">Step 2</span>
+                        <h3 class="mb-3">Launch Your Chatbot</h3>
+                        <p>Deploy the chatbot on your website with a single line of script or connect it with WhatsApp, Messenger, and Instagram in just a few clicks.</p>
                     </div>
+                </div>
 
-                    <!-- Card 3 -->
-                    <div class="swipe-item">
-                        <div class="swipe-card">
-                            <span class="card-badge cloud">Cloud Synced</span>
-                            <h3>Multi-Store Sync</h3>
-                            <p>Control purchases, stock levels, GST tax invoices, and retail dispatches across all your branch offices in real-time.</p>
-                            <a href="<?php echo esc_url( home_url( '/smart-retail/' ) ); ?>" class="card-btn">Learn More <i class="fas fa-arrow-right"></i></a>
-                        </div>
+                <!-- Step 3 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="swipe-card text-center p-4">
+                        <span class="card-badge cloud mb-3 d-inline-block">Step 3</span>
+                        <h3 class="mb-3">Grow Your Business</h3>
+                        <p>Answer customer questions instantly 24/7, capture qualified leads, recommend products automatically, and boost your monthly sales revenue.</p>
                     </div>
-
-                    <!-- Duplicates for seamless marquee loop on all screens -->
-                    <div class="swipe-item">
-                        <div class="swipe-card">
-                            <span class="card-badge ai">AI-Powered</span>
-                            <h3>Smart Image POS</h3>
-                            <p>AI automatically recognizes products on-screen for swift billing. Speed up your cash counters and prevent long checkout queues.</p>
-                            <a href="<?php echo esc_url( home_url( '/pos/' ) ); ?>" class="card-btn">Learn More <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <div class="swipe-item">
-                        <div class="swipe-card">
-                            <span class="card-badge ocr">OCR Scanning</span>
-                            <h3>AI Bill Scanner</h3>
-                            <p>Instantly upload supplier bills. Our OCR tool reads line items automatically and registers stock without manual typing.</p>
-                            <a href="<?php echo esc_url( home_url( '/inventory/' ) ); ?>" class="card-btn">Learn More <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <div class="swipe-item">
-                        <div class="swipe-card">
-                            <span class="card-badge cloud">Cloud Synced</span>
-                            <h3>Multi-Store Sync</h3>
-                            <p>Control purchases, stock levels, GST tax invoices, and retail dispatches across all your branch offices in real-time.</p>
-                            <a href="<?php echo esc_url( home_url( '/smart-retail/' ) ); ?>" class="card-btn">Learn More <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-
                 </div>
             </div>
         </div>
@@ -421,324 +377,133 @@ get_header(); ?>
             <div class="row g-4">
                 <div class="col-lg-3 col-6">
                     <div class="stat-card">
-                        <h3>100+</h3>
-                        <p>Happy Retailers</p>
+                        <h3>1,000+</h3>
+                        <p>Active Businesses</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-6">
                     <div class="stat-card">
                         <h3>10M+</h3>
-                        <p>Bills Generated</p>
+                        <p>AI Conversations</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-6">
                     <div class="stat-card">
                         <h3>99.9%</h3>
-                        <p>Server Uptime</p>
+                        <p>Response Accuracy</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-6">
                     <div class="stat-card">
                         <h3>24/7</h3>
-                        <p>Expert Support</p>
+                        <p>Instant Support</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SMART INDUSTRY SOLUTIONS -->
-    <section class="solving-business-sec">
-       <div class="container">
-           <div class="row">
-               <div class="col-md-10 mx-auto">
-                   <div class="heading-wrap">
-                      <h2>Smart Solutions for<span> Every Industry</span> </h2>
-                      <p>Whether it’s retail, wholesale, or manufacturing, Automatex.ai Solutions provides the right ERP and smart business solutions to streamline operations and boost efficiency.</p>
+    <!-- SMART INDUSTRY AI CHATBOT SOLUTIONS -->
+    <section class="solving-business-sec py-5" style="background: #060814; border-top: 1px solid rgba(255,255,255,0.08); border-bottom: 1px solid rgba(255,255,255,0.08);">
+       <div class="container py-3">
+           <div class="text-center mb-5">
+              <h2 class="section-title" style="color: #ffffff; font-weight: 800; font-size: 2.3rem;">AI ChatBot Solutions for <span style="color: #38bdf8;">Every Industry</span></h2>
+              <p class="section-desc mt-2 mx-auto" style="color: #94a3b8; max-width: 750px; font-size: 1.05rem; line-height: 1.7;">
+                 AutomateX AI ChatBot provides 24/7 intelligent assistance, lead qualification, and customer support tailored for any business domain.
+              </p>
+           </div>
+           
+           <div class="row g-4 justify-content-center">
+               <!-- 1. Ecommerce -->
+               <div class="col-lg-3 col-md-4 col-sm-6">
+                   <div class="industry-ai-card p-4 rounded-4" style="background: rgba(15, 23, 42, 0.9); border: 1px solid rgba(56, 189, 248, 0.25); box-shadow: 0 10px 25px rgba(0,0,0,0.4); text-align: center; height: 100%; transition: all 0.3s ease;">
+                       <div class="icon-box mb-3 mx-auto" style="width: 55px; height: 55px; background: rgba(56, 189, 248, 0.15); color: #38bdf8; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
+                           <i class="fas fa-shopping-cart"></i>
+                       </div>
+                       <h4 style="color: #ffffff; font-weight: 700; font-size: 1.15rem; margin-bottom: 10px;">Ecommerce & Online Stores</h4>
+                       <p style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6; margin: 0;">Recommend products, recover abandoned carts, track orders, and boost checkout conversions.</p>
                    </div>
-                    <div class="innovative-tabs solving-business-tabs">
-                      <!-- Nav Tabs -->
-                      <div class="nav nav-tabs mb-3" id="nav-tab-wholesale" role="tablist">
-                        <button class="nav-link active" id="nav-wholesale-tab" data-bs-toggle="tab" data-bs-target="#nav-wholesale" type="button" role="tab" aria-controls="nav-wholesale" aria-selected="true">Smarter retail</button>
-                        <button class="nav-link" id="nav-distribution-tab" data-bs-toggle="tab" data-bs-target="#nav-distribution" type="button" role="tab" aria-controls="nav-distribution" aria-selected="false">Manufacturing</button>
-                      </div>
+               </div>
 
-                      <!-- Tab Content -->
-                      <div class="tab-content" id="nav-tabContent-wholesale">
-
-                        <!-- Retail Tab -->
-                        <div class="tab-pane fade show active" id="nav-wholesale" role="tabpanel" aria-labelledby="nav-wholesale-tab">
-                           <div class="row align-items-center bg-shape">
-                                <div class="col-md-7">
-                                    <div class="innovative-silder">
-                                        <div class="owl-carousel store-silder owl-theme">
-                                           <div class="item">
-                                               <div class="store-box">
-                                                  <h3>Apparel & Footwear</h3>
-                                                  <ul>
-                                                     <li>
-                                                        <figure>
-                                                           <a href="<?php echo esc_url( home_url( '/bridal-store/' ) ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/img301.webp" alt="Bridal Store"></a>
-                                                        </figure>
-                                                        <h6>Bridal Store</h6>
-                                                     </li>
-                                                     <li>
-                                                        <figure>
-                                                           <a href="<?php echo esc_url( home_url( '/boutique-store/' ) ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/img302.webp" alt="Boutique Store"></a>
-                                                        </figure>
-                                                        <h6>Boutique Store</h6>
-                                                     </li>
-                                                     <li>
-                                                        <figure>
-                                                           <a href="<?php echo esc_url( home_url( '/readymade-garment/' ) ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/img303.webp" alt="Readymade Garment"></a>
-                                                        </figure>
-                                                        <h6>readymade-garment</h6>
-                                                     </li>
-                                                     <li>
-                                                        <figure>
-                                                           <a href="<?php echo esc_url( home_url( '/footwear-store/' ) ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/img304.webp" alt="Footwear Store"></a>
-                                                        </figure>
-                                                        <h6>footwear-store</h6>
-                                                     </li>
-                                                  </ul>
-                                               </div>
-                                           </div>
-
-                                           <div class="item">
-                                               <div class="store-box">
-                                                  <h3>Books & Office Supplies</h3>
-                                                  <ul>
-                                                     <li>
-                                                        <figure>
-                                                           <a href="<?php echo esc_url( home_url( '/book-store/' ) ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/img305.webp" alt="Book Store"></a>
-                                                        </figure>
-                                                        <h6>Book Store</h6>
-                                                     </li>
-                                                     <li>
-                                                        <figure>
-                                                           <a href="<?php echo esc_url( home_url( '/stationery-store/' ) ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/img306.webp" alt="Office Supplies"></a>
-                                                        </figure>
-                                                        <h6>Stationery Store</h6>
-                                                     </li>
-                                                  </ul>
-                                               </div>
-                                           </div>
-
-                                           <div class="item">
-                                               <div class="store-box">
-                                                  <h3>Hypermarket & Departmental Store</h3>
-                                                  <ul>
-                                                     <li>
-                                                        <figure>
-                                                           <a href="<?php echo esc_url( home_url( '/convenience-store/' ) ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/img310.webp" alt="Convenience Store"></a>
-                                                        </figure>
-                                                        <h6>Convenience Store</h6>
-                                                     </li>
-                                                     <li>
-                                                        <figure>
-                                                           <a href="<?php echo esc_url( home_url( '/departmental-store/' ) ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/img311.webp" alt="Departmental Store"></a>
-                                                        </figure>
-                                                        <h6>Departmental Store</h6>
-                                                     </li>
-                                                     <li>
-                                                        <figure>
-                                                           <a href="<?php echo esc_url( home_url( '/hypermarket/' ) ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/img312.webp" alt="Hypermarket"></a>
-                                                        </figure>
-                                                        <h6>Hypermarket</h6>
-                                                     </li>
-                                                  </ul>
-                                               </div>
-                                           </div>
-
-                                           <div class="item">
-                                               <div class="store-box">
-                                                  <h3>Lifestyle</h3>
-                                                  <ul>
-                                                     <li>
-                                                        <figure>
-                                                           <a href="<?php echo esc_url( home_url( '/cosmetic-store/' ) ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/img313.webp" alt="Cosmetic Store"></a>
-                                                        </figure>
-                                                        <h6>Cosmetic Store</h6>
-                                                     </li>
-                                                     <li>
-                                                        <figure>
-                                                           <a href="<?php echo esc_url( home_url( '/home-decor-furniture/' ) ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/img314.webp" alt="Home Decor"></a>
-                                                        </figure>
-                                                        <h6>Home Decor & Furniture</h6>
-                                                     </li>
-                                                     <li>
-                                                        <figure>
-                                                           <a href="<?php echo esc_url( home_url( '/imitation-jewellery/' ) ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/img315.webp" alt="Imitation Jewellery"></a>
-                                                        </figure>
-                                                        <h6>Imitation Jewellery</h6>
-                                                     </li>
-                                                  </ul>
-                                               </div>
-                                           </div>
-
-                                           <div class="item">
-                                               <div class="store-box">
-                                                  <h3>Supermarket & Groceries</h3>
-                                                  <ul>
-                                                     <li>
-                                                        <figure>
-                                                           <a href="<?php echo esc_url( home_url( '/fruits-vegetable-shop/' ) ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/img316.webp" alt="Fruits & Vegetables"></a>
-                                                        </figure>
-                                                        <h6>Fruits & Vegetable</h6>
-                                                     </li>
-                                                     <li>
-                                                        <figure>
-                                                           <a href="<?php echo esc_url( home_url( '/grocery-store/' ) ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/img317.webp" alt="Grocery Store"></a>
-                                                        </figure>
-                                                        <h6>Grocery Store</h6>
-                                                     </li>
-                                                     <li>
-                                                        <figure>
-                                                           <a href="<?php echo esc_url( home_url( '/kirana-store/' ) ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/img318.webp" alt="Kirana Store"></a>
-                                                        </figure>
-                                                        <h6>Kirana Store</h6>
-                                                     </li>
-                                                     <li>
-                                                        <figure>
-                                                           <a href="<?php echo esc_url( home_url( '/minimart/' ) ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/img319.webp" alt="Minimart"></a>
-                                                        </figure>
-                                                        <h6>Minimart</h6>
-                                                     </li>
-                                                     <li>
-                                                        <figure>
-                                                           <a href="<?php echo esc_url( home_url( '/supermarket/' ) ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/img320.webp" alt="Supermarket"></a>
-                                                        </figure>
-                                                        <h6>Supermarket</h6>
-                                                     </li>
-                                                  </ul>
-                                               </div>
-                                           </div>
-
-                                           <div class="item">
-                                               <div class="store-box">
-                                                  <h3>Specialized in Retail</h3>
-                                                  <ul>
-                                                     <li>
-                                                        <figure>
-                                                           <a href="<?php echo esc_url( home_url( '/gift-shop/' ) ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/img322.webp" alt="Gift Shop"></a>
-                                                        </figure>
-                                                        <h6>Gift Shop</h6>
-                                                     </li>
-                                                     <li>
-                                                        <figure>
-                                                           <a href="<?php echo esc_url( home_url( '/hardware-store/' ) ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/img323.webp" alt="Hardware Store"></a>
-                                                        </figure>
-                                                        <h6>Hardware Store</h6>
-                                                     </li>
-                                                     <li>
-                                                        <figure>
-                                                           <a href="<?php echo esc_url( home_url( '/liquor-store/' ) ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/img324.webp" alt="Liquor Store"></a>
-                                                        </figure>
-                                                        <h6>Liquor Store</h6>
-                                                     </li>
-                                                     <li>
-                                                        <figure>
-                                                           <a href="<?php echo esc_url( home_url( '/pet-shop/' ) ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/img325.webp" alt="Pet Shop"></a>
-                                                        </figure>
-                                                        <h6>Pet Shop</h6>
-                                                     </li>
-                                                     <li>
-                                                        <figure>
-                                                           <a href="<?php echo esc_url( home_url( '/shopping-mall/' ) ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/img326.webp" alt="Shopping Mall"></a>
-                                                        </figure>
-                                                        <h6>Shopping Mall</h6>
-                                                     </li>
-                                                     <li>
-                                                        <figure>
-                                                           <a href="<?php echo esc_url( home_url( '/sports-shop/' ) ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/img327.webp" alt="Sports Shop"></a>
-                                                        </figure>
-                                                        <h6>Sports Shop</h6>
-                                                     </li>
-                                                     <li>
-                                                        <figure>
-                                                           <a href="<?php echo esc_url( home_url( '/toy-store/' ) ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/img328.webp" alt="Toy Store"></a>
-                                                        </figure>
-                                                        <h6>Toy Store</h6>
-                                                     </li>
-                                                  </ul>
-                                               </div>
-                                           </div>
-                                        </div>
-                                    </div>
-                                 </div>
-                             </div>
-                             <div class="col-md-5">
-                                 <div class="solving-business-img">
-                                     <figure>
-                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/retail-store.webp" alt="Wholesale Solution">
-                                     </figure>
-                                 </div>
-                             </div>
-                        </div>
-                     </div>
-
-                     <!-- Manufacturing Tab -->
-                     <div class="tab-pane fade" id="nav-distribution" role="tabpanel" aria-labelledby="nav-distribution-tab">
-                       <div class="row align-items-center bg-shape">
-                             <div class="col-md-7">
-                                 <div class="innovative-silder">
-                                     <div class="owl-carousel store-silder owl-theme">
-                                        <div class="item">
-                                            <div class="store-box">
-                                               <h3>Manufacturing</h3>
-                                               <ul>
-                                                  <li>
-                                                     <figure>
-                                                        <a href="<?php echo esc_url( home_url( '/consumer-goods/' ) ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/store1.webp" alt="FMCG"></a>
-                                                     </figure>
-                                                     <h6>FMCG</h6>
-                                                  </li>
-                                                  <li>
-                                                     <figure>
-                                                        <a href="<?php echo esc_url( home_url( '/footwear-store/' ) ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/store3.webp" alt="Footwear"></a>
-                                                     </figure>
-                                                     <h6>Footwear</h6>
-                                                  </li>
-                                                  <li>
-                                                     <figure>
-                                                        <a href="<?php echo esc_url( home_url( '/garments/' ) ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/store4.webp" alt="Garment & Apparel"></a>
-                                                     </figure>
-                                                     <h6>Garment & Apparel</h6>
-                                                  </li>
-                                                  <li>
-                                                     <figure>
-                                                        <a href="<?php echo esc_url( home_url( '/industrial-products/' ) ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/store5.webp" alt="Steel"></a>
-                                                     </figure>
-                                                     <h6>Steel</h6>
-                                                  </li>
-                                                  <li>
-                                                     <figure>
-                                                        <a href="<?php echo esc_url( home_url( '/textile/' ) ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/store6.webp" alt="Textile"></a>
-                                                     </figure>
-                                                     <h6>Textile</h6>
-                                                  </li>
-                                               </ul>
-                                            </div>
-                                        </div>
-                                     </div>
-                                 </div>
-                             </div>
-                             <div class="col-md-5">
-                                 <div class="solving-business-img">
-                                     <figure>
-                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Manufacturing-image.webp" alt="Distribution Solution">
-                                     </figure>
-                                 </div>
-                             </div>
-                        </div>
-                     </div>
-
+               <!-- 2. Retail Stores -->
+               <div class="col-lg-3 col-md-4 col-sm-6">
+                   <div class="industry-ai-card p-4 rounded-4" style="background: rgba(15, 23, 42, 0.9); border: 1px solid rgba(255, 153, 0, 0.25); box-shadow: 0 10px 25px rgba(0,0,0,0.4); text-align: center; height: 100%; transition: all 0.3s ease;">
+                       <div class="icon-box mb-3 mx-auto" style="width: 55px; height: 55px; background: rgba(255, 153, 0, 0.15); color: #ff9900; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
+                           <i class="fas fa-store"></i>
+                       </div>
+                       <h4 style="color: #ffffff; font-weight: 700; font-size: 1.15rem; margin-bottom: 10px;">Retail Stores & Chains</h4>
+                       <p style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6; margin: 0;">Answer inventory inquiries, store locations, working hours, and promotional discount offers.</p>
                    </div>
-                 </div>
-            </div>
-        </div>
-    </div>
-</section>
+               </div>
+
+               <!-- 3. Healthcare -->
+               <div class="col-lg-3 col-md-4 col-sm-6">
+                   <div class="industry-ai-card p-4 rounded-4" style="background: rgba(15, 23, 42, 0.9); border: 1px solid rgba(16, 185, 129, 0.25); box-shadow: 0 10px 25px rgba(0,0,0,0.4); text-align: center; height: 100%; transition: all 0.3s ease;">
+                       <div class="icon-box mb-3 mx-auto" style="width: 55px; height: 55px; background: rgba(16, 185, 129, 0.15); color: #10b981; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
+                           <i class="fas fa-user-md"></i>
+                       </div>
+                       <h4 style="color: #ffffff; font-weight: 700; font-size: 1.15rem; margin-bottom: 10px;">Healthcare & Clinics</h4>
+                       <p style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6; margin: 0;">Book doctor appointments, share department info, log patient queries, and answer FAQs 24/7.</p>
+                   </div>
+               </div>
+
+               <!-- 4. Manufacturing -->
+               <div class="col-lg-3 col-md-4 col-sm-6">
+                   <div class="industry-ai-card p-4 rounded-4" style="background: rgba(15, 23, 42, 0.9); border: 1px solid rgba(168, 85, 247, 0.25); box-shadow: 0 10px 25px rgba(0,0,0,0.4); text-align: center; height: 100%; transition: all 0.3s ease;">
+                       <div class="icon-box mb-3 mx-auto" style="width: 55px; height: 55px; background: rgba(168, 85, 247, 0.15); color: #a855f7; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
+                           <i class="fas fa-industry"></i>
+                       </div>
+                       <h4 style="color: #ffffff; font-weight: 700; font-size: 1.15rem; margin-bottom: 10px;">Manufacturing & B2B</h4>
+                       <p style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6; margin: 0;">Handle wholesale inquiries, quotation requests, product spec sheets, and supplier FAQs.</p>
+                   </div>
+               </div>
+
+               <!-- 5. Education -->
+               <div class="col-lg-3 col-md-4 col-sm-6">
+                   <div class="industry-ai-card p-4 rounded-4" style="background: rgba(15, 23, 42, 0.9); border: 1px solid rgba(236, 72, 153, 0.25); box-shadow: 0 10px 25px rgba(0,0,0,0.4); text-align: center; height: 100%; transition: all 0.3s ease;">
+                       <div class="icon-box mb-3 mx-auto" style="width: 55px; height: 55px; background: rgba(236, 72, 153, 0.15); color: #ec4899; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
+                           <i class="fas fa-graduation-cap"></i>
+                       </div>
+                       <h4 style="color: #ffffff; font-weight: 700; font-size: 1.15rem; margin-bottom: 10px;">Education & Academies</h4>
+                       <p style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6; margin: 0;">Assist prospective students, automate admission inquiries, course details, and fee structures.</p>
+                   </div>
+               </div>
+
+               <!-- 6. Hospitality & Hotels -->
+               <div class="col-lg-3 col-md-4 col-sm-6">
+                   <div class="industry-ai-card p-4 rounded-4" style="background: rgba(15, 23, 42, 0.9); border: 1px solid rgba(245, 158, 11, 0.25); box-shadow: 0 10px 25px rgba(0,0,0,0.4); text-align: center; height: 100%; transition: all 0.3s ease;">
+                       <div class="icon-box mb-3 mx-auto" style="width: 55px; height: 55px; background: rgba(245, 158, 11, 0.15); color: #f59e0b; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
+                           <i class="fas fa-hotel"></i>
+                       </div>
+                       <h4 style="color: #ffffff; font-weight: 700; font-size: 1.15rem; margin-bottom: 10px;">Hospitality & Hotels</h4>
+                       <p style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6; margin: 0;">Instant room booking assistance, concierge services, local guides, and amenity details.</p>
+                   </div>
+               </div>
+
+               <!-- 7. Real Estate -->
+               <div class="col-lg-3 col-md-4 col-sm-6">
+                   <div class="industry-ai-card p-4 rounded-4" style="background: rgba(15, 23, 42, 0.9); border: 1px solid rgba(14, 165, 233, 0.25); box-shadow: 0 10px 25px rgba(0,0,0,0.4); text-align: center; height: 100%; transition: all 0.3s ease;">
+                       <div class="icon-box mb-3 mx-auto" style="width: 55px; height: 55px; background: rgba(14, 165, 233, 0.15); color: #0ea5e9; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
+                           <i class="fas fa-building"></i>
+                       </div>
+                       <h4 style="color: #ffffff; font-weight: 700; font-size: 1.15rem; margin-bottom: 10px;">Real Estate & Property</h4>
+                       <p style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6; margin: 0;">Qualify buyers, showcase property listings, capture contact details, and schedule site visits.</p>
+                   </div>
+               </div>
+
+               <!-- 8. Finance & SaaS -->
+               <div class="col-lg-3 col-md-4 col-sm-6">
+                   <div class="industry-ai-card p-4 rounded-4" style="background: rgba(15, 23, 42, 0.9); border: 1px solid rgba(99, 102, 241, 0.25); box-shadow: 0 10px 25px rgba(0,0,0,0.4); text-align: center; height: 100%; transition: all 0.3s ease;">
+                       <div class="icon-box mb-3 mx-auto" style="width: 55px; height: 55px; background: rgba(99, 102, 241, 0.15); color: #6366f1; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
+                           <i class="fas fa-laptop-code"></i>
+                       </div>
+                       <h4 style="color: #ffffff; font-weight: 700; font-size: 1.15rem; margin-bottom: 10px;">SaaS & IT Services</h4>
+                       <p style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6; margin: 0;">Offer instant technical documentation assistance, pricing model guidance, and feature support.</p>
+                   </div>
+               </div>
+           </div>
+       </div>
+    </section>
 
     <!-- AI CHATBOT ASSISTANT SECTION -->
     <section class="ai-chatbot-banner-sec py-5" style="background: linear-gradient(180deg, #fafafa, #ffffff); padding-top: 60px; padding-bottom: 60px; border-top: 1px solid rgba(0,0,0,0.03);">

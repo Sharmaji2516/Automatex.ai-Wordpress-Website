@@ -1,0 +1,406 @@
+/* ==========================================================================
+   🤖 AUTOMATEX.AI FUTURISTIC DARK AI THEME (STORE FIX & ULTRA-LUXURY FOOTER)
+   ========================================================================== */
+
+:root {
+    --bg-dark-main: #060913;
+    --bg-dark-card: #0e1628;
+    --bg-dark-card-hover: #142038;
+    --bg-dark-nav: #090e1a;
+    --border-cyan-glow: rgba(6, 182, 212, 0.35);
+    --border-cyan-bright: #00f2fe;
+    --cyan-accent: #00f2fe;
+    --blue-accent: #3b82f6;
+    --electric-gradient: linear-gradient(135deg, #00f2fe 0%, #3b82f6 100%);
+    --text-pure-white: #ffffff;
+    --text-high-contrast: #e2e8f0;
+    --text-muted-light: #cbd5e1;
+}
+
+/* 1. GLOBAL BACKGROUNDS & HIGH CONTRAST TYPOGRAPHY */
+html, body, .premium-home-body, main, section, div, article,
+.solutions-grid-sec, .automations-sec, .stats-sec, .integrations-sec, .brand-marquee-sec, .solving-business-sec {
+    background-color: var(--bg-dark-main) !important;
+    color: var(--text-pure-white) !important;
+}
+
+/* All Headings -> Crisp White */
+h1, h2, h3, h4, h5, h6, 
+.hero-title, .section-title, .title, .card-title,
+.category-card h3, .swipe-card h3, .stat-card h3, .solution-card h3, .feature-card h3, .industry-card h3,
+.store-box h3, .store-box h6 {
+    color: var(--text-pure-white) !important;
+}
+
+/* All Paragraphs & Text -> Bright High Contrast Light Gray/White */
+p, span, a, div, .hero-subtitle, .section-desc, .card-text, .lbl, .desc,
+.category-card p, .swipe-card p, .stat-card p, .solution-card p, .feature-card p,
+.store-box p, .store-box li {
+    color: var(--text-high-contrast) !important;
+}
+
+/* Gradient Spans */
+.hero-title span, .section-title span, h2 span, h3 span {
+    background: var(--electric-gradient) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    display: inline-block;
+}
+
+/* 2. STORE SLIDER & INDUSTRY TABS FIX */
+.solving-business-sec {
+    background: #060913 !important;
+}
+
+.solving-business-tabs .nav-tabs .nav-link {
+    background: #0d1527 !important;
+    color: #94a3b8 !important;
+    border: 1px solid rgba(6, 182, 212, 0.3) !important;
+    border-radius: 10px !important;
+    font-weight: 700 !important;
+    padding: 12px 24px !important;
+}
+
+.solving-business-tabs .nav-tabs .nav-link.active {
+    background: var(--electric-gradient) !important;
+    color: #ffffff !important;
+    border-color: #00f2fe !important;
+    box-shadow: 0 0 20px rgba(0, 242, 254, 0.5) !important;
+}
+
+.bg-shape {
+    background: var(--bg-dark-card) !important;
+    border: 1px solid var(--border-cyan-glow) !important;
+    border-radius: 20px !important;
+    padding: 30px !important;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8) !important;
+}
+
+.store-box {
+    background: transparent !important;
+}
+
+.store-box h3 {
+    color: var(--cyan-accent) !important;
+    font-weight: 800 !important;
+    margin-bottom: 20px !important;
+    font-size: 20px !important;
+}
+
+.store-box ul {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)) !important;
+    gap: 15px !important;
+    list-style: none !important;
+    padding: 0 !important;
+}
+
+.store-box li {
+    background: rgba(15, 23, 42, 0.8) !important;
+    border: 1px solid rgba(6, 182, 212, 0.25) !important;
+    border-radius: 12px !important;
+    padding: 12px !important;
+    text-align: center !important;
+    transition: all 0.3s ease !important;
+}
+
+.store-box li:hover {
+    border-color: #00f2fe !important;
+    box-shadow: 0 0 15px rgba(0, 242, 254, 0.3) !important;
+    transform: translateY(-3px) !important;
+}
+
+.store-box h6 {
+    color: #f8fafc !important;
+    font-size: 13px !important;
+    margin-top: 8px !important;
+    font-weight: 600 !important;
+}
+
+/* 3. ALL CARDS - DARK NAVY OBSIDIAN WITH GLOWING CYAN BORDER */
+.category-card,
+.swipe-card,
+.stat-card,
+.solution-card,
+.feature-card,
+.industry-card,
+.card,
+.pricing-card,
+.testimonial-card,
+.glass-card,
+.glass-dashboard-card,
+.desktop-integration-wrapper,
+.int-logo-box,
+div[class*="-card"] {
+    background: var(--bg-dark-card) !important;
+    border: 1px solid var(--border-cyan-glow) !important;
+    color: var(--text-pure-white) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7) !important;
+    transition: all 0.3s ease-in-out !important;
+}
+
+.category-card:hover,
+.swipe-card:hover,
+.stat-card:hover,
+.solution-card:hover,
+.feature-card:hover,
+.industry-card:hover,
+.card:hover {
+    background: var(--bg-dark-card-hover) !important;
+    border-color: var(--border-cyan-bright) !important;
+    box-shadow: 0 0 30px rgba(0, 242, 254, 0.4) !important;
+    transform: translateY(-4px) !important;
+}
+
+/* Icons & Buttons */
+.category-icon i, .icon-wrap i, .card-btn {
+    color: var(--cyan-accent) !important;
+}
+
+/* 4. HEADER & NAV */
+header, .sticky-header-wrapper {
+    background-color: rgba(9, 14, 26, 0.95) !important;
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(6, 182, 212, 0.3) !important;
+}
+
+ul.navbar-nav > li > a {
+    color: #f1f5f9 !important;
+}
+
+ul.navbar-nav > li > a:hover {
+    color: var(--cyan-accent) !important;
+    text-shadow: 0 0 10px rgba(0, 242, 254, 0.6);
+}
+
+.sub-menu, .mega-menu {
+    background-color: #0b1120 !important;
+    border: 1px solid rgba(6, 182, 212, 0.4) !important;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.9) !important;
+}
+
+.sub-menu li a, .mega-menu-wrap li a {
+    color: #e2e8f0 !important;
+}
+
+.sub-menu li a:hover, .mega-menu-wrap li a:hover {
+    color: var(--cyan-accent) !important;
+    background: rgba(6, 182, 212, 0.15) !important;
+}
+
+/* 5. ULTRA-ATTRACTIVE HIGH-TECH FUTURISTIC FOOTER */
+footer, .live-footer, .site-footer {
+    background: linear-gradient(180deg, #060913 0%, #020408 100%) !important;
+    border-top: 2px solid rgba(6, 182, 212, 0.4) !important;
+    padding: 70px 0 30px !important;
+    color: #94a3b8 !important;
+    position: relative !important;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 2px;
+    background: var(--electric-gradient);
+    box-shadow: 0 0 20px #00f2fe;
+}
+
+.footer-widget h4, footer h4, footer h5, .cities-title {
+    color: #00f2fe !important;
+    font-weight: 800 !important;
+    font-size: 18px !important;
+    margin-bottom: 22px !important;
+    letter-spacing: 0.5px !important;
+    text-shadow: 0 0 10px rgba(0, 242, 254, 0.3) !important;
+}
+
+.footer-links {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.footer-links li {
+    margin-bottom: 10px !important;
+}
+
+.footer-links a {
+    color: #cbd5e1 !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    text-decoration: none !important;
+    transition: all 0.25s ease !important;
+    display: inline-flex !important;
+    align-items: center !important;
+}
+
+.footer-links a::before {
+    content: '➔';
+    font-size: 11px;
+    margin-right: 8px;
+    color: #00f2fe;
+    opacity: 0;
+    transform: translateX(-5px);
+    transition: all 0.25s ease;
+}
+
+.footer-links a:hover {
+    color: #00f2fe !important;
+    transform: translateX(4px) !important;
+}
+
+.footer-links a:hover::before {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.footer-tagline {
+    color: #00f2fe !important;
+    font-weight: 700 !important;
+    font-size: 13px !important;
+    display: block !important;
+    margin-top: 10px !important;
+    letter-spacing: 1px !important;
+}
+
+/* Cities Pill Cloud */
+.cities-links-container {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 6px !important;
+    max-height: 180px !important;
+    overflow-y: auto !important;
+    padding-right: 5px !important;
+}
+
+.cities-links-container::-webkit-scrollbar {
+    width: 4px;
+}
+.cities-links-container::-webkit-scrollbar-thumb {
+    background: #00f2fe;
+    border-radius: 4px;
+}
+
+.city-link {
+    background: rgba(14, 22, 40, 0.8) !important;
+    border: 1px solid rgba(6, 182, 212, 0.25) !important;
+    color: #cbd5e1 !important;
+    padding: 4px 10px !important;
+    border-radius: 20px !important;
+    font-size: 11px !important;
+    text-decoration: none !important;
+    transition: all 0.2s ease !important;
+}
+
+.city-link:hover {
+    background: var(--electric-gradient) !important;
+    color: #ffffff !important;
+    border-color: #00f2fe !important;
+    box-shadow: 0 0 10px rgba(0, 242, 254, 0.5) !important;
+}
+
+.footer-contact-links li a {
+    color: #00f2fe !important;
+    font-weight: 600 !important;
+}
+
+/* Mobile Responsive Overrides for Dark AI Theme Pages */
+@media (max-width: 991.98px) {
+    .seo-hero h1, .dm-hero h1 {
+        font-size: 2.1rem !important;
+        line-height: 1.25 !important;
+    }
+    .seo-hero p.lead, .dm-hero p.lead {
+        font-size: 1rem !important;
+    }
+    .seo-hero, .dm-hero {
+        padding-top: 40px !important;
+        padding-bottom: 40px !important;
+    }
+    .seo-hero-card, .dm-hero-card {
+        padding: 20px 15px !important;
+        margin-top: 15px !important;
+    }
+    .navbar-collapse {
+        background: #0f172a !important;
+        padding: 15px !important;
+        border-radius: 12px !important;
+        border: 1px solid rgba(255,255,255,0.1) !important;
+        margin-top: 10px !important;
+    }
+}
+
+@media (max-width: 767.98px) {
+    /* Hero Badges on Mobile */
+    .seo-hero .badge, .dm-hero .badge, section .badge {
+        white-space: normal !important;
+        font-size: 0.72rem !important;
+        line-height: 1.4 !important;
+        padding: 6px 14px !important;
+        display: inline-block !important;
+        max-width: 95% !important;
+        text-align: center !important;
+        word-break: break-word !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    /* Mobile Footer Grid Layout */
+    .live-footer {
+        padding-top: 40px !important;
+        padding-bottom: 100px !important; /* Room for floating contact button */
+    }
+    .footer-widget h4 {
+        color: #ff9900 !important;
+        font-size: 1.05rem !important;
+        font-weight: 700 !important;
+        border-bottom: 1px solid rgba(255, 153, 0, 0.3) !important;
+        padding-bottom: 6px !important;
+        margin-bottom: 12px !important;
+    }
+    .footer-links {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 8px 12px !important;
+        padding-left: 0 !important;
+    }
+    .footer-links li {
+        margin-bottom: 4px !important;
+        list-style: none !important;
+    }
+    .footer-links a {
+        font-size: 0.85rem !important;
+        line-height: 1.3 !important;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .seo-hero h1, .dm-hero h1 {
+        font-size: 1.65rem !important;
+        line-height: 1.3 !important;
+    }
+    .display-4 {
+        font-size: 1.7rem !important;
+    }
+    .btn-lg {
+        width: 100% !important;
+        font-size: 0.95rem !important;
+        padding: 12px 18px !important;
+    }
+    .d-flex.gap-3, .d-flex.gap-2 {
+        gap: 8px !important;
+    }
+    .book-demo-strip span {
+        font-size: 11px !important;
+    }
+    .book-demo-strip button {
+        font-size: 10px !important;
+        padding: 5px 12px !important;
+    }
+}
+
+

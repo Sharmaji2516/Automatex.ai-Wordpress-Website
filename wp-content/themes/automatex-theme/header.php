@@ -26,19 +26,255 @@
               }
           }
 
-          /* Global Fix: Ensure navigation dropdowns render on top of sticky promo ribbons */
-          .sub-menu, .mega-menu {
-              z-index: 10000 !important;
-          }
+      /* Global Fix: Ensure navigation dropdowns render on top of sticky promo ribbons */
+      .sub-menu, .mega-menu {
+          z-index: 10000 !important;
+      }
+
+      /* ==========================================
+         🤖 AUTOMATEX PREMIUM FUTURISTIC HEADER STYLING
+         ========================================== */
+      .sticky-header-wrapper {
+          position: sticky !important;
+          top: 0 !important;
+          z-index: 1050 !important;
+          background: rgba(7, 11, 25, 0.95) !important;
+          backdrop-filter: blur(12px) !important;
+          -webkit-backdrop-filter: blur(12px) !important;
+          width: 100% !important;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+      }
+
+      header {
+          padding: 8px 0 !important;
+      }
+
+      .navbar-brand {
+          background: #ffffff !important;
+          padding: 6px 14px !important;
+          border-radius: 10px !important;
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25) !important;
+          transition: transform 0.3s ease !important;
+          display: flex !important;
+          align-items: center !important;
+      }
+      .navbar-brand:hover {
+          transform: scale(1.03) !important;
+      }
+      .navbar-brand img {
+          height: 42px !important;
+          width: auto !important;
+          display: block !important;
+      }
+
+      .navbar-nav {
+          gap: 6px !important;
+          align-items: center !important;
+      }
+      .navbar-nav .nav-link {
+          color: #f8fafc !important;
+          font-weight: 600 !important;
+          font-size: 0.92rem !important;
+          padding: 8px 14px !important;
+          border-radius: 8px !important;
+          transition: all 0.25s ease !important;
+          display: flex !important;
+          align-items: center !important;
+          gap: 5px !important;
+      }
+      .navbar-nav .nav-link:hover, 
+      .navbar-nav .nav-link:focus,
+      .navbar-nav .nav-item.dropdown:hover > .nav-link {
+          color: #38bdf8 !important;
+          background: rgba(56, 189, 248, 0.12) !important;
+      }
+      .navbar-nav .nav-link i {
+          font-size: 0.75rem !important;
+          transition: transform 0.3s ease !important;
+      }
+      .navbar-nav .nav-item:hover .nav-link i {
+          transform: rotate(180deg) !important;
+          color: #38bdf8 !important;
+             .sub-menu, .mega-menu {
+           background: #0f172a !important;
+           border: 1px solid rgba(255, 255, 255, 0.15) !important;
+           border-radius: 16px !important;
+           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), 0 0 25px rgba(56, 189, 248, 0.15) !important;
+           padding: 20px !important;
+           z-index: 99999 !important;
+           position: absolute !important;
+           top: 100% !important;
+           margin-top: 0 !important;
+           animation: none !important; /* Disable moving animations that break hover target */
+           -webkit-animation: none !important;
+           transition: opacity 0.2s ease, visibility 0.2s ease !important;
+       }
+
+       /* Fix: Invisible Hover Bridge & Padding Hit Area prevents dropdowns from disappearing */
+       @media (min-width: 992px) {
+           .navbar-nav .nav-item {
+               position: relative !important;
+               padding-bottom: 12px !important;
+               margin-bottom: -12px !important;
+           }
+
+           .sub-menu::before, .mega-menu::before {
+               content: '' !important;
+               position: absolute !important;
+               top: -30px !important;
+               left: 0 !important;
+               width: 100% !important;
+               height: 35px !important;
+               background: transparent !important;
+               z-index: 10001 !important;
+           }
+
+           .navbar-nav .nav-item:hover > .sub-menu,
+           .navbar-nav .nav-item:hover > .mega-menu,
+           .sub-menu:hover,
+           .mega-menu:hover {
+               display: block !important;
+               opacity: 1 !important;
+               visibility: visible !important;
+               pointer-events: auto !important;
+           }
+       }  }
+
+      .sub-menu {
+          min-width: 220px !important;
+          padding: 12px 8px !important;
+      }
+      .sub-menu li {
+          list-style: none !important;
+          margin-bottom: 4px !important;
+      }
+      .sub-menu li a {
+          color: #cbd5e1 !important;
+          font-weight: 600 !important;
+          font-size: 0.9rem !important;
+          padding: 8px 14px !important;
+          display: block !important;
+          border-radius: 8px !important;
+          text-decoration: none !important;
+          transition: all 0.2s ease !important;
+      }
+      .sub-menu li a:hover {
+          background: rgba(56, 189, 248, 0.15) !important;
+          color: #ffffff !important;
+          padding-left: 18px !important;
+      }
+
+      .mega-menu-wrap strong {
+          color: #38bdf8 !important;
+          font-weight: 800 !important;
+          font-size: 0.85rem !important;
+          text-transform: uppercase !important;
+          letter-spacing: 0.8px !important;
+          display: flex !important;
+          align-items: center !important;
+          gap: 8px !important;
+          padding-bottom: 8px !important;
+          margin-bottom: 12px !important;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+      }
+      .mega-menu-wrap ul {
+          list-style: none !important;
+          padding: 0 !important;
+          margin-bottom: 20px !important;
+      }
+      .mega-menu-wrap li a {
+          color: #cbd5e1 !important;
+          font-size: 0.88rem !important;
+          font-weight: 500 !important;
+          padding: 6px 10px !important;
+          display: flex !important;
+          align-items: center !important;
+          gap: 8px !important;
+          border-radius: 6px !important;
+          text-decoration: none !important;
+          transition: all 0.2s ease !important;
+      }
+      .mega-menu-wrap li a:hover {
+          background: rgba(56, 189, 248, 0.15) !important;
+          color: #ffffff !important;
+          transform: translateX(4px) !important;
+      }
+      .mega-menu-wrap li a i {
+          color: #ff9900 !important;
+          font-size: 0.85rem !important;
+      }
+
+      .right-btn ul {
+          list-style: none !important;
+          padding: 0 !important;
+          margin: 0 !important;
+      }
+      .right-btn a {
+          background: linear-gradient(135deg, #ff9900 0%, #e67e22 100%) !important;
+          color: #ffffff !important;
+          font-weight: 800 !important;
+          font-size: 0.9rem !important;
+          padding: 10px 22px !important;
+          border-radius: 30px !important;
+          box-shadow: 0 4px 15px rgba(255, 153, 0, 0.35) !important;
+          text-decoration: none !important;
+          display: inline-flex !important;
+          align-items: center !important;
+          gap: 8px !important;
+          transition: all 0.3s ease !important;
+      }
+      .right-btn a:hover {
+          background: linear-gradient(135deg, #ffaa1a 0%, #f39c12 100%) !important;
+          transform: translateY(-2deg) !important;
+          box-shadow: 0 8px 25px rgba(255, 153, 0, 0.55) !important;
+          color: #ffffff !important;
+      }
+
+      .book-demo-strip {
+          background: linear-gradient(90deg, #0d1527 0%, #1e293b 50%, #0d1527 100%) !important;
+          padding: 8px 15px !important;
+          border-bottom: 2px solid #ff9900 !important;
+      }
+      .book-demo-strip span {
+          color: #f8fafc !important;
+          font-weight: 700 !important;
+          letter-spacing: 0.5px !important;
+      }
+      .book-demo-strip button {
+          background: linear-gradient(135deg, #ff9900 0%, #ff5500 100%) !important;
+          color: #ffffff !important;
+          font-weight: 800 !important;
+          border-radius: 25px !important;
+          padding: 7px 20px !important;
+          box-shadow: 0 4px 15px rgba(255, 153, 0, 0.4) !important;
+          transition: all 0.3s ease !important;
+      }
+      .book-demo-strip button:hover {
+          transform: scale(1.05) !important;
+          box-shadow: 0 6px 20px rgba(255, 153, 0, 0.6) !important;
+      }
+
+      .navbar-toggler {
+          background: rgba(255, 255, 255, 0.1) !important;
+          border: 1px solid rgba(255, 255, 255, 0.2) !important;
+          color: #ffffff !important;
+          padding: 8px 12px !important;
+          border-radius: 8px !important;
+      }
+      .navbar-toggler i {
+          color: #ff9900 !important;
+          font-size: 1.25rem !important;
+      }
       </style>
    </head>
    <body <?php body_class(); ?>>
    <?php wp_body_open(); ?>
 
    <!-- sticky wrapper start -->
-   <div class="sticky-header-wrapper" style="position: sticky; top: 0; z-index: 1050; background: #fff; width: 100%;">
-   <!-- header start  -->
-   <header>
+   <div class="sticky-header-wrapper">
+    <!-- header start  -->
+    <header style="position: relative; z-index: 20000;">
       <div class="container">
           <div class="row navbarContainer ">
               <div class="col-md-12">
@@ -279,16 +515,6 @@
    </header>
    <!-- header end -->
 
-   <!-- Book A Demo Strip -->
-   <div class="book-demo-strip" style="background: #1e293b; padding: 10px 15px; text-align: center; border-bottom: 2px solid #e06930; position: relative; z-index: 9998;">
-       <div class="container d-flex flex-row align-items-center justify-content-between justify-content-md-center gap-2 gap-md-4">
-           <span style="color: #f8fafc; font-size: 14px; font-weight: 600; letter-spacing: 0.5px; text-align: left; line-height: 1.2;">Experience AI<br class="d-md-none"> Retail ERP</span>
-           <button type="button" class="btn btn-sm" style="background: linear-gradient(to right, #e06930, #fbc145); color: white; font-weight: 800; border-radius: 25px; padding: 8px 20px; border: none; box-shadow: 0 4px 10px rgba(224, 105, 48, 0.3); text-transform: uppercase; font-size: 12px; letter-spacing: 1px; white-space: nowrap;" data-bs-toggle="modal" data-bs-target="#trialModal">
-               <i class="fas fa-calendar-check me-1"></i> Book A Demo
-           </button>
-       </div>
-   </div>
-   </div>
    <!-- sticky wrapper end -->
 
    <!-- WhatsApp Icon Box -->
@@ -326,6 +552,40 @@
            window.open("https://wa.me/" + phone, "_blank");
        });
    });
+
+    // Desktop Navbar Dropdown Buffer (300ms grace period)
+    document.addEventListener('DOMContentLoaded', function() {
+        if (window.innerWidth >= 992) {
+            document.querySelectorAll('.navbar-nav .nav-item').forEach(function(item) {
+                const dropdownMenu = item.querySelector('.sub-menu, .mega-menu');
+                if (!dropdownMenu) return;
+
+                let leaveTimer;
+
+                function keepOpen() {
+                    clearTimeout(leaveTimer);
+                    dropdownMenu.style.display = 'block';
+                    dropdownMenu.style.opacity = '1';
+                    dropdownMenu.style.visibility = 'visible';
+                    dropdownMenu.style.pointerEvents = 'auto';
+                }
+
+                function closeWithDelay() {
+                    leaveTimer = setTimeout(function() {
+                        dropdownMenu.style.opacity = '0';
+                        dropdownMenu.style.visibility = 'hidden';
+                        dropdownMenu.style.pointerEvents = 'none';
+                        dropdownMenu.style.display = '';
+                    }, 300); // 300ms grace period keeps menu open while cursor moves
+                }
+
+                item.addEventListener('mouseenter', keepOpen);
+                item.addEventListener('mouseleave', closeWithDelay);
+                dropdownMenu.addEventListener('mouseenter', keepOpen);
+                dropdownMenu.addEventListener('mouseleave', closeWithDelay);
+            });
+        }
+    });
    </script>
 
    <style>

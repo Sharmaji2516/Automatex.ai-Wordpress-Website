@@ -27,6 +27,59 @@ class AutomateX_DB_Bridge {
 
         // Register custom WP REST API endpoint for WhatsApp leads
         add_action( 'rest_api_init', array( $this, 'register_rest_routes' ) );
+
+        // Seed 72 Cities CPT automatically on init
+        add_action( 'init', array( $this, 'seed_72_cities' ), 20 );
+    }
+
+    /**
+     * Programmatically seed and publish all 72 City CPT posts
+     */
+    public function seed_72_cities() {
+        if ( ! post_type_exists( 'cities' ) ) {
+            return;
+        }
+
+        // Only run seeder check once if not already seeded
+        if ( get_option( 'automatex_72_cities_seeded_v1' ) ) {
+            return;
+        }
+
+        $all_cities = array(
+            "Mumbai", "Delhi", "Bengaluru", "Hyderabad", "Chennai", "Kolkata", "Pune", "Ahmedabad", 
+            "Jaipur", "Surat", "Lucknow", "Kanpur", "Nagpur", "Indore", "Thane", "Bhopal", 
+            "Visakhapatnam", "Pimpri-Chinchwad", "Patna", "Vadodara", "Ghaziabad", "Ludhiana", "Agra", "Nashik", 
+            "Faridabad", "Meerut", "Rajkot", "Kalyan-Dombivli", "Vasai-Virar", "Varanasi", "Srinagar", "Aurangabad", 
+            "Dhanbad", "Amritsar", "Navi Mumbai", "Prayagraj", "Ranchi", "Howrah", "Coimbatore", "Jabalpur", 
+            "Gwalior", "Vijayawada", "Jodhpur", "Madurai", "Raipur", "Kota", "Guwahati", "Chandigarh", 
+            "Solapur", "Hubballi-Dharwad", "Bareilly", "Moradabad", "Mysore", "Gurgaon", "Aligarh", "Jalandhar", 
+            "Tiruchirappalli", "Bhubaneswar", "Salem", "Mira-Bhayandar", "Warangal", "Thiruvananthapuram", "Bhiwandi", "Saharanpur", 
+            "Guntur", "Amravati", "Bikaner", "Noida", "Jamshedpur", "Bhilai", "Cuttack", "Firozabad"
+        );
+
+        foreach ( $all_cities as $city_title ) {
+            $slug = sanitize_title( $city_title );
+            
+            // Check if post already exists
+            $existing = get_page_by_path( $slug, OBJECT, 'cities' );
+            if ( ! $existing ) {
+                $post_id = wp_insert_post( array(
+                    'post_title'   => $city_title,
+                    'post_name'    => $slug,
+                    'post_type'    => 'cities',
+                    'post_status'  => 'publish',
+                    'post_content' => sprintf( 'Top ERP & POS Billing Software in %s for Manufacturing and Retail businesses.', $city_title )
+                ) );
+
+                if ( $post_id && ! is_wp_error( $post_id ) ) {
+                    // Update default dynamic ACF metadata for city
+                    update_post_meta( $post_id, 'hero_badge', '#No.1 ERP Solution in ' . $city_title );
+                    update_post_meta( $post_id, 'hero_description', sprintf( '%s is a rapidly growing business hub. Automatex.ai ERP provides cloud automation for manufacturing, retail, POS billing, GST accounting, and inventory from one unified dashboard.', $city_title ) );
+                }
+            }
+        }
+
+        update_option( 'automatex_72_cities_seeded_v1', 1 );
     }
 
     /**

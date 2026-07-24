@@ -126,6 +126,264 @@
   </footer>
   <!--  footer -->
 
+<style>
+  /* Prevent Modal Backdrop Dark Overlay Lock */
+  .modal-backdrop {
+      z-index: 1040 !important;
+  }
+  #trialModal {
+      z-index: 1050 !important;
+  }
+  body:not(.modal-open) .modal-backdrop {
+      display: none !important;
+  }
+
+  /* Trial Modal Premium Dark Glassmorphism Styling */
+  #trialModal .modal-dialog {
+      max-width: 820px;
+      margin: 1.75rem auto;
+  }
+  #trialModal .modal-content {
+      background: linear-gradient(145deg, #0d1527 0%, #070b19 100%) !important;
+      border: 1px solid rgba(255, 255, 255, 0.15) !important;
+      border-radius: 20px !important;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7), 0 0 35px rgba(255, 153, 0, 0.15) !important;
+      overflow: hidden;
+      position: relative;
+  }
+  #trialModal .close-modal-custom {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      width: 38px;
+      height: 38px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      font-size: 1.25rem;
+      cursor: pointer;
+      z-index: 10;
+      transition: all 0.3s ease;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+  }
+  #trialModal .close-modal-custom:hover {
+      background: #ff9900;
+      color: #000000;
+      transform: scale(1.1) rotate(90deg);
+  }
+  #trialModal .modal-body {
+      padding: 0 !important;
+  }
+  .trial-flex {
+      display: flex;
+      flex-direction: column;
+  }
+  .trial-banner {
+      background: linear-gradient(135deg, #0d1527 0%, #1e293b 50%, #060814 100%) !important;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 30px 25px;
+      box-sizing: border-box;
+  }
+  .trial-banner::before {
+      content: '';
+      position: absolute;
+      top: -50px; left: -50px;
+      width: 150px; height: 150px;
+      background: radial-gradient(circle, rgba(255, 153, 0, 0.25) 0%, rgba(0,0,0,0) 70%);
+      pointer-events: none;
+  }
+  .trial-banner-content {
+      position: relative;
+      z-index: 2;
+      color: #ffffff;
+      width: 100%;
+  }
+  .trial-banner-content h2 {
+      font-size: 1.65rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 8px;
+  }
+  .trial-form-side {
+      flex: 1;
+      padding: 30px 25px;
+      color: #ffffff;
+  }
+  
+  /* Desktop Layout: Full height left panel */
+  @media (min-width: 768px) {
+      .trial-flex {
+          flex-direction: row;
+          align-items: stretch;
+      }
+      .trial-banner {
+          flex: 0 0 42%;
+          width: 42%;
+          border-right: 1px solid rgba(255, 255, 255, 0.12);
+          padding: 40px 30px;
+      }
+      .trial-form-side {
+          padding: 35px 30px;
+      }
+  }
+
+  /* Mobile Layout: Centered upper section */
+  @media (max-width: 767.98px) {
+      .trial-banner {
+          padding: 25px 20px;
+          text-align: center;
+          align-items: center;
+          justify-content: center;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+      }
+      .trial-banner-content {
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+      }
+      .trial-banner-content ul {
+          text-align: left;
+          display: inline-block;
+      }
+      .trial-form-side {
+          padding: 25px 20px;
+      }
+      .trial-form-side .text-center-mobile {
+          text-align: center !important;
+      }
+  }
+
+  .trial-badge {
+      display: inline-block;
+      padding: 4px 12px;
+      background: linear-gradient(90deg, #ff9900 0%, #ff5500 100%);
+      color: #ffffff;
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-radius: 20px;
+      margin-bottom: 8px;
+  }
+  .trial-title {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #ffffff !important;
+      margin-bottom: 4px;
+  }
+  .trial-subtitle {
+      color: #cbd5e1 !important;
+      font-size: 0.92rem !important;
+      font-weight: 500 !important;
+      margin-bottom: 20px;
+  }
+  #trialForm .input-group {
+      margin-bottom: 12px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+  }
+  #trialForm .input-group-text {
+      background: #f1f5f9 !important;
+      border: 1px solid #cbd5e1 !important;
+      border-right: none !important;
+      color: #d97706 !important;
+      padding: 10px 14px;
+      font-size: 0.95rem;
+  }
+  #trialForm .form-control,
+  #trialForm .form-select {
+      background: #ffffff !important;
+      border: 1px solid #cbd5e1 !important;
+      color: #0f172a !important;
+      font-size: 0.9rem !important;
+      font-weight: 600 !important;
+      padding: 10px 14px !important;
+      transition: all 0.3s ease;
+  }
+  #trialForm .form-control::placeholder {
+      color: #475569 !important;
+      font-weight: 600 !important;
+      opacity: 1 !important;
+  }
+  #trialForm .form-select {
+      color: #475569 !important;
+      font-weight: 600 !important;
+  }
+  #trialForm .form-select option {
+      background: #ffffff;
+      color: #0f172a;
+      font-weight: 600;
+  }
+  #trialForm .form-control:focus,
+  #trialForm .form-select:focus {
+      background: #ffffff !important;
+      border-color: #ff9900 !important;
+      box-shadow: 0 0 0 3px rgba(255, 153, 0, 0.35) !important;
+      color: #0f172a !important;
+  }
+  #trialForm textarea.form-control {
+      border-radius: 10px !important;
+      margin-bottom: 15px;
+      border: 1px solid #cbd5e1 !important;
+      background: #ffffff !important;
+      color: #0f172a !important;
+      font-weight: 600 !important;
+  }
+  .trial-btn {
+      width: 100%;
+      background: linear-gradient(135deg, #ff9900 0%, #e67e22 100%) !important;
+      color: #ffffff !important;
+      font-weight: 800 !important;
+      font-size: 1rem !important;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 14px 20px !important;
+      border: none !important;
+      border-radius: 10px !important;
+      box-shadow: 0 6px 20px rgba(255, 153, 0, 0.4) !important;
+      transition: all 0.3s ease !important;
+      cursor: pointer;
+      margin-top: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+  }
+  .trial-btn:hover {
+      background: linear-gradient(135deg, #ffaa1a 0%, #f39c12 100%) !important;
+      transform: translateY(-2deg);
+      box-shadow: 0 10px 25px rgba(255, 153, 0, 0.55) !important;
+  }
+  .dont-show-box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 14px;
+      font-size: 0.85rem;
+      color: #e2e8f0;
+      font-weight: 600;
+  }
+  .dont-show-box input[type="checkbox"] {
+      accent-color: #ff9900;
+      width: 16px;
+      height: 16px;
+      cursor: pointer;
+  }
+  .dont-show-box label {
+      cursor: pointer;
+      margin-bottom: 0;
+  }
+</style>
+
   <!-- Trial Modal -->
   <div class="modal fade" id="trialModal" tabindex="-1" aria-hidden="true" data-bs-focus="false">
       <div class="modal-dialog modal-dialog-centered">
@@ -136,16 +394,29 @@
               <div class="modal-body">
                   <div class="trial-flex">
                       <!-- Left Side: Banner (Visible on Desktop) -->
-                      <div class="trial-banner" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/free_trial_banner_1778579466613.png');">
+                      <div class="trial-banner">
                           <div class="trial-banner-content">
-                              <h2 class="mb-2">Scale Your Success</h2>
-                              <p class="mb-0 small">Join the future of retail with Automatex.ai.</p>
+                              <div class="mb-3">
+                                  <span style="background: #ffffff; padding: 6px 12px; border-radius: 8px; display: inline-block;">
+                                      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-automatex.png" alt="AutomateX.ai" style="height: 28px; width: auto;">
+                                  </span>
+                              </div>
+                              <h2>Scale Your <span style="color: #ff9900;">Success</span></h2>
+                              <p style="color: #cbd5e1; font-size: 0.9rem; margin-bottom: 20px;">Join the future of retail & manufacturing with Automatex.ai ERP.</p>
+                              
+                              <ul class="list-unstyled mb-0" style="font-size: 0.85rem; color: #f1f5f9;">
+                                  <li class="mb-2"><i class="fas fa-check-circle text-warning me-2"></i> AI-Powered POS & Billing</li>
+                                  <li class="mb-2"><i class="fas fa-check-circle text-warning me-2"></i> Real-time Stock Inventory</li>
+                                  <li class="mb-2"><i class="fas fa-check-circle text-warning me-2"></i> GST Accounting & CRM</li>
+                                  <li class="mb-0"><i class="fas fa-check-circle text-warning me-2"></i> 24/7 Dedicated Support</li>
+                              </ul>
                           </div>
                       </div>
 
                       <!-- Right Side: Form -->
                       <div class="trial-form-side">
                           <div class="text-center text-md-start">
+                              <span class="trial-badge"><i class="fas fa-fire me-1"></i> Exclusive Access</span>
                               <h3 class="trial-title">Special Offer - Free Trial</h3>
                               <p class="trial-subtitle">Experience AI-driven ERP today.</p>
                           </div>
@@ -205,10 +476,10 @@
                                   </div>
                               </div>
                               <div class="mb-2">
-                                  <textarea class="form-control" name="message" rows="2" placeholder="Brief requirements..." style="border: 1px solid #ddd; border-radius: 8px; font-size: 0.8rem;"></textarea>
+                                  <textarea class="form-control" name="message" rows="2" placeholder="Brief requirements..."></textarea>
                               </div>
 
-                              <button type="submit" class="trial-btn" id="trialSubmitBtn">Get Free Trial Now</button>
+                              <button type="submit" class="trial-btn" id="trialSubmitBtn"><i class="fas fa-paper-plane me-1"></i> Get Free Trial Now</button>
 
                               <div class="dont-show-box">
                                   <input type="checkbox" id="dontShowTrial">

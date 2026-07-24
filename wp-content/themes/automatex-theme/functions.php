@@ -55,11 +55,14 @@ function automatex_scripts() {
     wp_enqueue_style( 'automatex-style', get_stylesheet_uri(), array(), '1.0.0' );
     wp_enqueue_style( 'automatex-custom-style', get_template_directory_uri() . '/assets/css/style.css', array(), '1.0.0' );
     wp_enqueue_style( 'automatex-responsive-style', get_template_directory_uri() . '/assets/css/responsive.css', array(), '1.0.0' );
-
+    wp_enqueue_style( 'automatex-chatbot-style', get_template_directory_uri() . '/assets/css/chatbot.css', array(), '1.0.0' );
     // Homepage specific styles
     if ( is_front_page() ) {
         wp_enqueue_style( 'automatex-home-style', get_template_directory_uri() . '/assets/css/premium-home.css', array(), '1.0.0' );
     }
+
+    // Comprehensive Dark AI Theme (load last for priority)
+    wp_enqueue_style( 'automatex-dark-ai-style', get_template_directory_uri() . '/assets/css/dark-ai-theme.css', array(), '1.0.3' );
 
     // 4. Scripts (enqueue in footer)
     wp_enqueue_script( 'jquery' ); // Standard WordPress jQuery
@@ -70,8 +73,9 @@ function automatex_scripts() {
     wp_enqueue_script( 'fancybox-js', 'https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js', array('jquery'), '3.5.7', true );
     wp_enqueue_script( 'aos-js', 'https://unpkg.com/aos@2.3.1/dist/aos.js', array('jquery'), '2.3.1', true );
     
-    // Custom logic script
+    // Custom logic & Chatbot scripts
     wp_enqueue_script( 'automatex-custom-js', get_template_directory_uri() . '/assets/js/custom.js', array('jquery'), '1.0.0', true );
+    wp_enqueue_script( 'automatex-chatbot-js', get_template_directory_uri() . '/assets/js/chatbot.js', array('jquery'), '1.0.0', true );
 
     // GSAP Animations (homepage and dynamic elements)
     wp_enqueue_script( 'gsap-js', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js', array(), '3.12.2', true );
@@ -117,3 +121,123 @@ function register_cities_cpt() {
     register_post_type( 'cities', $args );
 }
 add_action( 'init', 'register_cities_cpt' );
+
+// Wildcard rewrite rules & template loader for all 72 City pages
+function automatex_cities_rewrite_rules() {
+    add_rewrite_rule( '^cities/([^/]+)/?', 'index.php?city_slug=$matches[1]', 'top' );
+}
+add_action( 'init', 'automatex_cities_rewrite_rules' );
+
+function automatex_cities_query_vars( $vars ) {
+    $vars[] = 'city_slug';
+    return $vars;
+}
+add_filter( 'query_vars', 'automatex_cities_query_vars' );
+
+function automatex_cities_template_include( $template ) {
+    $city_slug = get_query_var( 'city_slug' );
+    if ( ! empty( $city_slug ) ) {
+        $single_city = get_template_directory() . '/single-cities.php';
+        if ( file_exists( $single_city ) ) {
+            return $single_city;
+        }
+    }
+    return $template;
+}
+add_filter( 'template_include', 'automatex_cities_template_include' );
+
+// Auto flush rewrite rules on theme setup
+function automatex_flush_rewrite_rules_once() {
+    if ( ! get_option( 'automatex_cities_rules_flushed_v3' ) ) {
+        automatex_cities_rewrite_rules();
+        flush_rewrite_rules();
+        update_option( 'automatex_cities_rules_flushed_v3', 1 );
+    }
+}
+add_action( 'init', 'automatex_flush_rewrite_rules_once', 99 );
+
+/**
+ * Auto Template Interceptor: Maps any URL slug directly to theme page template (e.g. page-search-engine-optimization.php)
+ */
+function automatex_page_template_interceptor( $template ) {
+    if ( is_admin() ) {
+        return $template;
+    }
+
+    $request_uri = trim( parse_url( $_SERVER['REQUEST_URI'], PHP_URL_PATH ), '/' );
+    if ( empty( $request_uri ) ) {
+        return $template;
+    }
+
+    $slug = basename( $request_uri );
+    $slug = preg_replace( '/\.php$/i', '', $slug );
+
+    $possible_files = [
+        "page-{$slug}.php",
+        "template-{$slug}.php"
+    ];
+
+    foreach ( $possible_files as $file_name ) {
+        $file_path = get_template_directory() . '/' . $file_name;
+        if ( file_exists( $file_path ) ) {
+            return $file_path;
+        }
+    }
+
+    return $template;
+}
+add_filter( 'template_include', 'automatex_page_template_interceptor', 98 );
+
+/**
+ * Auto-create WordPress pages in database so all custom service & product routes exist in WP
+ */
+function automatex_auto_create_pages() {
+    if ( get_option( 'automatex_pages_created_v1' ) ) {
+        return;
+    }
+
+    $pages_to_create = [
+        'search-engine-optimization' => 'Search Engine Optimization (SEO)',
+        'seo' => 'SEO Services',
+        'digital-marketing-services' => 'Digital Marketing Services',
+        'social-media-optimization' => 'Social Media Optimization',
+        'on-page-seo-services' => 'On Page SEO Services',
+        'off-page-seo-services' => 'Off Page SEO Services',
+        'technical-seo-services' => 'Technical SEO Services',
+        'modern-responsive-website-design' => 'Modern & Responsive Website Design',
+        'e-commerce-website-development' => 'E-Commerce Website Development',
+        'custom-crm-solutions' => 'Custom CRM Solutions',
+        'web-development-services' => 'Web Development Services',
+        'android-application' => 'Android Application',
+        'ios-application' => 'IOS Application',
+        'pos' => 'POS',
+        'erp' => 'ERP',
+        'accounting' => 'Accounting',
+        'inventory' => 'Inventory',
+        'omnichannel' => 'Omnichannel',
+        'crm' => 'CRM',
+        'smart-retail' => 'Smart Retail',
+        'lead-management' => 'Lead Management',
+        'payroll' => 'Payroll',
+        'education' => 'Education',
+        'invoicing' => 'Invoicing',
+        'logistics' => 'Logistics',
+    ];
+
+    foreach ( $pages_to_create as $slug => $title ) {
+        $page = get_page_by_path( $slug );
+        if ( ! $page ) {
+            wp_insert_post( array(
+                'post_title'     => $title,
+                'post_name'      => $slug,
+                'post_status'    => 'publish',
+                'post_type'      => 'page',
+                'post_content'   => '',
+            ) );
+        }
+    }
+    update_option( 'automatex_pages_created_v1', 1 );
+}
+add_action( 'init', 'automatex_auto_create_pages' );
+
+
