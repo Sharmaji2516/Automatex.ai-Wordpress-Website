@@ -444,7 +444,49 @@
           font-size: 1.25rem !important;
       }
       </style>
-   </head>
+
+       <!-- GUARANTEED MOBILE DROPDOWN TOGGLE SCRIPT (Zero-Dependency Vanilla JS) -->
+       <script>
+       document.addEventListener('DOMContentLoaded', function() {
+           function initMobileNav() {
+               if (window.innerWidth < 992) {
+                   var dropdownLinks = document.querySelectorAll('.navbar-nav .nav-item.dropdown > a');
+                   dropdownLinks.forEach(function(link) {
+                       link.removeEventListener('click', handleDropdownClick);
+                       link.addEventListener('click', handleDropdownClick);
+                   });
+               }
+           }
+
+           function handleDropdownClick(e) {
+               if (window.innerWidth >= 992) return;
+
+               var parent = this.closest('.nav-item.dropdown');
+               if (!parent) return;
+
+               var submenu = parent.querySelector('.mega-menu, .sub-menu');
+               if (submenu) {
+                   e.preventDefault();
+                   e.stopPropagation();
+
+                   // Close other open dropdowns
+                   document.querySelectorAll('.navbar-nav .nav-item.dropdown').forEach(function(item) {
+                       if (item !== parent) {
+                           item.classList.remove('show', 'active');
+                       }
+                   });
+
+                   // Toggle current dropdown
+                   parent.classList.toggle('show');
+                   parent.classList.toggle('active');
+               }
+           }
+
+           initMobileNav();
+           window.addEventListener('resize', initMobileNav);
+       });
+       </script>
+    </head>
    <body <?php body_class(); ?>>
    <?php wp_body_open(); ?>
 
