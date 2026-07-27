@@ -288,54 +288,71 @@
       margin-bottom: 12px;
       border-radius: 10px;
       overflow: hidden;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+      border: 1px solid rgba(255, 255, 255, 0.12) !important;
+      transition: all 0.3s ease;
+  }
+  #trialForm .input-group:focus-within {
+      border-color: #ff9900 !important;
+      box-shadow: 0 0 0 3px rgba(255, 153, 0, 0.25) !important;
   }
   #trialForm .input-group-text {
-      background: #f1f5f9 !important;
-      border: 1px solid #cbd5e1 !important;
-      border-right: none !important;
-      color: #d97706 !important;
+      background: rgba(255, 255, 255, 0.04) !important;
+      border: none !important;
+      color: #ff9900 !important;
       padding: 10px 14px;
       font-size: 0.95rem;
   }
   #trialForm .form-control,
   #trialForm .form-select {
-      background: #ffffff !important;
-      border: 1px solid #cbd5e1 !important;
-      color: #0f172a !important;
+      background: rgba(15, 23, 42, 0.6) !important;
+      border: none !important;
+      color: #f8fafc !important;
       font-size: 0.9rem !important;
-      font-weight: 600 !important;
+      font-weight: 500 !important;
       padding: 10px 14px !important;
       transition: all 0.3s ease;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
   }
   #trialForm .form-control::placeholder {
-      color: #475569 !important;
-      font-weight: 600 !important;
+      color: #64748b !important;
+      font-weight: 500 !important;
       opacity: 1 !important;
   }
   #trialForm .form-select {
-      color: #475569 !important;
-      font-weight: 600 !important;
+      color: #64748b !important;
+      font-weight: 500 !important;
   }
   #trialForm .form-select option {
-      background: #ffffff;
-      color: #0f172a;
-      font-weight: 600;
+      background: #0f172a;
+      color: #f8fafc;
+      font-weight: 500;
   }
   #trialForm .form-control:focus,
   #trialForm .form-select:focus {
-      background: #ffffff !important;
-      border-color: #ff9900 !important;
-      box-shadow: 0 0 0 3px rgba(255, 153, 0, 0.35) !important;
-      color: #0f172a !important;
+      background: rgba(15, 23, 42, 0.8) !important;
+      color: #ffffff !important;
+      box-shadow: none !important;
+      outline: none !important;
   }
   #trialForm textarea.form-control {
       border-radius: 10px !important;
       margin-bottom: 15px;
-      border: 1px solid #cbd5e1 !important;
-      background: #ffffff !important;
-      color: #0f172a !important;
-      font-weight: 600 !important;
+      border: 1px solid rgba(255, 255, 255, 0.12) !important;
+      background: rgba(15, 23, 42, 0.6) !important;
+      color: #f8fafc !important;
+      font-weight: 500 !important;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      transition: all 0.3s ease;
+  }
+  #trialForm textarea.form-control:focus {
+      border-color: #ff9900 !important;
+      background: rgba(15, 23, 42, 0.8) !important;
+      box-shadow: 0 0 0 3px rgba(255, 153, 0, 0.25) !important;
+      color: #ffffff !important;
+      outline: none !important;
   }
   .trial-btn {
       width: 100%;
@@ -362,6 +379,10 @@
       transform: translateY(-2deg);
       box-shadow: 0 10px 25px rgba(255, 153, 0, 0.55) !important;
   }
+  .trial-btn:focus {
+      outline: none !important;
+      box-shadow: 0 0 0 3px rgba(255, 153, 0, 0.4) !important;
+  }
   .dont-show-box {
       display: flex;
       align-items: center;
@@ -381,6 +402,52 @@
   .dont-show-box label {
       cursor: pointer;
       margin-bottom: 0;
+  }
+
+  /* Premium Success Card */
+  .trial-success-card {
+      text-align: center;
+      padding: 40px 20px;
+      animation: fadeInScale 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+  .success-icon-wrap {
+      font-size: 4.5rem;
+      color: #22c55e;
+      margin-bottom: 20px;
+      display: inline-flex;
+      animation: pulseGlow 2s infinite ease-in-out;
+  }
+  .trial-success-card h4 {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 12px;
+  }
+  .trial-success-card p {
+      color: #cbd5e1;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-bottom: 0;
+  }
+  @keyframes fadeInScale {
+      0% {
+          opacity: 0;
+          transform: scale(0.9);
+      }
+      100% {
+          opacity: 1;
+          transform: scale(1);
+      }
+  }
+  @keyframes pulseGlow {
+      0%, 100% {
+          transform: scale(1);
+          filter: drop-shadow(0 0 5px rgba(34, 197, 94, 0.25));
+      }
+      50% {
+          transform: scale(1.05);
+          filter: drop-shadow(0 0 15px rgba(34, 197, 94, 0.65));
+      }
   }
 </style>
 
@@ -609,15 +676,33 @@
               submitBtn.disabled = false;
               submitBtn.innerText = "Get Free Trial Now";
 
-              if (res.success) {
-                  msgArea.innerHTML = '<div class="alert alert-success">Thank you! Your trial request has been submitted successfully.</div>';
-                  localStorage.setItem('trial_modal_dismissed_v2_at', Date.now());
-                  isPermanentlyDismissed = true;
-                  clearTimer();
-                  setTimeout(() => {
-                      trialModal.hide();
-                  }, 2000);
-              } else {
+               if (res.success) {
+                   trialForm.style.display = 'none';
+                   const formSide = document.querySelector('.trial-form-side');
+                   if (formSide) {
+                       const title = formSide.querySelector('.trial-title');
+                       const subtitle = formSide.querySelector('.trial-subtitle');
+                       const badge = formSide.querySelector('.trial-badge');
+                       if (title) title.style.display = 'none';
+                       if (subtitle) subtitle.style.display = 'none';
+                       if (badge) badge.style.display = 'none';
+                   }
+                   msgArea.innerHTML = `
+                       <div class="trial-success-card">
+                           <div class="success-icon-wrap">
+                               <i class="fas fa-check-circle"></i>
+                           </div>
+                           <h4>Request Submitted!</h4>
+                           <p>Thank you! Your trial request has been received. We will get in touch with you shortly.</p>
+                       </div>
+                   `;
+                   localStorage.setItem('trial_modal_dismissed_v2_at', Date.now());
+                   isPermanentlyDismissed = true;
+                   clearTimer();
+                   setTimeout(() => {
+                       trialModal.hide();
+                   }, 3000);
+               } else {
                   msgArea.innerHTML = '<div class="alert alert-danger">Error: ' + res.data.message + '</div>';
               }
           })
@@ -639,13 +724,27 @@
           clearTimer();
       });
 
-      trialModalEl.addEventListener('hidden.bs.modal', function () {
-          // Explicit cleanup of overlays & locks to completely prevent mobile black screen bugs
-          document.querySelectorAll('.modal-backdrop').forEach(el => el.remove());
-          document.body.classList.remove('modal-open');
-          document.body.style.overflow = '';
-          document.body.style.paddingRight = '';
-      });
+       trialModalEl.addEventListener('hidden.bs.modal', function () {
+           // Explicit cleanup of overlays & locks to completely prevent mobile black screen bugs
+           document.querySelectorAll('.modal-backdrop').forEach(el => el.remove());
+           document.body.classList.remove('modal-open');
+           document.body.style.overflow = '';
+           document.body.style.paddingRight = '';
+
+           // Restore form visibility and reset fields for subsequent manual opens
+           trialForm.reset();
+           trialForm.style.display = 'flex';
+           msgArea.innerHTML = '';
+           const formSide = document.querySelector('.trial-form-side');
+           if (formSide) {
+               const title = formSide.querySelector('.trial-title');
+               const subtitle = formSide.querySelector('.trial-subtitle');
+               const badge = formSide.querySelector('.trial-badge');
+               if (title) title.style.display = '';
+               if (subtitle) subtitle.style.display = '';
+               if (badge) badge.style.display = '';
+           }
+       });
   });
   </script>
 
