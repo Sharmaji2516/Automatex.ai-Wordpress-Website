@@ -388,8 +388,8 @@
   <div class="modal fade" id="trialModal" tabindex="-1" aria-hidden="true" data-bs-focus="false">
       <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content border-0">
-              <div class="close-modal-custom" data-bs-dismiss="modal">
-                  <i class="bi bi-x"></i>
+              <div class="close-modal-custom" data-bs-dismiss="modal" data-dismiss="modal">
+                  <i class="fas fa-times"></i>
               </div>
               <div class="modal-body">
                   <div class="trial-flex">
@@ -496,19 +496,25 @@
   <script>
   document.addEventListener("DOMContentLoaded", function() {
       const trialModalEl = document.getElementById('trialModal');
-      const trialModal = new bootstrap.Modal(trialModalEl);
+      if (!trialModalEl) return;
+
+      const trialModal = bootstrap.Modal.getOrCreateInstance(trialModalEl);
       const dontShowCheckbox = document.getElementById('dontShowTrial');
       const trialForm = document.getElementById('trialForm');
       const msgArea = document.getElementById('trialMessageArea');
       
       let popupCount = parseInt(sessionStorage.getItem('trial_popup_count')) || 0;
-      const maxPopups = 2;
+      const maxPopups = 1; // Only show automatically once per browsing session to prevent annoying lock issues
       let isPermanentlyDismissed = false;
       let timerId = null;
       let startTime = null;
       let remainingTime = 0;
 
       function shouldShowModal() {
+          // Do not show automatically if dismissed in this session
+          if (sessionStorage.getItem('trial_modal_dismissed_session') === 'true') {
+              return false;
+          }
           const lastDismissed = localStorage.getItem('trial_modal_dismissed_v2_at');
           if (!lastDismissed) return true;
           const sevenDaysInMs = 7 * 24 * 60 * 60 * 1000;
@@ -521,7 +527,7 @@
           remainingTime = delay;
           
           timerId = setTimeout(() => {
-              if (!document.querySelector('.modal.show') && !isPermanentlyDismissed) {
+              if (!document.querySelector('.modal.show') && !isPermanentlyDismissed && shouldShowModal()) {
                   trialModal.show();
                   popupCount++;
                   sessionStorage.setItem('trial_popup_count', popupCount);
@@ -543,7 +549,7 @@
           if (remainingTime > 0 && !timerId) {
               startTime = Date.now();
               timerId = setTimeout(() => {
-                  if (!document.querySelector('.modal.show') && !isPermanentlyDismissed) {
+                  if (!document.querySelector('.modal.show') && !isPermanentlyDismissed && shouldShowModal()) {
                       trialModal.show();
                       popupCount++;
                       sessionStorage.setItem('trial_popup_count', popupCount);
@@ -563,10 +569,11 @@
 
       function scheduleNext() {
           if (popupCount >= maxPopups || isPermanentlyDismissed || !shouldShowModal()) return;
-          const delay = (popupCount === 0) ? 3000 : 6000;
+          const delay = 3000; // Trigger after 3 seconds on page load
           startTimer(delay);
       }
 
+      // Safely auto-show popup
       if (shouldShowModal()) {
           scheduleNext();
           if (document.hidden) {
@@ -622,17 +629,22 @@
       });
 
       trialModalEl.addEventListener('hide.bs.modal', function () {
+          // Mark as dismissed for this session so they aren't bothered on subsequent pages
+          sessionStorage.setItem('trial_modal_dismissed_session', 'true');
+          
           if (dontShowCheckbox && dontShowCheckbox.checked) {
               localStorage.setItem('trial_modal_dismissed_v2_at', Date.now());
               isPermanentlyDismissed = true;
-              clearTimer();
           }
+          clearTimer();
       });
 
       trialModalEl.addEventListener('hidden.bs.modal', function () {
-          if (!isPermanentlyDismissed) {
-              scheduleNext();
-          }
+          // Explicit cleanup of overlays & locks to completely prevent mobile black screen bugs
+          document.querySelectorAll('.modal-backdrop').forEach(el => el.remove());
+          document.body.classList.remove('modal-open');
+          document.body.style.overflow = '';
+          document.body.style.paddingRight = '';
       });
   });
   </script>

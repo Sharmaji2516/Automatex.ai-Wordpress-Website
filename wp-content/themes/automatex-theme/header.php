@@ -254,6 +254,15 @@
           transform: scale(1.05) !important;
           box-shadow: 0 6px 20px rgba(255, 153, 0, 0.6) !important;
       }
+      @media (max-width: 576px) {
+          .book-demo-strip span {
+              font-size: 0.8rem !important;
+          }
+          .book-demo-strip button {
+              padding: 5px 12px !important;
+              font-size: 0.75rem !important;
+          }
+      }
 
       .navbar-toggler {
           background: rgba(255, 255, 255, 0.1) !important;
@@ -271,8 +280,15 @@
    <body <?php body_class(); ?>>
    <?php wp_body_open(); ?>
 
-   <!-- sticky wrapper start -->
-   <div class="sticky-header-wrapper">
+    <!-- sticky wrapper start -->
+    <div class="sticky-header-wrapper">
+     <!-- Book Demo Top Strip -->
+     <div class="book-demo-strip d-flex justify-content-between align-items-center">
+         <span>Experience AI Retail ERP</span>
+         <button type="button" data-bs-toggle="modal" data-bs-target="#trialModal">
+             <i class="fas fa-calendar-check me-2"></i>BOOK A DEMO
+         </button>
+     </div>
     <!-- header start  -->
     <header style="position: relative; z-index: 20000;">
       <div class="container">
@@ -281,7 +297,7 @@
                 <div class="nav-wrap">
                   <nav class="navbar navbar-expand-lg">
                     <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" style="text-decoration: none; display: flex; align-items: center;">
-                      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-automatex.png" alt="AutomateX.ai Logo" style="height: 50px; width: auto;" />
+                      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="AutomateX.ai Logo" style="height: 50px; width: auto;" />
                     </a>
                     <button
                       class="navbar-toggler"
