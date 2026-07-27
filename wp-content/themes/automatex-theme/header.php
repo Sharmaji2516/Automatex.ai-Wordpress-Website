@@ -165,6 +165,20 @@
                font-size: 0.9rem !important;
            }
 
+           /* Chevron Icon Rotation */
+           .navbar-nav .nav-link i,
+           .navbar-nav .nav-link i.fa-angle-down {
+               color: #64748b !important;
+               font-size: 0.85rem !important;
+               transition: transform 0.25s ease !important;
+           }
+
+           .navbar-nav .nav-item.show > .nav-link i,
+           .navbar-nav .nav-item.active > .nav-link i {
+               color: #ea580c !important;
+               transform: rotate(180deg) !important;
+           }
+
            /* === 100% UNIFORM WHITE CARD ACCORDION FOR ALL DROPDOWNS === */
            .mega-menu,
            .sub-menu,
@@ -292,82 +306,72 @@
            .sub-menu::before, .mega-menu::before { display: none !important; }
        }
 
-      .sub-menu {
-          min-width: 220px !important;
-          padding: 12px 8px !important;
-      }
-      .sub-menu li {
-          list-style: none !important;
-          margin-bottom: 4px !important;
-      }
-      .sub-menu li a {
-          color: #cbd5e1 !important;
-       /* Desktop Navigation Dropdown Styling */
-       @media (min-width: 992px) {
-           .sub-menu {
-               min-width: 220px !important;
-               padding: 12px 8px !important;
-           }
-           .sub-menu li {
-               list-style: none !important;
-               margin-bottom: 4px !important;
-           }
-           .sub-menu li a {
-               color: #cbd5e1 !important;
-               font-weight: 600 !important;
-               font-size: 0.9rem !important;
-               padding: 8px 14px !important;
-               display: block !important;
-               border-radius: 8px !important;
-               text-decoration: none !important;
-               transition: all 0.2s ease !important;
-           }
-           .sub-menu li a:hover {
-               background: rgba(56, 189, 248, 0.15) !important;
-               color: #ffffff !important;
-               padding-left: 18px !important;
-           }
+        /* Desktop Dropdown Styles */
+        @media (min-width: 992px) {
+            .sub-menu {
+                min-width: 220px !important;
+                padding: 12px 8px !important;
+            }
+            .sub-menu li {
+                list-style: none !important;
+                margin-bottom: 4px !important;
+            }
+            .sub-menu li a {
+                color: #cbd5e1 !important;
+                font-weight: 600 !important;
+                font-size: 0.9rem !important;
+                padding: 8px 14px !important;
+                display: block !important;
+                border-radius: 8px !important;
+                text-decoration: none !important;
+                transition: all 0.2s ease !important;
+            }
+            .sub-menu li a:hover {
+                background: rgba(56, 189, 248, 0.15) !important;
+                color: #ffffff !important;
+                padding-left: 18px !important;
+            }
 
-           .mega-menu-wrap strong {
-               color: #38bdf8 !important;
-               font-weight: 800 !important;
-               font-size: 0.85rem !important;
-               text-transform: uppercase !important;
-               letter-spacing: 0.8px !important;
-               display: flex !important;
-               align-items: center !important;
-               gap: 8px !important;
-               padding-bottom: 8px !important;
-               margin-bottom: 12px !important;
-               border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
-           }
-           .mega-menu-wrap ul {
-               list-style: none !important;
-               padding: 0 !important;
-               margin-bottom: 20px !important;
-           }
-           .mega-menu-wrap li a {
-               color: #cbd5e1 !important;
-               font-size: 0.88rem !important;
-               font-weight: 500 !important;
-               padding: 6px 10px !important;
-               display: flex !important;
-               align-items: center !important;
-               gap: 8px !important;
-               border-radius: 6px !important;
-               text-decoration: none !important;
-               transition: all 0.2s ease !important;
-           }
-           .mega-menu-wrap li a:hover {
-               background: rgba(56, 189, 248, 0.15) !important;
-               color: #ffffff !important;
-               transform: translateX(4px) !important;
-           }
-           .mega-menu-wrap li a i {
-               color: #ff9900 !important;
-               font-size: 0.85rem !important;
-           }
-       }
+            .mega-menu-wrap strong {
+                color: #38bdf8 !important;
+                font-weight: 800 !important;
+                font-size: 0.85rem !important;
+                text-transform: uppercase !important;
+                letter-spacing: 0.8px !important;
+                display: flex !important;
+                align-items: center !important;
+                gap: 8px !important;
+                padding-bottom: 8px !important;
+                margin-bottom: 12px !important;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+            }
+            .mega-menu-wrap ul {
+                list-style: none !important;
+                padding: 0 !important;
+                margin-bottom: 20px !important;
+            }
+            .mega-menu-wrap li a {
+                color: #cbd5e1 !important;
+                font-size: 0.88rem !important;
+                font-weight: 500 !important;
+                padding: 6px 10px !important;
+                display: flex !important;
+                align-items: center !important;
+                gap: 8px !important;
+                border-radius: 6px !important;
+                text-decoration: none !important;
+                transition: all 0.2s ease !important;
+            }
+            .mega-menu-wrap li a:hover {
+                background: rgba(56, 189, 248, 0.15) !important;
+                color: #ffffff !important;
+                transform: translateX(4px) !important;
+            }
+            .mega-menu-wrap li a i {
+                color: #ff9900 !important;
+                font-size: 0.85rem !important;
+            }
+        }
 
       .right-btn ul {
           list-style: none !important;
