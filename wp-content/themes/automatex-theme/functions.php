@@ -192,7 +192,7 @@ add_filter( 'template_include', 'automatex_page_template_interceptor', 98 );
  * Auto-create WordPress pages in database so all custom service & product routes exist in WP
  */
 function automatex_auto_create_pages() {
-    if ( get_option( 'automatex_pages_created_v1' ) ) {
+    if ( get_option( 'automatex_pages_created_v2' ) ) {
         return;
     }
 
@@ -222,6 +222,13 @@ function automatex_auto_create_pages() {
         'education' => 'Education',
         'invoicing' => 'Invoicing',
         'logistics' => 'Logistics',
+        'customer-support-chatbot' => 'Customer Support Chatbot',
+        'manufacturing-chatbot' => 'Manufacturing Chatbot',
+        'sales-chatbot' => 'Sales Chatbot',
+        'billing-chatbot' => 'Billing Chatbot',
+        'healthcare-chatbot' => 'Healthcare Chatbot',
+        'enterprise-chatbot' => 'Enterprise Chatbot',
+        'education-chatbot' => 'Education Chatbot',
     ];
 
     foreach ( $pages_to_create as $slug => $title ) {
@@ -236,7 +243,7 @@ function automatex_auto_create_pages() {
             ) );
         }
     }
-    update_option( 'automatex_pages_created_v1', 1 );
+    update_option( 'automatex_pages_created_v2', 1 );
 }
 add_action( 'init', 'automatex_auto_create_pages' );
 

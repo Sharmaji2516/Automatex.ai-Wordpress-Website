@@ -538,7 +538,7 @@
                           </a>
                           <div class="mega-menu">
                             <div class="row">
-                              <div class="col-md-4">
+                              <div class="col-md-3">
                                 <div class="mega-menu-wrap">
                                   <ul>
                                     <strong><i class="fa-solid fa-bullhorn"></i> Digital Marketing</strong>
@@ -551,7 +551,7 @@
                                   </ul>
                                 </div>
                               </div>
-                              <div class="col-md-4">
+                              <div class="col-md-3">
                                 <div class="mega-menu-wrap">
                                   <ul>
                                     <strong><i class="fa-solid fa-globe"></i> Website Design & Development</strong>
@@ -562,12 +562,26 @@
                                   </ul>
                                 </div>
                               </div>
-                              <div class="col-md-4">
+                              <div class="col-md-3">
                                 <div class="mega-menu-wrap">
                                   <ul>
                                     <strong><i class="fa-solid fa-mobile-screen"></i> Mobile Application</strong>
                                     <li><a href="<?php echo esc_url( home_url( '/android-application/' ) ); ?>"><i class="fa-brands fa-android"></i> Android Application</a></li>
                                     <li><a href="<?php echo esc_url( home_url( '/ios-application/' ) ); ?>"><i class="fa-brands fa-apple"></i> IOS Application</a></li>
+                                  </ul>
+                                </div>
+                              </div>
+                              <div class="col-md-3">
+                                <div class="mega-menu-wrap">
+                                  <ul>
+                                    <strong><i class="fa-solid fa-robot"></i> AI Automation & Chatbot</strong>
+                                    <li><a href="<?php echo esc_url( home_url( '/customer-support-chatbot/' ) ); ?>"><i class="fa-solid fa-headset"></i> Customer Support Chatbot</a></li>
+                                    <li><a href="<?php echo esc_url( home_url( '/manufacturing-chatbot/' ) ); ?>"><i class="fa-solid fa-industry"></i> Manufacturing Chatbot</a></li>
+                                    <li><a href="<?php echo esc_url( home_url( '/sales-chatbot/' ) ); ?>"><i class="fa-solid fa-chart-line"></i> Sales Chatbot</a></li>
+                                    <li><a href="<?php echo esc_url( home_url( '/billing-chatbot/' ) ); ?>"><i class="fa-solid fa-file-invoice-dollar"></i> Billing Chatbot</a></li>
+                                    <li><a href="<?php echo esc_url( home_url( '/healthcare-chatbot/' ) ); ?>"><i class="fa-solid fa-heart-pulse"></i> Healthcare Chatbot</a></li>
+                                    <li><a href="<?php echo esc_url( home_url( '/enterprise-chatbot/' ) ); ?>"><i class="fa-solid fa-building"></i> Enterprise Chatbot</a></li>
+                                    <li><a href="<?php echo esc_url( home_url( '/education-chatbot/' ) ); ?>"><i class="fa-solid fa-graduation-cap"></i> Education Chatbot</a></li>
                                   </ul>
                                 </div>
                               </div>
