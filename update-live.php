@@ -22,6 +22,7 @@ echo '<h1>AutomateX Auto-Deployer</h1>';
 $files_to_sync = array(
     'wp-content/themes/automatex-theme/header.php',
     'wp-content/themes/automatex-theme/footer.php',
+    'wp-content/themes/automatex-theme/single-cities.php',
     'wp-content/themes/automatex-theme/assets/css/dark-ai-theme.css',
     'wp-content/themes/automatex-theme/assets/css/responsive.css',
     'wp-content/themes/automatex-theme/assets/js/custom.js',
