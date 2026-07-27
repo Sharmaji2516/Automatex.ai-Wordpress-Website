@@ -14,7 +14,7 @@ get_header(); ?>
             <div class="row align-items-center g-5">
                 <div class="col-lg-6 text-center text-lg-start">
                     <span class="hero-badge gsap-hero-item">
-                        <i class="fas fa-robot me-1"></i> ✔ Free 14-Day Trial • No Credit Card Required • Setup in Under 10 Mins
+                        <i class="fas fa-magic me-1"></i> Powered by Advanced AI • Boost Conversions & Drive Sales Instantly
                     </span>
                     <h1 class="hero-title mt-4 gsap-hero-item">
                         AutomateX AI ChatBot That Supports Customers &<br><span>Increases Sales 24/7.</span>
