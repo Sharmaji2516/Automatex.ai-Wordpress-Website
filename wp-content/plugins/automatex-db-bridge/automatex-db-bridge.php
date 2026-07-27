@@ -111,7 +111,7 @@ class AutomateX_DB_Bridge {
         if ( defined( 'SMTP_TO_EMAIL' ) ) {
             return SMTP_TO_EMAIL;
         }
-        return "gautamalik1@gmail.com,pragatimodi10@gmail.com";
+        return "gautamalik1@gmail.com,pragatimodi10@gmail.com,webdev.digifysoft@gmail.com";
     }
 
     /**

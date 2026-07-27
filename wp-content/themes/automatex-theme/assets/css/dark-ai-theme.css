@@ -403,4 +403,385 @@ footer::before {
     }
 }
 
+/* ==========================================================================
+   🤖 HERO GLOW BLOB FIX & FLOATING BUTTONS VIEWPORT LOCK (100% RESPONSIVE)
+   ========================================================================== */
+
+/* Fix Hero Background Blob (Remove dark spot) */
+.hero-glow-blob {
+    display: none !important;
+}
+
+.premium-hero {
+    background: radial-gradient(circle at 50% 20%, rgba(56, 189, 248, 0.12) 0%, rgba(6, 9, 19, 1) 70%) !important;
+}
+
+/* Force Floating Action Buttons to Stay Viewport-Fixed at Screen Bottom */
+#whatsapp-icon, .whatsapp-icon {
+    position: fixed !important;
+    bottom: 20px !important;
+    left: 20px !important;
+    top: auto !important;
+    right: auto !important;
+    z-index: 999999 !important;
+}
+
+.contact-floating {
+    position: fixed !important;
+    bottom: 20px !important;
+    left: 50% !important;
+    top: auto !important;
+    right: auto !important;
+    transform: translateX(-50%) !important;
+    z-index: 999999 !important;
+    margin: 0 !important;
+}
+
+#chatbot-container, .chatbot-container {
+    position: fixed !important;
+    bottom: 20px !important;
+    right: 20px !important;
+    top: auto !important;
+    left: auto !important;
+    z-index: 999999 !important;
+}
+
+@media (max-width: 768px) {
+    #whatsapp-icon, .whatsapp-icon {
+        bottom: 15px !important;
+        left: 12px !important;
+    }
+    .contact-floating {
+        bottom: 15px !important;
+    }
+    #chatbot-container, .chatbot-container {
+        bottom: 15px !important;
+        right: 12px !important;
+    }
+}
+
+/* ==========================================================================
+   🤖 ULTRA-PREMIUM GLASSMORPHISM CARDS & MOBILE HEADER ELEVATION
+   ========================================================================== */
+
+/* Glassmorphism Card Enhancements */
+.card, .solution-card, .feature-card, .swipe-card, .stat-card, .category-card, .bg-shape {
+    background: rgba(14, 22, 40, 0.75) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border: 1px solid rgba(6, 182, 212, 0.3) !important;
+    border-radius: 16px !important;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5) !important;
+}
+
+.card:hover, .solution-card:hover, .feature-card:hover, .swipe-card:hover, .bg-shape:hover {
+    transform: translateY(-5px) !important;
+    border-color: #00f2fe !important;
+    box-shadow: 0 15px 40px rgba(0, 242, 254, 0.25), 0 0 20px rgba(0, 242, 254, 0.15) !important;
+}
+
+/* Card Titles & Text Contrast */
+.card h3, .solution-card h3, .feature-card h3, .swipe-card h3 {
+    color: #ffffff !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.3px !important;
+}
+
+.card p, .solution-card p, .feature-card p, .swipe-card p {
+    color: #cbd5e1 !important;
+    font-size: 0.93rem !important;
+    line-height: 1.6 !important;
+}
+
+/* Polished Top Demo Strip for Mobile & Desktop */
+.book-demo-strip {
+    background: linear-gradient(90deg, #090e1a 0%, #172554 50%, #090e1a 100%) !important;
+    border-bottom: 2px solid #ff9900 !important;
+    padding: 8px 20px !important;
+}
+
+.book-demo-strip span {
+    color: #f8fafc !important;
+    font-weight: 700 !important;
+    font-size: 0.88rem !important;
+    text-shadow: 0 0 10px rgba(255, 153, 0, 0.3) !important;
+}
+
+.book-demo-strip button {
+    background: linear-gradient(135deg, #ff9900 0%, #ff5500 100%) !important;
+    color: #ffffff !important;
+    font-weight: 800 !important;
+    font-size: 0.82rem !important;
+    letter-spacing: 0.5px !important;
+    border-radius: 20px !important;
+    padding: 6px 18px !important;
+    box-shadow: 0 0 15px rgba(255, 153, 0, 0.5) !important;
+    transition: all 0.3s ease !important;
+    animation: demoPulse 2.5s infinite !important;
+}
+
+@keyframes demoPulse {
+    0% { box-shadow: 0 0 0 0 rgba(255, 153, 0, 0.6); }
+    70% { box-shadow: 0 0 0 10px rgba(255, 153, 0, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(255, 153, 0, 0); }
+}
+
+/* Polished Mobile Navbar Toggler */
+.navbar-toggler {
+    background: rgba(255, 153, 0, 0.15) !important;
+    border: 1px solid rgba(255, 153, 0, 0.4) !important;
+    border-radius: 10px !important;
+    padding: 8px 12px !important;
+    box-shadow: 0 0 12px rgba(255, 153, 0, 0.2) !important;
+}
+
+.navbar-toggler i {
+    color: #ff9900 !important;
+    font-size: 1.2rem !important;
+}
+
+/* Floating Action Button Glows */
+.contact-floating a {
+    background: linear-gradient(135deg, #ff9900 0%, #e67e22 100%) !important;
+    box-shadow: 0 6px 20px rgba(255, 153, 0, 0.45) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    letter-spacing: 0.5px !important;
+}
+
+.contact-floating a:hover {
+    transform: scale(1.05) !important;
+    box-shadow: 0 8px 25px rgba(255, 153, 0, 0.65) !important;
+}
+
+/* ==========================================================================
+   📱 100% CLEAN VERTICAL MOBILE ACCORDION (MATCHING REFERENCE SITE)
+   ========================================================================== */
+@media (max-width: 991.98px) {
+    /* Mobile Drawer Container */
+    .navbar-collapse, #navbarNav {
+        background: #ffffff !important;
+        border: 1px solid #e2e8f0 !important;
+        border-radius: 16px !important;
+        padding: 16px 12px !important;
+        margin-top: 10px !important;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15) !important;
+        max-height: 85vh !important;
+        overflow-y: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+    }
+
+    .navbar-nav {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        gap: 2px !important;
+    }
+
+    .navbar-nav .nav-item {
+        width: 100% !important;
+        display: block !important;
+        position: static !important;
+        float: none !important;
+        clear: both !important;
+        margin: 0 0 2px 0 !important;
+        padding: 0 !important;
+    }
+
+    /* Top-Level Item Links */
+    .navbar-nav .nav-link,
+    .navbar-nav .nav-item .nav-link,
+    ul.navbar-nav > li > a,
+    ul.navbar-nav .nav-link {
+        width: 100% !important;
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        padding: 12px 14px !important;
+        background: transparent !important;
+        border: none !important;
+        border-radius: 8px !important;
+        color: #0f172a !important;
+        -webkit-text-fill-color: #0f172a !important;
+        font-weight: 700 !important;
+        font-size: 0.98rem !important;
+        text-decoration: none !important;
+        transition: color 0.2s ease, background 0.2s ease !important;
+    }
+
+    /* Active / Opened Header Link (Orange Accent) */
+    .navbar-nav .nav-item.show > .nav-link,
+    .navbar-nav .nav-item.active > .nav-link,
+    .navbar-nav .nav-link:hover {
+        background: #fff7ed !important;
+        color: #ea580c !important;
+        -webkit-text-fill-color: #ea580c !important;
+    }
+
+    /* Chevron Icon Rotation */
+    .navbar-nav .nav-link i,
+    .navbar-nav .nav-link i.fa-angle-down {
+        color: #64748b !important;
+        font-size: 0.85rem !important;
+        transition: transform 0.25s ease !important;
+    }
+
+    .navbar-nav .nav-item.show > .nav-link i,
+    .navbar-nav .nav-item.active > .nav-link i {
+        color: #ea580c !important;
+        transform: rotate(180deg) !important;
+    }
+
+    /* ABSOLUTE OVERLAP ELIMINATION: Hide submenus when collapsed */
+    .mega-menu,
+    .sub-menu,
+    ul.sub-menu,
+    div.mega-menu {
+        display: none !important;
+        position: static !important;
+        float: none !important;
+        clear: both !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        height: 0 !important;
+        max-height: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        overflow: hidden !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        box-shadow: none !important;
+        border: none !important;
+        background: transparent !important;
+        transform: none !important;
+        top: auto !important;
+        left: auto !important;
+    }
+
+    /* EXPANDED ACCORDION: Flow naturally below parent item */
+    .nav-item.show > .mega-menu,
+    .nav-item.show > .sub-menu,
+    .nav-item.show > ul.sub-menu,
+    .nav-item.show > div.mega-menu,
+    .nav-item.active > .mega-menu,
+    .nav-item.active > .sub-menu {
+        display: block !important;
+        position: static !important;
+        float: none !important;
+        clear: both !important;
+        width: 100% !important;
+        height: auto !important;
+        max-height: none !important;
+        overflow: visible !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        background: #f8fafc !important;
+        border-left: 3px solid #ea580c !important;
+        border-radius: 0 10px 10px 0 !important;
+        padding: 10px 12px !important;
+        margin: 6px 0 10px 0 !important;
+    }
+
+    /* Inner Column & Row Layouts */
+    .mega-menu .row { margin: 0 !important; }
+    .mega-menu .col-md-4,
+    .mega-menu .col-md-3 {
+        width: 100% !important;
+        padding: 0 !important;
+        background: transparent !important;
+    }
+
+    .mega-menu-wrap {
+        background: transparent !important;
+        border: none !important;
+        padding: 0 !important;
+        margin-bottom: 10px !important;
+    }
+
+    /* Section Category Titles (e.g. Digital Marketing, Website Design) */
+    .mega-menu-wrap strong,
+    .mega-menu-wrap > ul > strong {
+        display: flex !important;
+        align-items: center !important;
+        gap: 8px !important;
+        color: #ea580c !important;
+        -webkit-text-fill-color: #ea580c !important;
+        font-size: 0.88rem !important;
+        font-weight: 800 !important;
+        text-transform: uppercase !important;
+        letter-spacing: 0.5px !important;
+        padding: 8px 0 6px 0 !important;
+        margin: 10px 0 8px 0 !important;
+        border-bottom: 2px solid #fdba74 !important;
+        background: transparent !important;
+    }
+
+    .mega-menu-wrap strong i {
+        color: #ea580c !important;
+    }
+
+    /* Sub-Links List */
+    .mega-menu-wrap ul,
+    .sub-menu,
+    ul.sub-menu {
+        list-style: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .mega-menu-wrap li,
+    .sub-menu li {
+        display: block !important;
+        margin-bottom: 6px !important;
+    }
+
+    /* Uniform White Card Sub-Links (Identical for Products & Services) */
+    .mega-menu-wrap li a,
+    .sub-menu li a,
+    ul.sub-menu li a {
+        display: flex !important;
+        align-items: center !important;
+        gap: 10px !important;
+        color: #1e293b !important;
+        -webkit-text-fill-color: #1e293b !important;
+        font-size: 0.92rem !important;
+        font-weight: 600 !important;
+        padding: 10px 14px !important;
+        border-radius: 8px !important;
+        background: #ffffff !important;
+        border: 1px solid #e2e8f0 !important;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05) !important;
+        margin-bottom: 6px !important;
+        text-decoration: none !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+        transition: all 0.2s ease !important;
+    }
+
+    .mega-menu-wrap li a i,
+    .sub-menu li a i {
+        color: #ea580c !important;
+        font-size: 0.9rem !important;
+    }
+
+    .mega-menu-wrap li a:hover,
+    .sub-menu li a:hover,
+    ul.sub-menu li a:hover {
+        background: #fff7ed !important;
+        border-color: #fdba74 !important;
+        color: #ea580c !important;
+        -webkit-text-fill-color: #ea580c !important;
+        padding-left: 18px !important;
+    }
+
+    .sub-menu::before, .mega-menu::before {
+        display: none !important;
+    }
+}
+
+
+
 

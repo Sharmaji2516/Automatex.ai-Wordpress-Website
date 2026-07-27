@@ -649,12 +649,22 @@
   });
   </script>
 
-  <!-- Mobile Accordion Footer Toggle Script -->
+  <!-- Mobile Accordion Navbar & Footer Toggle Scripts -->
   <script>
   jQuery(document).ready(function($) {
-      if ($(window).width() < 768) {
+      if ($(window).width() < 992) {
+          // Mobile Footer Accordion
           $('.footer-widget h4').css('cursor', 'pointer').click(function() {
               $(this).parent('.footer-widget').toggleClass('active');
+          });
+
+          // Mobile Header Navigation Accordion (Services, Products, Retail, etc.)
+          $('.navbar-nav .nav-item.dropdown > a').on('click', function(e) {
+              e.preventDefault();
+              e.stopPropagation();
+              var $parent = $(this).parent('.dropdown');
+              $('.navbar-nav .nav-item.dropdown').not($parent).removeClass('show');
+              $parent.toggleClass('show');
           });
       }
   });

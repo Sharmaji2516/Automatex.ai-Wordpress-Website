@@ -68,51 +68,11 @@
           display: block !important;
       }
 
-      .navbar-nav {
-          gap: 6px !important;
-          align-items: center !important;
-      }
-      .navbar-nav .nav-link {
-          color: #f8fafc !important;
-          font-weight: 600 !important;
-          font-size: 0.92rem !important;
-          padding: 8px 14px !important;
-          border-radius: 8px !important;
-          transition: all 0.25s ease !important;
-          display: flex !important;
-          align-items: center !important;
-          gap: 5px !important;
-      }
-      .navbar-nav .nav-link:hover, 
-      .navbar-nav .nav-link:focus,
-      .navbar-nav .nav-item.dropdown:hover > .nav-link {
-          color: #38bdf8 !important;
-          background: rgba(56, 189, 248, 0.12) !important;
-      }
-      .navbar-nav .nav-link i {
-          font-size: 0.75rem !important;
-          transition: transform 0.3s ease !important;
-      }
-      .navbar-nav .nav-item:hover .nav-link i {
-          transform: rotate(180deg) !important;
-          color: #38bdf8 !important;
-             .sub-menu, .mega-menu {
-           background: #0f172a !important;
-           border: 1px solid rgba(255, 255, 255, 0.15) !important;
-           border-radius: 16px !important;
-           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), 0 0 25px rgba(56, 189, 248, 0.15) !important;
-           padding: 20px !important;
-           z-index: 99999 !important;
-           position: absolute !important;
-           top: 100% !important;
-           margin-top: 0 !important;
-           animation: none !important; /* Disable moving animations that break hover target */
-           -webkit-animation: none !important;
-           transition: opacity 0.2s ease, visibility 0.2s ease !important;
-       }
-
-       /* Fix: Invisible Hover Bridge & Padding Hit Area prevents dropdowns from disappearing */
        @media (min-width: 992px) {
+           .navbar-nav {
+               gap: 6px !important;
+               align-items: center !important;
+           }
            .navbar-nav .nav-item {
                position: relative !important;
                padding-bottom: 12px !important;
@@ -139,7 +99,198 @@
                visibility: visible !important;
                pointer-events: auto !important;
            }
-       }  }
+       }
+
+              /* Mobile Navigation Responsive Drawer Fix - Clean White Theme */
+       @media (max-width: 991.98px) {
+           .navbar-collapse, #navbarNav {
+               background: #ffffff !important;
+               border: 1px solid #e2e8f0 !important;
+               border-radius: 16px !important;
+               padding: 20px 16px !important;
+               margin-top: 12px !important;
+               box-shadow: 0 15px 45px rgba(0, 0, 0, 0.35) !important;
+               max-height: 90vh !important;
+               overflow-y: auto !important;
+               -webkit-overflow-scrolling: touch !important;
+           }
+
+           .navbar-nav {
+               align-items: stretch !important;
+               flex-direction: column !important;
+               width: 100% !important;
+               gap: 6px !important;
+               margin: 0 !important;
+               padding: 0 !important;
+           }
+
+           .navbar-nav .nav-item {
+               width: 100% !important;
+               display: block !important;
+               margin-bottom: 4px !important;
+               padding: 0 !important;
+           }
+
+           .navbar-nav .nav-link,
+           .navbar-nav .nav-item .nav-link,
+           ul.navbar-nav > li > a,
+           ul.navbar-nav .nav-link {
+               width: 100% !important;
+               display: flex !important;
+               justify-content: space-between !important;
+               align-items: center !important;
+               padding: 12px 18px !important;
+               background: transparent !important;
+               border: 1px solid transparent !important;
+               border-radius: 10px !important;
+               color: #0f172a !important;
+               -webkit-text-fill-color: #0f172a !important;
+               font-weight: 700 !important;
+               font-size: 0.98rem !important;
+               text-decoration: none !important;
+               transition: all 0.2s ease !important;
+           }
+
+           .navbar-nav .nav-link:hover,
+           .navbar-nav .nav-link:focus,
+           .navbar-nav .nav-item.show > .nav-link {
+               background: #f1f5f9 !important;
+               color: #ff9900 !important;
+               -webkit-text-fill-color: #ff9900 !important;
+               border-color: #e2e8f0 !important;
+           }
+
+           .navbar-nav .nav-link i {
+               color: #64748b !important;
+               font-size: 0.9rem !important;
+           }
+
+           /* === 100% UNIFORM WHITE CARD ACCORDION FOR ALL DROPDOWNS === */
+           .mega-menu,
+           .sub-menu,
+           .mega-menu-wrap,
+           .mega-menu .row,
+           .mega-menu .col-md-4,
+           .mega-menu .col-md-3,
+           .mega-menu-wrap strong,
+           .mega-menu-wrap > ul > strong {
+               background: transparent !important;
+               box-shadow: none !important;
+               border-right: none !important;
+           }
+
+           .mega-menu,
+           .sub-menu {
+               display: none !important;
+               visibility: hidden !important;
+               opacity: 0 !important;
+               position: static !important;
+               height: 0 !important;
+               overflow: hidden !important;
+               width: 100% !important;
+               margin: 0 !important;
+               padding: 0 !important;
+               border: none !important;
+           }
+
+           /* === EXPANDED STATE (Services, Products, Retail, Functions, Enterprise) === */
+           .nav-item.dropdown.show > .mega-menu,
+           .nav-item.dropdown.show > .sub-menu,
+           .nav-item.show > .mega-menu,
+           .nav-item.show > .sub-menu,
+           .nav-item.active > .mega-menu,
+           .nav-item.active > .sub-menu {
+               display: block !important;
+               position: static !important;
+               float: none !important;
+               z-index: auto !important;
+               visibility: visible !important;
+               opacity: 1 !important;
+               height: auto !important;
+               overflow: visible !important;
+               background: #f8fafc !important;
+               border-left: 3px solid #ea580c !important;
+               border-radius: 0 10px 10px 0 !important;
+               padding: 10px 12px !important;
+               margin-top: 6px !important;
+               margin-bottom: 10px !important;
+               width: 100% !important;
+           }
+
+           /* Category Section Headers (Digital Marketing, Books & Office Supplies, Lifestyle) */
+           .mega-menu-wrap strong,
+           .mega-menu-wrap > ul > strong {
+               display: flex !important;
+               align-items: center !important;
+               gap: 8px !important;
+               color: #ea580c !important;
+               -webkit-text-fill-color: #ea580c !important;
+               font-size: 0.85rem !important;
+               font-weight: 800 !important;
+               text-transform: uppercase !important;
+               letter-spacing: 0.5px !important;
+               padding: 8px 0 6px 0 !important;
+               margin: 10px 0 8px 0 !important;
+               border-bottom: 2px solid #fdba74 !important;
+               background: transparent !important;
+               width: 100% !important;
+           }
+
+           .mega-menu-wrap strong i { color: #ea580c !important; }
+
+           /* Sub-Links List (Identical white cards for Products, Services, Retail) */
+           .mega-menu-wrap ul,
+           .sub-menu,
+           ul.sub-menu {
+               list-style: none !important;
+               padding: 0 !important;
+               margin: 0 !important;
+               display: block !important;
+               height: auto !important;
+           }
+
+           .mega-menu-wrap li,
+           .sub-menu li {
+               display: block !important;
+               margin-bottom: 6px !important;
+           }
+
+           .mega-menu-wrap li a,
+           .sub-menu li a,
+           ul.sub-menu li a {
+               display: flex !important;
+               align-items: center !important;
+               gap: 10px !important;
+               color: #1e293b !important;
+               -webkit-text-fill-color: #1e293b !important;
+               background: #ffffff !important;
+               border: 1px solid #e2e8f0 !important;
+               border-radius: 8px !important;
+               padding: 10px 14px !important;
+               font-size: 0.92rem !important;
+               font-weight: 600 !important;
+               text-decoration: none !important;
+               width: 100% !important;
+               box-sizing: border-box !important;
+               box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04) !important;
+               transition: all 0.2s ease !important;
+           }
+
+           .mega-menu-wrap li a i,
+           .sub-menu li a i { color: #ea580c !important; font-size: 0.9rem !important; }
+
+           .mega-menu-wrap li a:hover,
+           .sub-menu li a:hover,
+           ul.sub-menu li a:hover {
+               background: #fff7ed !important;
+               border-color: #fdba74 !important;
+               color: #ea580c !important;
+               -webkit-text-fill-color: #ea580c !important;
+               padding-left: 18px !important;
+           }
+
+           .sub-menu::before, .mega-menu::before { display: none !important; }
+       }
 
       .sub-menu {
           min-width: 220px !important;
@@ -151,59 +302,72 @@
       }
       .sub-menu li a {
           color: #cbd5e1 !important;
-          font-weight: 600 !important;
-          font-size: 0.9rem !important;
-          padding: 8px 14px !important;
-          display: block !important;
-          border-radius: 8px !important;
-          text-decoration: none !important;
-          transition: all 0.2s ease !important;
-      }
-      .sub-menu li a:hover {
-          background: rgba(56, 189, 248, 0.15) !important;
-          color: #ffffff !important;
-          padding-left: 18px !important;
-      }
+       /* Desktop Navigation Dropdown Styling */
+       @media (min-width: 992px) {
+           .sub-menu {
+               min-width: 220px !important;
+               padding: 12px 8px !important;
+           }
+           .sub-menu li {
+               list-style: none !important;
+               margin-bottom: 4px !important;
+           }
+           .sub-menu li a {
+               color: #cbd5e1 !important;
+               font-weight: 600 !important;
+               font-size: 0.9rem !important;
+               padding: 8px 14px !important;
+               display: block !important;
+               border-radius: 8px !important;
+               text-decoration: none !important;
+               transition: all 0.2s ease !important;
+           }
+           .sub-menu li a:hover {
+               background: rgba(56, 189, 248, 0.15) !important;
+               color: #ffffff !important;
+               padding-left: 18px !important;
+           }
 
-      .mega-menu-wrap strong {
-          color: #38bdf8 !important;
-          font-weight: 800 !important;
-          font-size: 0.85rem !important;
-          text-transform: uppercase !important;
-          letter-spacing: 0.8px !important;
-          display: flex !important;
-          align-items: center !important;
-          gap: 8px !important;
-          padding-bottom: 8px !important;
-          margin-bottom: 12px !important;
-          border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
-      }
-      .mega-menu-wrap ul {
-          list-style: none !important;
-          padding: 0 !important;
-          margin-bottom: 20px !important;
-      }
-      .mega-menu-wrap li a {
-          color: #cbd5e1 !important;
-          font-size: 0.88rem !important;
-          font-weight: 500 !important;
-          padding: 6px 10px !important;
-          display: flex !important;
-          align-items: center !important;
-          gap: 8px !important;
-          border-radius: 6px !important;
-          text-decoration: none !important;
-          transition: all 0.2s ease !important;
-      }
-      .mega-menu-wrap li a:hover {
-          background: rgba(56, 189, 248, 0.15) !important;
-          color: #ffffff !important;
-          transform: translateX(4px) !important;
-      }
-      .mega-menu-wrap li a i {
-          color: #ff9900 !important;
-          font-size: 0.85rem !important;
-      }
+           .mega-menu-wrap strong {
+               color: #38bdf8 !important;
+               font-weight: 800 !important;
+               font-size: 0.85rem !important;
+               text-transform: uppercase !important;
+               letter-spacing: 0.8px !important;
+               display: flex !important;
+               align-items: center !important;
+               gap: 8px !important;
+               padding-bottom: 8px !important;
+               margin-bottom: 12px !important;
+               border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+           }
+           .mega-menu-wrap ul {
+               list-style: none !important;
+               padding: 0 !important;
+               margin-bottom: 20px !important;
+           }
+           .mega-menu-wrap li a {
+               color: #cbd5e1 !important;
+               font-size: 0.88rem !important;
+               font-weight: 500 !important;
+               padding: 6px 10px !important;
+               display: flex !important;
+               align-items: center !important;
+               gap: 8px !important;
+               border-radius: 6px !important;
+               text-decoration: none !important;
+               transition: all 0.2s ease !important;
+           }
+           .mega-menu-wrap li a:hover {
+               background: rgba(56, 189, 248, 0.15) !important;
+               color: #ffffff !important;
+               transform: translateX(4px) !important;
+           }
+           .mega-menu-wrap li a i {
+               color: #ff9900 !important;
+               font-size: 0.85rem !important;
+           }
+       }
 
       .right-btn ul {
           list-style: none !important;

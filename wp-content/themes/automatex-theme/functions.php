@@ -52,17 +52,17 @@ function automatex_scripts() {
     wp_enqueue_style( 'bootstrap-icons-css', 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css', array(), '1.11.3' );
 
     // 3. Theme Custom Styles
-    wp_enqueue_style( 'automatex-style', get_stylesheet_uri(), array(), '1.0.0' );
-    wp_enqueue_style( 'automatex-custom-style', get_template_directory_uri() . '/assets/css/style.css', array(), '1.0.0' );
-    wp_enqueue_style( 'automatex-responsive-style', get_template_directory_uri() . '/assets/css/responsive.css', array(), '1.0.0' );
-    wp_enqueue_style( 'automatex-chatbot-style', get_template_directory_uri() . '/assets/css/chatbot.css', array(), '1.0.0' );
+    wp_enqueue_style( 'automatex-style', get_stylesheet_uri(), array(), '2.0.0' );
+    wp_enqueue_style( 'automatex-custom-style', get_template_directory_uri() . '/assets/css/style.css', array(), '2.0.0' );
+    wp_enqueue_style( 'automatex-responsive-style', get_template_directory_uri() . '/assets/css/responsive.css', array(), '2.0.0' );
+    wp_enqueue_style( 'automatex-chatbot-style', get_template_directory_uri() . '/assets/css/chatbot.css', array(), '2.0.0' );
     // Homepage specific styles
     if ( is_front_page() ) {
-        wp_enqueue_style( 'automatex-home-style', get_template_directory_uri() . '/assets/css/premium-home.css', array(), '1.0.0' );
+        wp_enqueue_style( 'automatex-home-style', get_template_directory_uri() . '/assets/css/premium-home.css', array(), '2.0.0' );
     }
 
     // Comprehensive Dark AI Theme (load last for priority)
-    wp_enqueue_style( 'automatex-dark-ai-style', get_template_directory_uri() . '/assets/css/dark-ai-theme.css', array(), '1.0.3' );
+    wp_enqueue_style( 'automatex-dark-ai-style', get_template_directory_uri() . '/assets/css/dark-ai-theme.css', array(), '2.1.0' );
 
     // 4. Scripts (enqueue in footer)
     wp_enqueue_script( 'jquery' ); // Standard WordPress jQuery
@@ -74,7 +74,7 @@ function automatex_scripts() {
     wp_enqueue_script( 'aos-js', 'https://unpkg.com/aos@2.3.1/dist/aos.js', array('jquery'), '2.3.1', true );
     
     // Custom logic & Chatbot scripts
-    wp_enqueue_script( 'automatex-custom-js', get_template_directory_uri() . '/assets/js/custom.js', array('jquery'), '1.0.0', true );
+    wp_enqueue_script( 'automatex-custom-js', get_template_directory_uri() . '/assets/js/custom.js', array('jquery'), '2.0.0', true );
     wp_enqueue_script( 'automatex-chatbot-js', get_template_directory_uri() . '/assets/js/chatbot.js', array('jquery'), '1.0.0', true );
 
     // GSAP Animations (homepage and dynamic elements)
