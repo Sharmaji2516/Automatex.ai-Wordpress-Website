@@ -28,7 +28,15 @@ $files_to_sync = array(
     'wp-content/themes/automatex-theme/assets/css/responsive.css',
     'wp-content/themes/automatex-theme/assets/js/custom.js',
     'wp-content/themes/automatex-theme/functions.php',
-    'wp-content/plugins/automatex-db-bridge/automatex-db-bridge.php'
+    'wp-content/plugins/automatex-db-bridge/automatex-db-bridge.php',
+    'wp-content/themes/automatex-theme/page-chatbot-service-base.php',
+    'wp-content/themes/automatex-theme/page-customer-support-chatbot.php',
+    'wp-content/themes/automatex-theme/page-manufacturing-chatbot.php',
+    'wp-content/themes/automatex-theme/page-sales-chatbot.php',
+    'wp-content/themes/automatex-theme/page-billing-chatbot.php',
+    'wp-content/themes/automatex-theme/page-healthcare-chatbot.php',
+    'wp-content/themes/automatex-theme/page-enterprise-chatbot.php',
+    'wp-content/themes/automatex-theme/page-education-chatbot.php'
 );
 
 $github_raw_url = 'https://raw.githubusercontent.com/Sharmaji2516/Automatex.ai-Wordpress-Website/main/';
