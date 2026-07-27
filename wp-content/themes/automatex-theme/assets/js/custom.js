@@ -163,18 +163,25 @@ jQuery(document).ready(function($) {
     // Mobile Navigation Accordion Toggle
     if ($(window).width() < 992) {
         $('.navbar-nav .nav-item.dropdown > a').on('click', function(e) {
+            var $target = $(e.target);
             var $parent = $(this).closest('.nav-item.dropdown');
             var $submenu = $parent.find('.mega-menu, .sub-menu').first();
 
+            // If clicking the arrow icon OR if parent isn't opened yet OR if href is '#'
+            var href = $(this).attr('href');
+            var isHash = !href || href === '#' || href === 'javascript:void(0)';
+
             if ($submenu.length) {
-                e.preventDefault();
-                e.stopPropagation();
+                if (isHash || $target.is('i') || !$parent.hasClass('show')) {
+                    e.preventDefault();
+                    e.stopPropagation();
 
-                // Close other open dropdowns
-                $('.navbar-nav .nav-item.dropdown').not($parent).removeClass('show active');
+                    // Close other open dropdowns
+                    $('.navbar-nav .nav-item.dropdown').not($parent).removeClass('show active');
 
-                // Toggle current dropdown
-                $parent.toggleClass('show active');
+                    // Toggle current dropdown
+                    $parent.toggleClass('show active');
+                }
             }
         });
     }
