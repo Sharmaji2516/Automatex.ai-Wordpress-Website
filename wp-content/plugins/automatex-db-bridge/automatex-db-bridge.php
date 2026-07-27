@@ -236,7 +236,7 @@ class AutomateX_DB_Bridge {
 
         $headers = array(
             'Content-Type: text/plain; charset=UTF-8',
-            'From: Automatex.ai Website <support-noreply@Automatex.ai.com>'
+            'From: Automatex.ai Website <support-noreply@automatexai.co.in>'
         );
 
         wp_mail( $to, $subject, $body, $headers );
@@ -282,7 +282,7 @@ class AutomateX_DB_Bridge {
 
         $headers = array(
             'Content-Type: text/plain; charset=UTF-8',
-            'From: Automatex.ai Website <support-noreply@Automatex.ai.com>'
+            'From: Automatex.ai Website <support-noreply@automatexai.co.in>'
         );
 
         wp_mail( $to, $subject, $body, $headers );
