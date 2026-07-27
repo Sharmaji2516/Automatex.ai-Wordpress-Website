@@ -17,11 +17,11 @@ if ( empty( $chatbot_type ) ) {
 
 // Comprehensive Chatbot Config Data
 $chatbot_data = [
-    'customer-support-chatbot' => [
-        'title' => 'AI Customer Support Chatbot',
-        'badge' => 'AutomateX AI Support Assistant',
-        'sub_title' => 'Instant Solutions, Zero Wait Time',
-        'hero_desc' => 'Provide rapid 24/7 customer care. Train your AI assistant on custom FAQs, service documents, and articles to resolve support tickets instantly, freeing up human agents.',
+    'ai-chatbot-for-customer-support' => [
+        'title' => 'AI Chatbot for Customer Support',
+        'badge' => 'AI Chatbot for Customer Support',
+        'sub_title' => 'Deliver Exceptional Customer Service with Intelligent AI Automation',
+        'hero_desc' => 'Deliver instant customer support with an AI Chatbot. Automate FAQs, reduce support tickets, improve customer satisfaction, provide 24/7 AI customer service, and resolve customer queries with Conversational AI.',
         'hero_icon' => 'fa-headset',
         'stats' => [
             ['label' => 'Queries Resolved', 'value' => '85%+'],
@@ -33,43 +33,75 @@ $chatbot_data = [
             [
                 'title' => 'Knowledge Base Training',
                 'icon' => 'fa-brain',
-                'desc' => 'Train your AI using website URLs, PDFs, DOCs, or custom sheets. It parses raw data and builds a context-aware brain in minutes.'
+                'desc' => 'Train your AI using website URLs, FAQs, product manuals, help center articles, company policies, warranty details, returns, and troubleshooting guides.'
             ],
             [
                 'title' => 'Smart Live Chat Handover',
                 'icon' => 'fa-comments',
-                'desc' => 'Detects complex queries and routes them to live human agents. Passes full transcripts to ensure seamless transfers.'
+                'desc' => 'Automatically creates support tickets or transfers the conversation to a live agent with complete chat history for unresolved issues.'
             ],
             [
-                'title' => 'Order Tracking Sync',
-                'icon' => 'fa-truck-fast',
-                'desc' => 'Connects to your CRM/ERP to give real-time updates on delivery, refund statuses, and logistics tracking directly.'
+                'title' => 'CRM & System Integrations',
+                'icon' => 'fa-network-wired',
+                'desc' => 'Connects to CRM, ERP, Helpdesk, Order Management, WhatsApp, Facebook Messenger, Live Chat, and Email Support.'
             ],
             [
-                'title' => 'Sentiment Detection',
-                'icon' => 'fa-face-smile',
-                'desc' => 'Scans incoming text for tone and user emotion. Prioritizes frustrated callers for immediate supervisor support.'
+                'title' => 'Omnichannel AI Care',
+                'icon' => 'fa-comments-dollar',
+                'desc' => 'Deliver consistent customer service across websites, mobile apps, WhatsApp, Facebook Messenger, Instagram, and Live Chat.'
             ]
+        ],
+        'long_copy' => [
+            "Customer support has become one of the most important factors influencing customer satisfaction, brand loyalty, and long-term business success. Modern customers expect immediate responses whenever they have questions about products, services, pricing, order status, returns, technical issues, or account information. They no longer want to wait for business hours, remain on hold during phone calls, or wait several hours for email responses. In today's competitive marketplace, slow customer support often results in lost customers, negative reviews, and declining customer retention. This is why businesses across every industry are adopting an AI Chatbot for Customer Support to provide instant, personalized, and intelligent customer service around the clock.",
+            "An AI Chatbot functions as a virtual customer support executive that is available twenty-four hours a day, seven days a week. Unlike traditional Chat Bot systems that rely on predefined rules and scripted responses, modern Chatbot AI uses Artificial Intelligence, Machine Learning, Natural Language Processing (NLP), and Conversational AI to understand customer intent, analyze conversation context, and provide accurate responses in natural language. Whether customers need assistance with product information, order tracking, technical support, billing inquiries, appointment scheduling, return policies, or troubleshooting, the chatbot delivers fast and reliable assistance without requiring human intervention.",
+            "One of the biggest challenges faced by customer support teams is handling large volumes of repetitive inquiries. Every day, businesses receive thousands of similar questions regarding shipping information, payment methods, refund policies, warranty details, login issues, account management, business hours, and frequently asked questions. Customer support representatives often spend a significant portion of their time answering these routine requests, leaving less time for handling complex customer issues. An intelligent AI Chatbot for Customer Service automates these repetitive conversations, allowing support teams to focus on higher-value interactions that require empathy, problem-solving, and specialized expertise.",
+            "Instant response is one of the greatest advantages of implementing an AI Customer Service Bot. Research consistently shows that customers are more likely to remain loyal to businesses that provide fast support. Every second of delay increases customer frustration and the possibility of losing business to competitors. An AI-powered chatbot eliminates waiting time by responding immediately to customer inquiries regardless of time zone, business hours, holidays, or support volume. Customers receive assistance whenever they need it, creating a seamless and satisfying support experience.",
+            "Modern Conversational AI Chatbot technology provides far more than simple question-and-answer functionality. It understands customer conversations naturally and maintains context throughout the interaction. If a customer asks multiple related questions during the same conversation, the chatbot remembers previous responses and continues the discussion without requiring customers to repeat information. This creates a human-like support experience that feels personalized, intelligent, and highly engaging.",
+            "An AI Chatbot Online can be trained using a company's knowledge base, website content, FAQs, product documentation, help center articles, policy documents, training materials, technical manuals, and customer support records. As a result, the chatbot develops deep knowledge of the business and provides responses that accurately reflect company policies and procedures. The more business information it learns, the more accurate and effective its responses become.",
+            "Businesses also benefit significantly from reduced support costs through intelligent automation. Instead of expanding customer service teams to manage increasing inquiry volumes, organizations can deploy a single AI Chatbot capable of handling thousands of simultaneous conversations. The chatbot automatically resolves common customer issues while escalating only complex cases to human support agents. This balanced approach improves operational efficiency, reduces staffing costs, shortens response times, and enables businesses to scale customer support without increasing operational expenses.",
+            "Customer experience is dramatically improved through personalized interactions powered by Artificial Intelligence Chat. The chatbot recognizes returning customers, retrieves previous conversation history, analyzes purchase records, and provides personalized recommendations based on customer preferences. Rather than delivering generic responses, the chatbot adapts conversations according to individual customer needs, creating stronger relationships and improving customer satisfaction.",
+            "One of the most valuable features of an intelligent AI Chatbot for Customer Support is its ability to integrate with CRM software, ERP systems, Helpdesk platforms, ticket management solutions, order management systems, inventory software, and payment gateways. Through these integrations, the chatbot can retrieve real-time customer information such as order status, invoice history, shipment tracking, service requests, warranty details, subscription information, and account records. Customers receive accurate answers immediately without requiring support representatives to manually search multiple systems.",
+            "Omnichannel customer support has become essential for modern businesses because customers communicate through websites, mobile applications, WhatsApp, Facebook Messenger, Instagram, Telegram, Live Chat, and email. An AI Chatbot Online provides consistent customer service across all communication channels while maintaining conversation history and customer context. Whether a conversation begins on the company website and continues on WhatsApp or social media, customers experience uninterrupted support across every platform.",
+            "Businesses can also use an AI Chatbot proactively rather than waiting for customers to ask questions. For example, the chatbot can automatically notify customers about order confirmations, shipping updates, payment reminders, appointment schedules, maintenance notifications, subscription renewals, promotional offers, and service updates. These proactive interactions strengthen customer relationships while reducing incoming support inquiries.",
+            "Customer satisfaction is further improved through intelligent issue resolution. If the chatbot cannot fully resolve a customer problem, it automatically transfers the conversation to the appropriate human support representative while sharing the complete conversation history. Customers never need to repeat their concerns, allowing support agents to resolve issues more efficiently while maintaining a smooth customer experience.",
+            "Every customer interaction generates valuable business intelligence that helps organizations improve customer service continuously. The Chatbot AI analyzes conversation trends, identifies common customer issues, monitors response quality, measures customer satisfaction, and highlights areas requiring improvement. Businesses use these insights to optimize support workflows, update knowledge bases, improve products, strengthen training programs, and enhance overall customer experience.",
+            "As organizations continue embracing digital transformation, intelligent customer service automation has become a strategic business investment rather than a luxury. The Best AI Chatbot combines AI Chat, Conversational AI, automation, and enterprise integration into a comprehensive customer support platform capable of serving businesses of every size. Whether supporting eCommerce stores, healthcare providers, educational institutions, manufacturers, SaaS companies, financial organizations, or retail businesses, AI-powered customer support delivers faster responses, higher satisfaction, improved efficiency, and measurable business growth.",
+            "Ultimately, an AI Chatbot for Customer Support is far more than an automated messaging solution. It serves as a virtual customer service representative, technical support assistant, helpdesk agent, knowledge management system, and customer engagement platform working continuously to deliver exceptional customer experiences. Businesses that invest in intelligent Chatbot AI technology today are creating customer-centric support ecosystems capable of improving loyalty, reducing operational costs, increasing efficiency, and building lasting customer relationships in an increasingly digital world."
+        ],
+        'steps' => [
+            ['title' => 'Create Your AI Customer Support Chatbot', 'desc' => 'Choose an AI chatbot platform and create your chatbot account. Configure your business profile, company details, support channels, and customer service preferences.'],
+            ['title' => 'Train the AI with Your Business Knowledge', 'desc' => 'Upload your website, FAQs, product manuals, help center articles, knowledge base, company policies, warranty information, shipping details, return policy, and troubleshooting guides.'],
+            ['title' => 'Design Customer Support Workflows', 'desc' => 'Customize welcome messages, support categories, automated replies, escalation rules, ticket creation, order tracking, refund requests, appointment booking, and complaint management workflows.'],
+            ['title' => 'Integrate Business Systems', 'desc' => 'Connect your chatbot with CRM Software, ERP Software, Helpdesk, Ticket management systems, Order management, Inventory software, WhatsApp Business, Facebook Messenger, Live Chat, and Email Support.'],
+            ['title' => 'Deploy Across Multiple Channels', 'desc' => 'Publish the chatbot on your website, customer portal, mobile application, WhatsApp, Facebook Messenger, Instagram, Telegram, and other communication channels.'],
+            ['title' => 'Customers Start Asking Questions', 'desc' => 'Customers interact with the chatbot naturally by asking questions about products, services, payments, shipping, returns, technical issues, account information, warranties, or order status.'],
+            ['title' => 'AI Resolves Customer Queries', 'desc' => 'The chatbot instantly provides personalized responses using AI and retrieves real-time information from connected business systems.'],
+            ['title' => 'Escalate Complex Issues', 'desc' => 'If the chatbot cannot resolve a customer issue, it automatically creates a support ticket or transfers the conversation to a live support agent with complete chat history.'],
+            ['title' => 'Analyze Customer Support Performance', 'desc' => 'Track customer satisfaction, response time, ticket resolution, chatbot accuracy, conversation volume, and support analytics to continuously improve customer service.']
         ],
         'benefits' => [
-            '24/7/365 Instant customer assistance with zero queuing.',
-            'Drastically reduces support ticket volumes and agent workloads.',
-            'Standardizes customer responses with completely accurate information.',
-            'Fully custom dashboard tracking query volume, resolution rates, and client happiness.'
+            ['title' => '24/7 Customer Support', 'desc' => 'Provide instant customer assistance every hour of the day without relying on business hours.', 'icon' => 'fa-clock'],
+            ['title' => 'Instant Response Time', 'desc' => 'Customers receive immediate answers instead of waiting for email replies or phone support.', 'icon' => 'fa-bolt'],
+            ['title' => 'Reduce Support Costs', 'desc' => 'Automate thousands of repetitive customer inquiries without increasing support staff.', 'icon' => 'fa-dollar-sign'],
+            ['title' => 'Faster Ticket Resolution', 'desc' => 'Resolve common issues instantly while forwarding only complex cases to human agents.', 'icon' => 'fa-ticket-simple'],
+            ['title' => 'Improve Customer Satisfaction', 'desc' => 'Quick, personalized responses create better customer experiences and stronger brand loyalty.', 'icon' => 'fa-face-smile'],
+            ['title' => 'Handle Unlimited Conversations', 'desc' => 'Support thousands of customers simultaneously without reducing service quality.', 'icon' => 'fa-users'],
+            ['title' => 'Reduce Human Workload', 'desc' => 'Allow support teams to focus on technical issues, escalations, and high-priority customers.', 'icon' => 'fa-user-tie'],
+            ['title' => 'Omnichannel Customer Support', 'desc' => 'Serve customers across websites, mobile apps, WhatsApp, Facebook Messenger, Instagram, email, and live chat.', 'icon' => 'fa-comments'],
+            ['title' => 'Real-Time Business Information', 'desc' => 'Provide live order status, payment details, invoices, shipping updates, appointment schedules, and account information.', 'icon' => 'fa-circle-info'],
+            ['title' => 'Continuous AI Learning', 'desc' => 'The chatbot becomes smarter with every customer conversation, improving response quality over time.', 'icon' => 'fa-brain']
         ],
         'faqs' => [
-            [
-                'q' => 'How does the chatbot learn about my business?',
-                'a' => 'Simply upload your PDF documents, website URLs, or FAQ pages. The AutomateX engine automatically reads, organizes, and trains the AI model on your data.'
-            ],
-            [
-                'q' => 'Can it transfer users to a human support agent?',
-                'a' => 'Yes. You can define triggers or fallback scenarios. When a user requests a human agent or the query is highly complex, it instantly alerts your staff and transfers the session.'
-            ],
-            [
-                'q' => 'Is customer data kept secure?',
-                'a' => 'Absolutely. We follow strict data-privacy guidelines, and all customer chat transcripts and training materials are encrypted both in transit and at rest.'
-            ]
+            ['q' => 'What is an AI Chatbot for Customer Support?', 'a' => 'An AI Chatbot for Customer Support is an intelligent virtual assistant that automatically answers customer questions, resolves issues, creates support tickets, and provides 24/7 assistance using Artificial Intelligence and Conversational AI.'],
+            ['q' => 'How does an AI Customer Support Chatbot work?', 'a' => 'The chatbot understands customer questions using Natural Language Processing (NLP), searches your business knowledge base and integrated systems, and provides accurate responses instantly. If necessary, it transfers the conversation to a live support representative.'],
+            ['q' => 'Can the chatbot answer customer questions automatically?', 'a' => 'Yes. It can answer FAQs, product inquiries, pricing questions, order status, shipping information, payment issues, account management, warranty details, and many other routine support requests automatically.'],
+            ['q' => 'Can the chatbot create support tickets?', 'a' => 'Yes. If the issue cannot be resolved automatically, the chatbot creates a support ticket and assigns it to the appropriate support team.'],
+            ['q' => 'Can AI Chatbot integrate with CRM and ERP software?', 'a' => 'Yes. It integrates with CRM, ERP, Helpdesk, inventory systems, order management software, payment gateways, and customer databases to provide real-time information.'],
+            ['q' => 'Does the chatbot work 24/7?', 'a' => 'Yes. AI chatbots operate continuously throughout the year without breaks, ensuring customers always receive immediate support.'],
+            ['q' => 'Can AI Chatbot support multiple languages?', 'a' => 'Yes. Most modern AI chatbots provide multilingual support, enabling businesses to serve customers across different countries and regions.'],
+            ['q' => 'Is AI Chatbot suitable for small businesses?', 'a' => 'Absolutely. Startups, SMEs, and large enterprises can all benefit by improving customer service, reducing operational costs, and increasing support efficiency.'],
+            ['q' => 'Which industries use AI Customer Support Chatbots?', 'a' => 'AI Customer Support Chatbots are widely used in eCommerce, healthcare, banking, manufacturing, education, retail, logistics, travel, hospitality, insurance, SaaS, telecom, and government organizations.'],
+            ['q' => 'Why should businesses implement an AI Customer Support Chatbot?', 'a' => 'Businesses should implement AI chatbots to automate customer service, improve response times, increase customer satisfaction, reduce support costs, streamline workflows, and deliver consistent, high-quality support at scale.']
         ]
     ],
     'manufacturing-chatbot' => [
@@ -357,7 +389,7 @@ $chatbot_data = [
             ],
             [
                 'title' => 'Broadcasting Exam Updates',
-                'icon' => 'fa-bullhorn',
+                'icon' => 'fa-circle-info',
                 'desc' => 'Sends vital announcements, holiday alerts, and card reports to parents and students via integrated WhatsApp alerts.'
             ]
         ],
@@ -381,7 +413,7 @@ $chatbot_data = [
 ];
 
 // Fallback to customer support chatbot if slug is invalid
-$data = isset( $chatbot_data[$chatbot_type] ) ? $chatbot_data[$chatbot_type] : $chatbot_data['customer-support-chatbot'];
+$data = isset( $chatbot_data[$chatbot_type] ) ? $chatbot_data[$chatbot_type] : $chatbot_data['ai-chatbot-for-customer-support'];
 ?>
 
 <div class="chatbot-service-wrapper" style="background-color: #060913; color: #f8fafc; font-family: 'Raleway', system-ui, sans-serif; overflow-x: hidden;">
@@ -394,11 +426,11 @@ $data = isset( $chatbot_data[$chatbot_type] ) ? $chatbot_data[$chatbot_type] : $
                     <span class="badge mb-3 px-3 py-2 animate__animated animate__fadeInDown" style="background: rgba(0, 242, 254, 0.15); color: #00f2fe; border: 1px solid rgba(0, 242, 254, 0.35); border-radius: 30px; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; display: inline-flex; align-items: center; gap: 6px;">
                         <i class="fas <?php echo esc_attr( $data['hero_icon'] ); ?>"></i> <?php echo esc_html( $data['badge'] ); ?>
                     </span>
-                    <h1 class="display-4 font-weight-extrabold text-white mt-2 animate__animated animate__fadeInLeft" style="font-weight: 800; line-height: 1.2; font-size: 2.8rem;">
+                    <h1 class="display-4 font-weight-extrabold text-white mt-2 animate__animated animate__fadeInLeft" style="font-weight: 800; line-height: 1.2; font-size: 2.3rem;">
                         <?php echo esc_html( $data['title'] ); ?> <br>
-                        <span style="background: linear-gradient(135deg, #00f2fe 0%, #3b82f6 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 800;"><?php echo esc_html( $data['sub_title'] ); ?></span>
+                        <span style="background: linear-gradient(135deg, #00f2fe 0%, #3b82f6 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 800; font-size: 1.8rem;"><?php echo esc_html( $data['sub_title'] ); ?></span>
                     </h1>
-                    <p class="lead mt-4 animate__animated animate__fadeInUp" style="color: #cbd5e1; font-size: 1.15rem; line-height: 1.8; max-width: 650px;">
+                    <p class="lead mt-4 animate__animated animate__fadeInUp" style="color: #cbd5e1; font-size: 1.1rem; line-height: 1.8; max-width: 650px;">
                         <?php echo esc_html( $data['hero_desc'] ); ?>
                     </p>
                     <div class="d-flex flex-wrap gap-3 mt-4 justify-content-center justify-content-lg-start">
@@ -439,6 +471,25 @@ $data = isset( $chatbot_data[$chatbot_type] ) ? $chatbot_data[$chatbot_type] : $
         </div>
     </section>
 
+    <!-- 1.2 MAIN CONTENT (LONG COPY) -->
+    <?php if ( ! empty( $data['long_copy'] ) ) : ?>
+        <section class="py-5" style="background: #060913; border-bottom: 1px solid rgba(255,255,255,0.04);">
+            <div class="container py-3">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <div class="p-4 p-md-5 rounded-4 animate__animated animate__fadeInUp" style="background: rgba(14, 22, 40, 0.45); border: 1px solid rgba(0, 242, 254, 0.15); box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                            <?php foreach ( $data['long_copy'] as $para ) : ?>
+                                <p style="font-size: 1.05rem; line-height: 1.9; color: #cbd5e1; margin-bottom: 24px; text-align: justify; text-justify: inter-word;">
+                                    <?php echo esc_html( $para ); ?>
+                                </p>
+                            <?php endforeach; ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <?php endif; ?>
+
     <!-- 2. CORE FEATURES GRID -->
     <section class="py-5" style="background: #060913;">
         <div class="container py-4">
@@ -475,48 +526,151 @@ $data = isset( $chatbot_data[$chatbot_type] ) ? $chatbot_data[$chatbot_type] : $
                         Our solutions are built using industry-grade large language models (LLMs) trained specifically for target industries. The engine leverages vector embeddings to ensure precise answers, fast queries, and absolute brand safety.
                     </p>
                     
-                    <ul class="mt-4 p-0" style="list-style: none;">
+                    <div class="row g-4 mt-2">
                         <?php foreach ( $data['benefits'] as $benefit ) : ?>
-                            <li class="d-flex align-items-start mb-3" style="gap: 12px;">
-                                <div style="color: #10b981; font-size: 1.2rem; margin-top: -2px;"><i class="fas fa-circle-check"></i></div>
-                                <span style="color: #cbd5e1; font-size: 0.95rem; font-weight: 500;"><?php echo esc_html( $benefit ); ?></span>
-                            </li>
+                            <?php if ( is_array( $benefit ) ) : ?>
+                                <!-- New structured format (Customer Support Chatbot) -->
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-start gap-3">
+                                        <div style="width: 42px; height: 42px; background: rgba(0, 242, 254, 0.15); color: #00f2fe; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; border: 1px solid rgba(0, 242, 254, 0.25); flex-shrink: 0;">
+                                            <i class="fas <?php echo esc_attr( $benefit['icon'] ); ?>"></i>
+                                        </div>
+                                        <div>
+                                            <h5 style="color: #fff; font-weight: 700; font-size: 1.05rem; margin-bottom: 4px;"><?php echo esc_html( $benefit['title'] ); ?></h5>
+                                            <p style="color: #94a3b8; font-size: 0.88rem; line-height: 1.6; margin-bottom: 0;"><?php echo esc_html( $benefit['desc'] ); ?></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php else : ?>
+                                <!-- Standard string format (other chatbots) -->
+                                <div class="col-12">
+                                    <div class="d-flex align-items-start gap-3">
+                                        <div style="color: #10b981; font-size: 1.2rem; margin-top: -2px;"><i class="fas fa-circle-check"></i></div>
+                                        <span style="color: #cbd5e1; font-size: 0.95rem; font-weight: 500;"><?php echo esc_html( $benefit ); ?></span>
+                                    </div>
+                                </div>
+                            <?php endif; ?>
                         <?php endforeach; ?>
-                    </ul>
+                    </div>
                 </div>
                 
                 <div class="col-lg-6">
                     <div class="p-4 rounded-4" style="background: rgba(14, 22, 40, 0.85); border: 1px solid rgba(0, 242, 254, 0.15); box-shadow: 0 10px 30px rgba(0,0,0,0.6);">
                         <h3 class="mb-4" style="color: #fff; font-weight: 800; font-size: 1.5rem;"><i class="fas fa-bolt me-2" style="color: #00f2fe;"></i> Instant Deployment Lifecycle</h3>
                         
-                        <div class="steps-flow" style="display: flex; flex-direction: column; gap: 24px;">
-                            <div class="step-item d-flex gap-3">
-                                <div class="step-num" style="width: 32px; height: 32px; border-radius: 50%; background: #00f2fe; color: #060913; font-weight: 800; display: flex; align-items: center; justify-content: center;">1</div>
-                                <div>
-                                    <h5 style="color: #fff; font-weight: 700; font-size: 1rem; margin-bottom: 4px;">Sync Database / Docs</h5>
-                                    <p style="color: #94a3b8; font-size: 0.85rem; margin-bottom: 0;">Upload training documents, databases, links, or sync product inventory sheets.</p>
+                        <div class="steps-flow" style="display: flex; flex-direction: column; gap: 24px; max-height: 480px; overflow-y: auto; padding-right: 10px;">
+                            <?php if ( ! empty( $data['steps'] ) ) : ?>
+                                <!-- Dynamic steps loop (for Customer Support) -->
+                                <?php foreach ( $data['steps'] as $idx => $step ) : ?>
+                                    <div class="step-item d-flex gap-3">
+                                        <div class="step-num" style="width: 32px; height: 32px; border-radius: 50%; background: linear-gradient(135deg, #00f2fe 0%, #3b82f6 100%); color: #060913; font-weight: 800; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                            <?php echo ($idx + 1); ?>
+                                        </div>
+                                        <div>
+                                            <h5 style="color: #fff; font-weight: 700; font-size: 1rem; margin-bottom: 4px;"><?php echo esc_html( $step['title'] ); ?></h5>
+                                            <p style="color: #94a3b8; font-size: 0.85rem; margin-bottom: 0;"><?php echo esc_html( $step['desc'] ); ?></p>
+                                        </div>
+                                    </div>
+                                <?php endforeach; ?>
+                            <?php else : ?>
+                                <!-- Static default steps (for other chatbots) -->
+                                <div class="step-item d-flex gap-3">
+                                    <div class="step-num" style="width: 32px; height: 32px; border-radius: 50%; background: #00f2fe; color: #060913; font-weight: 800; display: flex; align-items: center; justify-content: center;">1</div>
+                                    <div>
+                                        <h5 style="color: #fff; font-weight: 700; font-size: 1rem; margin-bottom: 4px;">Sync Database / Docs</h5>
+                                        <p style="color: #94a3b8; font-size: 0.85rem; margin-bottom: 0;">Upload training documents, databases, links, or sync product inventory sheets.</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="step-item d-flex gap-3">
-                                <div class="step-num" style="width: 32px; height: 32px; border-radius: 50%; background: #3b82f6; color: #fff; font-weight: 800; display: flex; align-items: center; justify-content: center;">2</div>
-                                <div>
-                                    <h5 style="color: #fff; font-weight: 700; font-size: 1rem; margin-bottom: 4px;">AI Auto-Training</h5>
-                                    <p style="color: #94a3b8; font-size: 0.85rem; margin-bottom: 0;">The AutomateX LLM parses data inputs and trains a custom secure agent within minutes.</p>
+                                <div class="step-item d-flex gap-3">
+                                    <div class="step-num" style="width: 32px; height: 32px; border-radius: 50%; background: #3b82f6; color: #fff; font-weight: 800; display: flex; align-items: center; justify-content: center;">2</div>
+                                    <div>
+                                        <h5 style="color: #fff; font-weight: 700; font-size: 1rem; margin-bottom: 4px;">AI Auto-Training</h5>
+                                        <p style="color: #94a3b8; font-size: 0.85rem; margin-bottom: 0;">The AutomateX LLM parses data inputs and trains a custom secure agent within minutes.</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="step-item d-flex gap-3">
-                                <div class="step-num" style="width: 32px; height: 32px; border-radius: 50%; background: #ff9900; color: #fff; font-weight: 800; display: flex; align-items: center; justify-content: center;">3</div>
-                                <div>
-                                    <h5 style="color: #fff; font-weight: 700; font-size: 1rem; margin-bottom: 4px;">Go Live</h5>
-                                    <p style="color: #94a3b8; font-size: 0.85rem; margin-bottom: 0;">Embed the chat widget on your site, hook up WhatsApp APIs, and start serving visitors.</p>
+                                <div class="step-item d-flex gap-3">
+                                    <div class="step-num" style="width: 32px; height: 32px; border-radius: 50%; background: #ff9900; color: #fff; font-weight: 800; display: flex; align-items: center; justify-content: center;">3</div>
+                                    <div>
+                                        <h5 style="color: #fff; font-weight: 700; font-size: 1rem; margin-bottom: 4px;">Go Live</h5>
+                                        <p style="color: #94a3b8; font-size: 0.85rem; margin-bottom: 0;">Embed the chat widget on your site, hook up WhatsApp APIs, and start serving visitors.</p>
+                                    </div>
                                 </div>
-                            </div>
+                            <?php endif; ?>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- 3.2 WORKFLOW FLOWCHART -->
+    <?php if ( $chatbot_type === 'ai-chatbot-for-customer-support' ) : ?>
+        <section class="py-5" style="background: rgba(14, 22, 40, 0.25); border-bottom: 1px solid rgba(255,255,255,0.04);">
+            <div class="container py-4">
+                <div class="text-center mb-5">
+                    <h2 style="color: #fff; font-weight: 800; font-size: 2.2rem;">How AI Customer Support <span style="background: linear-gradient(135deg, #00f2fe 0%, #3b82f6 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 800;">Workflow Works</span></h2>
+                    <p style="color: #94a3b8; max-width: 650px; margin: 10px auto 0 auto; font-size: 1.05rem; font-weight: 500;">A visual breakdown of how queries flow through AutomateX AI from visitor query to final customer satisfaction.</p>
+                </div>
+                
+                <div class="row justify-content-center">
+                    <div class="col-lg-12 text-center">
+                        <div class="d-flex flex-wrap justify-content-center align-items-center gap-4">
+                            
+                            <div class="p-3 rounded-3" style="background: var(--bg-dark-card); border: 1px solid var(--border-cyan-glow); min-width: 180px; max-width: 220px;">
+                                <div style="font-size: 1.8rem; color: #00f2fe; margin-bottom: 8px;"><i class="fas fa-laptop"></i></div>
+                                <h6 style="color: #fff; font-weight: 700; margin: 0; font-size: 0.95rem;">1. Customer Visits Site</h6>
+                            </div>
+                            
+                            <div class="d-none d-lg-block" style="color: #00f2fe; font-size: 1.2rem;"><i class="fas fa-chevron-right"></i></div>
+                            <div class="d-block d-lg-none" style="color: #00f2fe; font-size: 1.2rem; margin: 8px 0;"><i class="fas fa-chevron-down"></i></div>
+                            
+                            <div class="p-3 rounded-3" style="background: var(--bg-dark-card); border: 1px solid var(--border-cyan-glow); min-width: 180px; max-width: 220px;">
+                                <div style="font-size: 1.8rem; color: #00f2fe; margin-bottom: 8px;"><i class="fas fa-robot"></i></div>
+                                <h6 style="color: #fff; font-weight: 700; margin: 0; font-size: 0.95rem;">2. AI Welcomes User</h6>
+                            </div>
+                            
+                            <div class="d-none d-lg-block" style="color: #00f2fe; font-size: 1.2rem;"><i class="fas fa-chevron-right"></i></div>
+                            <div class="d-block d-lg-none" style="color: #00f2fe; font-size: 1.2rem; margin: 8px 0;"><i class="fas fa-chevron-down"></i></div>
+                            
+                            <div class="p-3 rounded-3" style="background: var(--bg-dark-card); border: 1px solid var(--border-cyan-glow); min-width: 180px; max-width: 220px;">
+                                <div style="font-size: 1.8rem; color: #00f2fe; margin-bottom: 8px;"><i class="fas fa-comment-dots"></i></div>
+                                <h6 style="color: #fff; font-weight: 700; margin: 0; font-size: 0.95rem;">3. User Asks Question</h6>
+                            </div>
+                            
+                            <div class="d-none d-lg-block" style="color: #3b82f6; font-size: 1.2rem;"><i class="fas fa-chevron-right"></i></div>
+                            <div class="d-block d-lg-none" style="color: #3b82f6; font-size: 1.2rem; margin: 8px 0;"><i class="fas fa-chevron-down"></i></div>
+                            
+                            <div class="p-3 rounded-3" style="background: var(--bg-dark-card); border: 1px solid var(--border-cyan-glow); min-width: 180px; max-width: 220px;">
+                                <div style="font-size: 1.8rem; color: #3b82f6; margin-bottom: 8px;"><i class="fas fa-brain"></i></div>
+                                <h6 style="color: #fff; font-weight: 700; margin: 0; font-size: 0.95rem;">4. AI Analyzes Intent</h6>
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="text-center my-4" style="color: #3b82f6; font-size: 1.5rem;"><i class="fas fa-chevron-down"></i></div>
+                        
+                        <div class="d-flex flex-wrap justify-content-center align-items-stretch gap-4">
+                            
+                            <div class="p-4 rounded-4 text-center" style="background: rgba(16, 185, 129, 0.05); border: 1px solid rgba(16, 185, 129, 0.3); max-width: 420px; flex: 1;">
+                                <div style="display: inline-block; padding: 4px 12px; background: #10b981; color: #fff; border-radius: 20px; font-weight: 800; font-size: 0.8rem; margin-bottom: 12px;">YES (Auto-Resolved)</div>
+                                <div style="font-size: 2.2rem; color: #10b981; margin-bottom: 12px;"><i class="fas fa-circle-check"></i></div>
+                                <h5 style="color: #fff; font-weight: 700; margin-bottom: 8px; font-size: 1.1rem;">Instant AI Resolution</h5>
+                                <p style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.7; margin-bottom: 0; text-align: left;">AI fetches immediate answers from your synced FAQs and Knowledge Base. The case is marked resolved, boosting visitor satisfaction and saving resource costs.</p>
+                            </div>
+                            
+                            <div class="p-4 rounded-4 text-center" style="background: rgba(239, 68, 68, 0.05); border: 1px solid rgba(239, 68, 68, 0.3); max-width: 420px; flex: 1;">
+                                <div style="display: inline-block; padding: 4px 12px; background: #ef4444; color: #fff; border-radius: 20px; font-weight: 800; font-size: 0.8rem; margin-bottom: 12px;">NO (Needs Human Assist)</div>
+                                <div style="font-size: 2.2rem; color: #ef4444; margin-bottom: 12px;"><i class="fas fa-headset"></i></div>
+                                <h5 style="color: #fff; font-weight: 700; margin-bottom: 8px; font-size: 1.1rem;">Human Escalation</h5>
+                                <p style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.7; margin-bottom: 0; text-align: left;">System creates a helpdesk ticket automatically and routes the live conversation context directly to an online human agent to finalize customer satisfaction.</p>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <?php endif; ?>
 
     <!-- 4. FAQ SECTION -->
     <section class="py-5" style="background: #060913;">

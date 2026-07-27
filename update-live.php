@@ -30,7 +30,7 @@ $files_to_sync = array(
     'wp-content/themes/automatex-theme/functions.php',
     'wp-content/plugins/automatex-db-bridge/automatex-db-bridge.php',
     'wp-content/themes/automatex-theme/page-chatbot-service-base.php',
-    'wp-content/themes/automatex-theme/page-customer-support-chatbot.php',
+    'wp-content/themes/automatex-theme/page-ai-chatbot-for-customer-support.php',
     'wp-content/themes/automatex-theme/page-manufacturing-chatbot.php',
     'wp-content/themes/automatex-theme/page-sales-chatbot.php',
     'wp-content/themes/automatex-theme/page-billing-chatbot.php',

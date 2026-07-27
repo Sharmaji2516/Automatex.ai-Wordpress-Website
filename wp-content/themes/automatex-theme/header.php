@@ -575,7 +575,7 @@
                                 <div class="mega-menu-wrap">
                                   <ul>
                                     <strong><i class="fa-solid fa-robot"></i> AI Automation & Chatbot</strong>
-                                    <li><a href="<?php echo esc_url( home_url( '/customer-support-chatbot/' ) ); ?>"><i class="fa-solid fa-headset"></i> Customer Support Chatbot</a></li>
+                                    <li><a href="<?php echo esc_url( home_url( '/ai-chatbot-for-customer-support/' ) ); ?>"><i class="fa-solid fa-headset"></i> AI Chatbot for Customer Support</a></li>
                                     <li><a href="<?php echo esc_url( home_url( '/manufacturing-chatbot/' ) ); ?>"><i class="fa-solid fa-industry"></i> Manufacturing Chatbot</a></li>
                                     <li><a href="<?php echo esc_url( home_url( '/sales-chatbot/' ) ); ?>"><i class="fa-solid fa-chart-line"></i> Sales Chatbot</a></li>
                                     <li><a href="<?php echo esc_url( home_url( '/billing-chatbot/' ) ); ?>"><i class="fa-solid fa-file-invoice-dollar"></i> Billing Chatbot</a></li>
