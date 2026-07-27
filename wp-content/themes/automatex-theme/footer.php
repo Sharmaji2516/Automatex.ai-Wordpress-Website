@@ -129,10 +129,10 @@
 <style>
   /* Prevent Modal Backdrop Dark Overlay Lock */
   .modal-backdrop {
-      z-index: 1040 !important;
+      z-index: 999998 !important;
   }
   #trialModal {
-      z-index: 1050 !important;
+      z-index: 999999 !important;
   }
   body:not(.modal-open) .modal-backdrop {
       display: none !important;

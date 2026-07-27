@@ -528,10 +528,10 @@
               </div>
           </div>
       </div>
-   </header>
-   <!-- header end -->
-
-   <!-- sticky wrapper end -->
+    </header>
+    <!-- header end -->
+    </div>
+    <!-- sticky wrapper end -->
 
    <!-- WhatsApp Icon Box -->
    <div class="whatsapp-icon" style="position:fixed; bottom:20px; left:20px; z-index:9999;">
