@@ -1,51 +1,30 @@
   <!--  footer -->
-  <footer class="live-footer">
+  <footer class="live-footer premium-footer">
       <div class="container">
-          <div class="row">
-              <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+          <div class="row footer-main-grid">
+              <div class="col-lg-3 col-md-12 mb-4 mb-lg-0 footer-brand-col">
                 <div class="footer-logo-section">
                     <figure> 
-                      <a href="<?php echo esc_url( home_url( '/' ) ); ?>" style="text-decoration: none; display: inline-block; background: #fff; padding: 10px 15px; border-radius: 8px;">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-automatex.png" alt="AutomateX.ai Logo" style="height: 45px; width: auto; display: block;" />
+                      <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="footer-logo-link">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-automatex.png" alt="AutomateX.ai Logo" />
                       </a> 
                     </figure>
-                    <span class="footer-tagline">Smart IT . Smarter Business</span>
-                    <p class="mt-3">At Automatex.ai Solutions, we are passionate about transforming businesses through innovative, cloud-based software solutions. Founded with a vision to empower small and mid-sized enterprises, we specialize in delivering cutting-edge ERP, CRM, and automation systems.</p>
+                    <span class="footer-tagline-text">Smart IT . Smarter Business</span>
+                    <p class="footer-desc">At Automatex.ai Solutions, we are passionate about transforming businesses through innovative, cloud-based software solutions. Founded with a vision to empower small and mid-sized enterprises, we specialize in delivering cutting-edge ERP, CRM, and automation systems.</p>
                     
-                    <div class="footer-cities-serve mt-4">
-                        <h5 class="cities-title">Cities We Serve:</h5>
-
-                        <div class="cities-links-container" id="footerCitiesList">
-                            <?php 
-                                // Query custom cities post type dynamically
-                                $cities_query = new WP_Query( array(
-                                    'post_type'      => 'cities',
-                                    'posts_per_page' => -1,
-                                    'orderby'        => 'title',
-                                    'order'          => 'ASC'
-                                ) );
-
-                                if ( $cities_query->have_posts() ) {
-                                    while ( $cities_query->have_posts() ) {
-                                        $cities_query->the_post();
-                                        echo '<a href="' . esc_url( get_permalink() ) . '" class="city-link">' . esc_html( get_the_title() ) . '</a>';
-                                    }
-                                    wp_reset_postdata();
-                                } else {
-                                    // Staging Fallback if CPT holds no posts yet
-                                    $allCities = ["Mumbai", "Delhi", "Bengaluru", "Hyderabad", "Chennai", "Pune", "Ahmedabad", "Jaipur", "Surat", "Kolkata", "Noida", "Gurgaon", "Lucknow", "Indore", "Bhopal", "Nagpur", "Vadodara", "Nashik", "Coimbatore", "Kochi", "Visakhapatnam", "Vijayawada", "Chandigarh", "Ludhiana", "Ranchi", "Raipur", "Bhubaneswar", "Kanpur", "Agra", "Varanasi", "Meerut", "Faridabad", "Ghaziabad", "Jodhpur", "Udaipur", "Ajmer", "Kota", "Aurangabad", "Thane", "Mysuru", "Hubli", "Mangalore", "Trichy", "Madurai", "Salem", "Tiruppur", "Guwahati", "Dehradun", "Shimla", "Jammu", "Srinagar", "Amritsar", "Jalandhar", "Panipat", "Sonipat", "Dharwad", "Rajkot", "Jamnagar", "Gandhinagar", "Thrissur", "Kannur", "Warangal", "Nizamabad", "Karimnagar", "Belgaum", "Davanagere", "Tumakuru", "Anand", "Bhavnagar", "Junagadh", "Thiruvananthapuram"];
-                                    
-                                    foreach($allCities as $city) {
-                                        $slug = sanitize_title($city);
-                                        echo '<a href="' . esc_url( home_url( '/cities/' . $slug . '/' ) ) . '" class="city-link">' . esc_html( $city ) . '</a>';
-                                    }
-                                }
-                            ?>
-                        </div>
+                    <div class="footer-social-wrapper">
+                       <ul>
+                          <li> <a target="_blank" href="https://www.facebook.com/people/Automatex.ai/61554507884332/" title="Facebook"> <i class="fa-brands fa-facebook-f"></i></a> </li>
+                          <li> <a target="_blank" href="https://www.instagram.com/Automatex.ai/" title="Instagram"> <i class="fa-brands fa-instagram"></i></a> </li>
+                          <li> <a target="_blank" href="https://wa.me/917425016636" title="WhatsApp"> <i class="fa-brands fa-whatsapp"></i></a> </li>
+                          <li> <a target="_blank" href="https://www.linkedin.com/company/Automatex.ai-soft-solutions/" title="LinkedIn"> <i class="fa-brands fa-linkedin-in"></i></a> </li>
+                          <li> <a target="_blank" href="https://www.Automatex.ai.in/pos_bill/lead/inquiry_formIndiaMART.php" title="IndiaMART"> <img src="<?php echo get_template_directory_uri(); ?>/assets/images/social1.png" style="width: 18px; filter: grayscale(1) brightness(2.5);" alt="IndiaMART"> </a></li>
+                          <li> <a target="_blank" href="https://www.Automatex.ai.in/pos_bill/lead/inquiry_formJustdial.php" title="Justdial"> <img src="<?php echo get_template_directory_uri(); ?>/assets/images/social2.png" style="width: 18px; filter: grayscale(1) brightness(2.5);" alt="Justdial"> </a></li>
+                       </ul>
                     </div>
                 </div>
               </div>
-               <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+              <div class="col-lg-2 col-md-4 col-sm-6 mb-4 mb-lg-0">
                 <div class="footer-widget">
                    <h4>Our Products</h4>
                    <ul class="footer-links">
@@ -62,7 +41,7 @@
                      </ul>
                 </div>
               </div>
-              <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+              <div class="col-lg-2 col-md-4 col-sm-6 mb-4 mb-lg-0">
                 <div class="footer-widget">
                    <h4>Useful Links</h4>
                    <ul class="footer-links">
@@ -74,9 +53,9 @@
                      </ul>
                 </div>
               </div>
-              <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+              <div class="col-lg-2 col-md-4 col-sm-6 mb-4 mb-lg-0">
                 <div class="footer-widget">
-                   <h4>Service</h4>
+                   <h4>Services</h4>
                    <ul class="footer-links">
                        <li><a href="<?php echo esc_url( home_url( '/digital-marketing-services/' ) ); ?>">Digital Marketing Services</a></li>
                        <li><a href="<?php echo esc_url( home_url( '/e-commerce-website-development/' ) ); ?>">Web Development</a></li>
@@ -87,30 +66,83 @@
                      </ul>
                 </div>
               </div> 
-              <div class="col-lg-3 col-md-6">
+              <div class="col-lg-3 col-md-12">
                 <div class="footer-widget">
                    <h4>Contact Us</h4>
-                   <ul class="footer-contact-links">
-                      <li><a href="mailto:sales.Automatex.ai@Automatex.aicrm.in">sales.Automatex.ai@Automatex.aicrm.in</a></li>
-                      <li><a href="tel:+917425016636">+91 7425016636</a></li>
-                    </ul>
-                    <div class="footer-address">
-                        <p><strong>India (Noida Office):</strong><br>
-                        Knowledge Park V, Sector 12, Greater Noida, Uttar Pradesh, 203207</p>
-                        <p class="mt-3"><strong>India (Jaipur Office):</strong><br>
-                        Akash Ganga, C-107, Keshav Nagar, Civil Lines, Jaipur – 302006, Rajasthan, India.</p>
-                    </div>
-                    <div class="footer-social-icons mt-4">
-                       <ul>
-                          <li> <a target="_blank" href="https://www.facebook.com/people/Automatex.ai/61554507884332/"> <i class="fa-brands fa-facebook-f"></i></a> </li>
-                          <li> <a target="_blank" href="https://www.instagram.com/Automatex.ai/"> <i class="fa-brands fa-instagram"></i></a> </li>
-                          <li> <a target="_blank" href="https://wa.me/917425016636"> <i class="fa-brands fa-whatsapp"></i></a> </li>
-                          <li> <a target="_blank" href="https://www.linkedin.com/company/Automatex.ai-soft-solutions/"> <i class="fa-brands fa-linkedin-in"></i></a> </li>
-                          <li> <a target="_blank" href="https://www.Automatex.ai.in/pos_bill/lead/inquiry_formIndiaMART.php"> <img src="<?php echo get_template_directory_uri(); ?>/assets/images/social1.png" style="width: 20px;"> </a></li>
-                          <li> <a target="_blank" href="https://www.Automatex.ai.in/pos_bill/lead/inquiry_formJustdial.php"> <img src="<?php echo get_template_directory_uri(); ?>/assets/images/social2.png" style="width: 20px;"> </a></li>
-                       </ul>
-                    </div>
+                   <div class="contact-card-glass">
+                       <div class="contact-item">
+                           <span class="contact-icon"><i class="fas fa-envelope"></i></span>
+                           <a href="mailto:sales.Automatex.ai@Automatex.aicrm.in" class="contact-link" style="word-break: break-all;">sales.Automatex.ai@Automatex.aicrm.in</a>
+                       </div>
+                       <div class="contact-item">
+                           <span class="contact-icon"><i class="fas fa-phone-alt"></i></span>
+                           <a href="tel:+917425016636" class="contact-link">+91 7425016636</a>
+                       </div>
+                       <hr class="contact-divider">
+                       <div class="contact-item align-items-start">
+                           <span class="contact-icon mt-1"><i class="fas fa-map-marker-alt"></i></span>
+                           <div>
+                               <strong style="color: #ffffff; font-size: 0.9rem;">India (Noida Office):</strong>
+                               <p class="contact-address-text">Knowledge Park V, Sector 12, Greater Noida, Uttar Pradesh, 203207</p>
+                           </div>
+                       </div>
+                       <div class="contact-item align-items-start mt-3">
+                           <span class="contact-icon mt-1"><i class="fas fa-map-marker-alt"></i></span>
+                           <div>
+                               <strong style="color: #ffffff; font-size: 0.9rem;">India (Jaipur Office):</strong>
+                               <p class="contact-address-text">Akash Ganga, C-107, Keshav Nagar, Civil Lines, Jaipur – 302006, Rajasthan, India.</p>
+                           </div>
+                       </div>
+                   </div>
                 </div>
+              </div>
+          </div>
+          
+          <!-- Separator Line -->
+          <div class="row">
+              <div class="col-12">
+                  <div class="footer-glow-line"></div>
+              </div>
+          </div>
+
+          <!-- Locations / Cities Expandable Section -->
+          <div class="row">
+              <div class="col-12">
+                  <div class="footer-cities-drawer">
+                      <button class="cities-drawer-toggleCollapsed cities-drawer-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#footerCitiesCollapse" aria-expanded="false" aria-controls="footerCitiesCollapse">
+                          <span><i class="fas fa-map-marked-alt me-2" style="color: #00f2fe;"></i> Browse ERP & POS Software by Location (72 Cities)</span>
+                          <i class="fas fa-chevron-down toggle-arrow"></i>
+                      </button>
+                      <div class="collapse" id="footerCitiesCollapse">
+                          <div class="cities-links-grid pt-3">
+                              <?php 
+                                  // Query custom cities post type dynamically
+                                  $cities_query = new WP_Query( array(
+                                      'post_type'      => 'cities',
+                                      'posts_per_page' => -1,
+                                      'orderby'        => 'title',
+                                      'order'          => 'ASC'
+                                  ) );
+
+                                  if ( $cities_query->have_posts() ) {
+                                      while ( $cities_query->have_posts() ) {
+                                          $cities_query->the_post();
+                                          echo '<a href="' . esc_url( get_permalink() ) . '" class="city-link">' . esc_html( get_the_title() ) . '</a>';
+                                      }
+                                      wp_reset_postdata();
+                                  } else {
+                                      // Staging Fallback if CPT holds no posts yet
+                                      $allCities = ["Mumbai", "Delhi", "Bengaluru", "Hyderabad", "Chennai", "Pune", "Ahmedabad", "Jaipur", "Surat", "Kolkata", "Noida", "Gurgaon", "Lucknow", "Indore", "Bhopal", "Nagpur", "Vadodara", "Nashik", "Coimbatore", "Kochi", "Visakhapatnam", "Vijayawada", "Chandigarh", "Ludhiana", "Ranchi", "Raipur", "Bhubaneswar", "Kanpur", "Agra", "Varanasi", "Meerut", "Faridabad", "Ghaziabad", "Jodhpur", "Udaipur", "Ajmer", "Kota", "Aurangabad", "Thane", "Mysuru", "Hubli", "Mangalore", "Trichy", "Madurai", "Salem", "Tiruppur", "Guwahati", "Dehradun", "Shimla", "Jammu", "Srinagar", "Amritsar", "Jalandhar", "Panipat", "Sonipat", "Dharwad", "Rajkot", "Jamnagar", "Gandhinagar", "Thrissur", "Kannur", "Warangal", "Nizamabad", "Karimnagar", "Belgaum", "Davanagere", "Tumakuru", "Anand", "Bhavnagar", "Junagadh", "Thiruvananthapuram"];
+                                      
+                                      foreach($allCities as $city) {
+                                          $slug = sanitize_title($city);
+                                          echo '<a href="' . esc_url( home_url( '/cities/' . $slug . '/' ) ) . '" class="city-link">' . esc_html( $city ) . '</a>';
+                                      }
+                                  }
+                              ?>
+                          </div>
+                      </div>
+                  </div>
               </div>
           </div>
       </div>
@@ -123,6 +155,271 @@
               </div>
           </div>
       </div>
+
+      <!-- inline style overrides for premium dark-theme elements -->
+      <style>
+      .premium-footer {
+          background: #030712 !important; /* Rich obsidian background */
+          border-top: 1px solid rgba(6, 182, 212, 0.2) !important;
+          padding: 80px 0 0 0 !important;
+          color: #94a3b8 !important;
+          position: relative !important;
+      }
+
+      .premium-footer::before {
+          content: '' !important;
+          position: absolute !important;
+          top: 0 !important; left: 50% !important;
+          transform: translateX(-50%) !important;
+          width: 60% !important; height: 2px !important;
+          background: linear-gradient(90deg, transparent 0%, #00f2fe 50%, transparent 100%) !important;
+          box-shadow: 0 0 15px #00f2fe !important;
+          pointer-events: none !important;
+      }
+
+      .premium-footer h4 {
+          color: #ffffff !important;
+          font-size: 1.15rem !important;
+          font-weight: 800 !important;
+          text-transform: uppercase !important;
+          letter-spacing: 1px !important;
+          margin-bottom: 24px !important;
+          position: relative !important;
+          padding-bottom: 10px !important;
+      }
+
+      .premium-footer h4::after {
+          content: '' !important;
+          position: absolute !important;
+          bottom: 0 !important; left: 0 !important;
+          width: 35px !important; height: 3px !important;
+          background: #00f2fe !important;
+          border-radius: 2px !important;
+      }
+
+      .footer-logo-link {
+          display: inline-block !important;
+          background: #ffffff !important;
+          padding: 8px 16px !important;
+          border-radius: 10px !important;
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4) !important;
+          margin-bottom: 16px !important;
+      }
+
+      .footer-logo-link img {
+          height: 40px !important;
+          width: auto !important;
+          display: block !important;
+      }
+
+      .footer-tagline-text {
+          display: block !important;
+          font-size: 0.85rem !important;
+          font-weight: 700 !important;
+          color: #00f2fe !important;
+          letter-spacing: 1.5px !important;
+          text-transform: uppercase !important;
+          margin-bottom: 12px !important;
+      }
+
+      .footer-desc {
+          font-size: 0.9rem !important;
+          line-height: 1.6 !important;
+          color: #94a3b8 !important;
+          margin-bottom: 20px !important;
+      }
+
+      .footer-social-wrapper ul {
+          list-style: none !important;
+          padding: 0 !important;
+          margin: 0 !important;
+          display: flex !important;
+          gap: 10px !important;
+          flex-wrap: wrap !important;
+      }
+
+      .footer-social-wrapper li {
+          display: inline-block !important;
+          margin: 0 !important;
+      }
+
+      .footer-social-wrapper a {
+          display: flex !important;
+          align-items: center !important;
+          justify-content: center !important;
+          width: 36px !important;
+          height: 36px !important;
+          border-radius: 50% !important;
+          background: rgba(255, 255, 255, 0.04) !important;
+          border: 1px solid rgba(255, 255, 255, 0.08) !important;
+          color: #cbd5e1 !important;
+          transition: all 0.3s ease !important;
+          text-decoration: none !important;
+      }
+
+      .footer-social-wrapper a:hover {
+          background: #00f2fe !important;
+          color: #030712 !important;
+          border-color: #00f2fe !important;
+          transform: translateY(-3px) !important;
+          box-shadow: 0 5px 15px rgba(0, 242, 254, 0.4) !important;
+      }
+
+      .footer-links li {
+          list-style: none !important;
+          margin-bottom: 8px !important;
+      }
+
+      .footer-links a {
+          color: #cbd5e1 !important;
+          font-size: 0.9rem !important;
+          text-decoration: none !important;
+          transition: all 0.25s ease !important;
+          display: inline-block !important;
+          padding: 4px 0 !important;
+      }
+
+      .footer-links a:hover {
+          color: #00f2fe !important;
+          transform: translateX(4px) !important;
+          text-decoration: none !important;
+      }
+
+      .contact-card-glass {
+          background: rgba(255, 255, 255, 0.02) !important;
+          border: 1px solid rgba(255, 255, 255, 0.08) !important;
+          border-radius: 16px !important;
+          padding: 20px !important;
+          box-shadow: 0 10px 30px rgba(0,0,0,0.3) !important;
+      }
+
+      .contact-item {
+          display: flex !important;
+          align-items: center !important;
+          gap: 12px !important;
+          margin-bottom: 14px !important;
+      }
+
+      .contact-icon {
+          display: flex !important;
+          align-items: center !important;
+          justify-content: center !important;
+          width: 28px !important;
+          height: 28px !important;
+          border-radius: 50% !important;
+          background: rgba(0, 242, 254, 0.1) !important;
+          border: 1px solid rgba(0, 242, 254, 0.25) !important;
+          color: #00f2fe !important;
+          font-size: 0.85rem !important;
+          flex-shrink: 0 !important;
+      }
+
+      .contact-link {
+          color: #cbd5e1 !important;
+          text-decoration: none !important;
+          font-size: 0.9rem !important;
+          font-weight: 600 !important;
+          transition: color 0.25s ease !important;
+      }
+
+      .contact-link:hover {
+          color: #00f2fe !important;
+          text-decoration: none !important;
+      }
+
+      .contact-divider {
+          border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+          margin: 15px 0 !important;
+          opacity: 0.5 !important;
+      }
+
+      .contact-address-text {
+          font-size: 0.82rem !important;
+          line-height: 1.5 !important;
+          color: #cbd5e1 !important;
+          margin: 4px 0 0 0 !important;
+      }
+
+      .footer-glow-line {
+          height: 1px !important;
+          background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0) 100%) !important;
+          margin: 40px 0 20px 0 !important;
+      }
+
+      .footer-cities-drawer {
+          background: rgba(255, 255, 255, 0.02) !important;
+          border: 1px solid rgba(255, 255, 255, 0.05) !important;
+          border-radius: 12px !important;
+          padding: 10px 20px !important;
+          margin-bottom: 40px !important;
+      }
+
+      .cities-drawer-toggle {
+          background: transparent !important;
+          border: none !important;
+          color: #cbd5e1 !important;
+          width: 100% !important;
+          display: flex !important;
+          justify-content: space-between !important;
+          align-items: center !important;
+          font-weight: 700 !important;
+          font-size: 0.92rem !important;
+          cursor: pointer !important;
+          padding: 10px 0 !important;
+          outline: none !important;
+      }
+
+      .cities-drawer-toggle:hover {
+          color: #00f2fe !important;
+      }
+
+      .cities-drawer-toggle .toggle-arrow {
+          transition: transform 0.3s ease !important;
+          color: #cbd5e1 !important;
+      }
+
+      .cities-drawer-toggle[aria-expanded="true"] .toggle-arrow {
+          transform: rotate(180deg) !important;
+          color: #00f2fe !important;
+      }
+
+      .cities-links-grid {
+          display: flex !important;
+          flex-wrap: wrap !important;
+          gap: 8px !important;
+      }
+
+      .cities-links-grid .city-link {
+          background: rgba(255, 255, 255, 0.03) !important;
+          border: 1px solid rgba(255, 255, 255, 0.08) !important;
+          color: #cbd5e1 !important;
+          padding: 6px 14px !important;
+          border-radius: 20px !important;
+          font-size: 0.8rem !important;
+          text-decoration: none !important;
+          transition: all 0.25s ease !important;
+      }
+
+      .cities-links-grid .city-link:hover {
+          background: linear-gradient(135deg, #00f2fe 0%, #3b82f6 100%) !important;
+          color: #ffffff !important;
+          border-color: #00f2fe !important;
+          box-shadow: 0 0 10px rgba(0, 242, 254, 0.4) !important;
+          text-decoration: none !important;
+      }
+
+      .footer-copyright-bar {
+          background: #02040a !important;
+          border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
+          padding: 20px 0 !important;
+      }
+
+      .footer-copyright-bar p {
+          font-size: 0.85rem !important;
+          color: #64748b !important;
+          margin: 0 !important;
+      }
+      </style>
   </footer>
   <!--  footer -->
 
