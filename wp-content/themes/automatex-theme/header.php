@@ -31,6 +31,42 @@
           z-index: 10000 !important;
       }
 
+      /* Desktop Dropdown Responsiveness & Height Limits */
+      @media (min-width: 992px) {
+          /* Allow mega-menus to span relative to the full header wrapper */
+          .navbar-nav .nav-item.dropdown {
+              position: static !important;
+          }
+
+          /* Auto-scale width and center the menu dynamically */
+          .mega-menu {
+              width: 95vw !important; /* Scaled dynamically to screen width */
+              max-width: 1200px !important; /* Capped for large high-resolution screens */
+              left: 50% !important;
+              transform: translateX(-50%) !important;
+              right: auto !important;
+              box-sizing: border-box !important;
+          }
+
+          /* Limit height and enable vertical scrolling to prevent cutting-off */
+          .mega-menu, .sub-menu {
+              max-height: calc(100vh - 140px) !important;
+              overflow-y: auto !important;
+          }
+
+          /* Premium Custom Scrollbar Styling matching theme colors */
+          .mega-menu::-webkit-scrollbar, .sub-menu::-webkit-scrollbar {
+              width: 6px;
+          }
+          .mega-menu::-webkit-scrollbar-thumb, .sub-menu::-webkit-scrollbar-thumb {
+              background: rgba(0, 242, 254, 0.4) !important; /* Glow cyan scrollbar */
+              border-radius: 4px !important;
+          }
+          .mega-menu::-webkit-scrollbar-track, .sub-menu::-webkit-scrollbar-track {
+              background: transparent !important;
+          }
+      }
+
       /* ==========================================
          🤖 AUTOMATEX PREMIUM FUTURISTIC HEADER STYLING
          ========================================== */
