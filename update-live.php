@@ -36,7 +36,8 @@ $files_to_sync = array(
     'wp-content/themes/automatex-theme/page-billing-chatbot.php',
     'wp-content/themes/automatex-theme/page-healthcare-chatbot.php',
     'wp-content/themes/automatex-theme/page-enterprise-chatbot.php',
-    'wp-content/themes/automatex-theme/page-education-chatbot.php'
+    'wp-content/themes/automatex-theme/page-education-chatbot.php',
+    'wp-content/themes/automatex-theme/page-social-media-optimization.php'
 );
 
 $github_raw_url = 'https://raw.githubusercontent.com/Sharmaji2516/Automatex.ai-Wordpress-Website/main/';
