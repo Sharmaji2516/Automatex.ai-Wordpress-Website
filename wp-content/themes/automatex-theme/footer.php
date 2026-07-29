@@ -822,17 +822,11 @@
                                   </div>
                                   <div class="col-md-6">
                                       <div class="input-group">
-                                          <span class="input-group-text"><i class="fas fa-concierge-bell small"></i></span>
-                                          <input type="text" class="form-control" name="firm" placeholder="Business*" required>
-                                      </div>
-                                  </div>
-                                  <div class="col-md-6">
-                                      <div class="input-group">
                                           <span class="input-group-text"><i class="fas fa-phone small"></i></span>
                                           <input type="text" class="form-control" name="contact" placeholder="Contact*" required>
                                       </div>
                                   </div>
-                                  <div class="col-12">
+                                  <div class="col-md-6">
                                       <div class="input-group">
                                           <span class="input-group-text"><i class="fas fa-map-marker-alt small"></i></span>
                                           <input type="text" class="form-control" name="location" placeholder="Location (City/State)*" required>
