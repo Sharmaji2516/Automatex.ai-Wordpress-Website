@@ -792,7 +792,7 @@
                                   <div class="col-md-6">
                                       <div class="input-group">
                                           <span class="input-group-text"><i class="fas fa-user small"></i></span>
-                                          <input type="text" class="form-control" name="name" placeholder="Name*" required>
+                                          <input type="text" class="form-control" name="name" placeholder="Name*" oninput="this.value = this.value.replace(/[^a-zA-Z\s]/g, '');" required>
                                       </div>
                                   </div>
                                   <div class="col-md-6">
@@ -810,20 +810,13 @@
                                   <div class="col-md-6">
                                       <div class="input-group">
                                           <span class="input-group-text"><i class="fas fa-industry small"></i></span>
-                                          <select name="industry" class="form-select" required>
-                                              <option value="">Industry*</option>
-                                              <option value="Manufacturing">Manufacturing</option>
-                                              <option value="Trading">Trading</option>
-                                              <option value="Retail">Retail</option>
-                                              <option value="Services">Services</option>
-                                              <option value="Any other">Any other</option>
-                                          </select>
+                                          <input type="text" class="form-control" name="industry" placeholder="Industry*" required>
                                       </div>
                                   </div>
                                   <div class="col-md-6">
                                       <div class="input-group">
                                           <span class="input-group-text"><i class="fas fa-phone small"></i></span>
-                                          <input type="text" class="form-control" name="contact" placeholder="Contact*" required>
+                                          <input type="text" class="form-control" name="contact" placeholder="Contact*" oninput="this.value = this.value.replace(/[^0-9]/g, '');" required>
                                       </div>
                                   </div>
                                   <div class="col-md-6">
