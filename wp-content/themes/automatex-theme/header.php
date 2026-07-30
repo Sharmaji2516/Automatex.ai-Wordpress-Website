@@ -4,6 +4,7 @@
       <meta charset="<?php bloginfo( 'charset' ); ?>" />
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="google-site-verification" content="JYg7th7v69zHFDSEOV6xTg3UVk7wSr17bhus47O7aSw" />
       <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png?v=2"/>
       <?php wp_head(); ?>
       <style>
