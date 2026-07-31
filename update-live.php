@@ -51,7 +51,9 @@ $files_to_sync = array(
     'set-templates.php',
     'check-active-plugins.php',
     'test-mail.php',
-    'chat_api.php'
+    'chat_api.php',
+    'wp-content/themes/automatex-theme/assets/js/chatbot.js',
+    'wp-content/themes/automatex-theme/assets/css/chatbot.css'
 );
 
 $github_raw_url = 'https://raw.githubusercontent.com/Sharmaji2516/Automatex.ai-Wordpress-Website/main/';
