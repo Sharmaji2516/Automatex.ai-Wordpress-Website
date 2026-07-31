@@ -43,7 +43,9 @@ $files_to_sync = array(
     'wp-content/themes/automatex-theme/page-off-page-seo-services.php',
     'wp-content/themes/automatex-theme/page-technical-seo-services.php',
     'wp-content/themes/automatex-theme/page-modern-responsive-website-design.php',
-    'wp-content/themes/automatex-theme/page-responsive-website-design.php'
+    'wp-content/themes/automatex-theme/page-responsive-website-design.php',
+    'wp-content/themes/automatex-theme/page-e-commerce-website-development.php',
+    'wp-content/themes/automatex-theme/page-ecommerce-website-development.php'
 );
 
 $github_raw_url = 'https://raw.githubusercontent.com/Sharmaji2516/Automatex.ai-Wordpress-Website/main/';
