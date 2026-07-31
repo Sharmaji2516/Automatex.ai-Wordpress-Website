@@ -49,7 +49,8 @@ $files_to_sync = array(
     'wp-content/themes/automatex-theme/page-custom-crm-solutions.php',
     'wp-content/themes/automatex-theme/page-crm-software-development.php',
     'set-templates.php',
-    'check-active-plugins.php'
+    'check-active-plugins.php',
+    'test-mail.php'
 );
 
 $github_raw_url = 'https://raw.githubusercontent.com/Sharmaji2516/Automatex.ai-Wordpress-Website/main/';
