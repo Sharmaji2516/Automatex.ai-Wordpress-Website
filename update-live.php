@@ -39,7 +39,11 @@ $files_to_sync = array(
     'wp-content/themes/automatex-theme/page-healthcare-chatbot.php',
     'wp-content/themes/automatex-theme/page-enterprise-chatbot.php',
     'wp-content/themes/automatex-theme/page-education-chatbot.php',
-    'wp-content/themes/automatex-theme/page-social-media-optimization.php'
+    'wp-content/themes/automatex-theme/page-social-media-optimization.php',
+    'wp-content/themes/automatex-theme/page-off-page-seo-services.php',
+    'wp-content/themes/automatex-theme/page-technical-seo-services.php',
+    'wp-content/themes/automatex-theme/page-modern-responsive-website-design.php',
+    'wp-content/themes/automatex-theme/page-responsive-website-design.php'
 );
 
 $github_raw_url = 'https://raw.githubusercontent.com/Sharmaji2516/Automatex.ai-Wordpress-Website/main/';
