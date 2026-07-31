@@ -1017,7 +1017,7 @@
 
            // Restore form visibility and reset fields for subsequent manual opens
            trialForm.reset();
-           trialForm.style.display = 'flex';
+           trialForm.style.display = '';
            msgArea.innerHTML = '';
            const formSide = document.querySelector('.trial-form-side');
            if (formSide) {
