@@ -46,6 +46,8 @@ $files_to_sync = array(
     'wp-content/themes/automatex-theme/page-responsive-website-design.php',
     'wp-content/themes/automatex-theme/page-e-commerce-website-development.php',
     'wp-content/themes/automatex-theme/page-ecommerce-website-development.php',
+    'wp-content/themes/automatex-theme/page-custom-crm-solutions.php',
+    'wp-content/themes/automatex-theme/page-crm-software-development.php',
     'set-templates.php',
     'check-active-plugins.php'
 );
