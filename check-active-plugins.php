@@ -20,35 +20,32 @@ foreach ($active_plugins as $plugin) {
 echo "</ul>";
 
 if ($bridge_active) {
-    echo "<p style='color:green; font-weight:bold;'>✔ AutomateX DB Bridge plugin is listed in active_plugins.</p>";
+    echo "<p style='color:green; font-weight:bold;'>✔ AutomateX DB Bridge plugin is active.</p>";
 } else {
     echo "<p style='color:red; font-weight:bold;'>✘ AutomateX DB Bridge plugin is NOT active.</p>";
 }
 
-// Check class existence
-if (class_exists('AutomateX_DB_Bridge')) {
-    echo "<p style='color:green; font-weight:bold;'>✔ AutomateX_DB_Bridge class exists and is loaded.</p>";
-} else {
-    echo "<p style='color:red; font-weight:bold;'>✘ AutomateX_DB_Bridge class is NOT loaded.</p>";
+// Check SMTP Constants
+echo "<h3>SMTP Constants check:</h3>";
+$smtp_constants = ['SMTP_HOST', 'SMTP_USER', 'SMTP_PORT', 'SMTP_PASSWORD', 'SMTP_TO_EMAIL', 'SMTP_SECURE', 'SMTP_FROM'];
+foreach ($smtp_constants as $const) {
+    if (defined($const)) {
+        echo "<p>✔ Constant <strong>{$const}</strong> is defined (Value hidden for security).</p>";
+    } else {
+        echo "<p style='color:orange;'>✘ Constant <strong>{$const}</strong> is NOT defined.</p>";
+    }
 }
 
-// Test database connection
-if (defined('AUTOMATEX_DB_HOST')) {
-    echo "<p>Custom Database Constants: Host=" . AUTOMATEX_DB_HOST . ", User=" . AUTOMATEX_DB_USER . ", DB=" . AUTOMATEX_DB_NAME . "</p>";
-    $conn = @new mysqli(AUTOMATEX_DB_HOST, AUTOMATEX_DB_USER, AUTOMATEX_DB_PASSWORD, AUTOMATEX_DB_NAME);
-    if ($conn->connect_error) {
-        echo "<p style='color:red; font-weight:bold;'>✘ Custom Database connection failed: " . $conn->connect_error . "</p>";
-    } else {
-        echo "<p style='color:green; font-weight:bold;'>✔ Custom Database connection succeeded.</p>";
-        $conn->close();
-    }
+// Test Native PHP mail()
+echo "<h3>Native PHP mail() Test:</h3>";
+$to = "gautamalik1@gmail.com,pragatimodi10@gmail.com,webdev.digifysoft@gmail.com";
+$subject = "AutomateX PHP mail() test";
+$message = "Test message from native PHP mail().";
+$headers = "From: support-noreply@automatexai.co.in\r\n";
+
+$php_mail_result = @mail($to, $subject, $message, $headers);
+if ($php_mail_result) {
+    echo "<p style='color:green; font-weight:bold;'>✔ Native PHP mail() returned TRUE.</p>";
 } else {
-    echo "<p>Custom Database Constants NOT defined. Falling back to default WP database: Host=" . DB_HOST . ", User=" . DB_USER . ", DB=" . DB_NAME . "</p>";
-    $conn = @new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
-    if ($conn->connect_error) {
-        echo "<p style='color:red; font-weight:bold;'>✘ Default WP Database connection failed: " . $conn->connect_error . "</p>";
-    } else {
-        echo "<p style='color:green; font-weight:bold;'>✔ Default WP Database connection succeeded.</p>";
-        $conn->close();
-    }
+    echo "<p style='color:red; font-weight:bold;'>✘ Native PHP mail() returned FALSE (Disabled/blocked by server PHP settings).</p>";
 }
