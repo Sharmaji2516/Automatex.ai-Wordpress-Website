@@ -58,11 +58,11 @@ function automatex_scripts() {
     wp_enqueue_style( 'automatex-chatbot-style', get_template_directory_uri() . '/assets/css/chatbot.css', array(), '3.0.0' );
     // Homepage specific styles
     if ( is_front_page() ) {
-        wp_enqueue_style( 'automatex-home-style', get_template_directory_uri() . '/assets/css/premium-home.css', array(), '3.0.0' );
+        wp_enqueue_style( 'automatex-home-style', get_template_directory_uri() . '/assets/css/premium-home.css', array(), '3.0.1' );
     }
 
     // Comprehensive Dark AI Theme (load last for priority)
-    wp_enqueue_style( 'automatex-dark-ai-style', get_template_directory_uri() . '/assets/css/dark-ai-theme.css', array(), '3.0.0' );
+    wp_enqueue_style( 'automatex-dark-ai-style', get_template_directory_uri() . '/assets/css/dark-ai-theme.css', array(), '3.0.1' );
 
     // 4. Scripts (enqueue in footer)
     wp_enqueue_script( 'jquery' ); // Standard WordPress jQuery

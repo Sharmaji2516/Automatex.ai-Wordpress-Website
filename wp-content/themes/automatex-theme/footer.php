@@ -72,7 +72,7 @@
                    <div class="contact-card-glass">
                        <div class="contact-item">
                            <span class="contact-icon"><i class="fas fa-envelope"></i></span>
-                           <a href="mailto:sales.Automatex.ai@Automatex.aicrm.in" class="contact-link" style="word-break: break-all;">sales.Automatex.ai@Automatex.aicrm.in</a>
+                           <a href="mailto:support@digifysoft.in" class="contact-link" style="word-break: break-all;">support@digifysoft.in</a>
                        </div>
                        <div class="contact-item">
                            <span class="contact-icon"><i class="fas fa-phone-alt"></i></span>

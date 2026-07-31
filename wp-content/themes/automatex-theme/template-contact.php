@@ -119,7 +119,7 @@ if ( isset( $_GET['success'] ) ) {
                 <div class="info-icon mx-auto mb-3"><i class="fas fa-envelope"></i></div>
                 <div class="info-content">
                   <h5>Email Support</h5>
-                  <a href="mailto:sales.Automatex.ai@Automatex.aicrm.in" class="fw-bold text-dark">sales.Automatex.ai@Automatex.aicrm.in</a>
+                  <a href="mailto:support@digifysoft.in" class="fw-bold text-dark">support@digifysoft.in</a>
                 </div>
               </div>
             </div>

@@ -100,9 +100,9 @@
 }
 
 .btn-hero-secondary {
-    background: rgba(15, 23, 42, 0.04);
-    border: 1px solid rgba(15, 23, 42, 0.1);
-    color: #0f172a !important;
+    background: #ffffff !important;
+    border: 1px solid #ffffff;
+    color: #000000 !important;
     font-weight: 600;
     font-size: 14px;
     padding: 12px 28px;
@@ -114,7 +114,9 @@
 }
 
 .btn-hero-secondary:hover {
-    background: rgba(15, 23, 42, 0.08);
+    background: #f1f5f9 !important;
+    border-color: #f1f5f9;
+    color: #000000 !important;
     transform: translateY(-2px);
 }
 

@@ -782,6 +782,48 @@ footer::before {
     }
 }
 
+/* ==========================================================================
+   🤖 BOOK FREE DEMO BUTTON STYLING FOR THE HOME PAGE (ULTRA-HIGH VISIBILITY)
+   ========================================================================== */
+.btn-hero-secondary,
+button.btn-hero-secondary,
+.hero-ctas button.btn-hero-secondary {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    border: 1px solid #ffffff !important;
+    color: #000000 !important;
+    font-weight: 600 !important;
+    font-size: 14px !important;
+    padding: 12px 28px !important;
+    border-radius: 30px !important;
+    transition: all 0.3s ease !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.btn-hero-secondary i,
+button.btn-hero-secondary i,
+.hero-ctas button.btn-hero-secondary i {
+    color: #000000 !important;
+}
+
+.btn-hero-secondary:hover,
+button.btn-hero-secondary:hover,
+.hero-ctas button.btn-hero-secondary:hover {
+    background: #f1f5f9 !important;
+    background-color: #f1f5f9 !important;
+    border-color: #f1f5f9 !important;
+    color: #000000 !important;
+    transform: translateY(-2px) !important;
+}
+
+.btn-hero-secondary:hover i,
+button.btn-hero-secondary:hover i,
+.hero-ctas button.btn-hero-secondary:hover i {
+    color: #000000 !important;
+}
+
 
 
 
