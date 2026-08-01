@@ -788,6 +788,7 @@
                           <div id="trialMessageArea"></div>
 
                           <form id="trialForm" method="POST">
+                              <input type="hidden" name="lead_source" id="leadSource" value="trial_modal">
                               <div class="row g-2">
                                   <div class="col-md-6">
                                       <div class="input-group">
@@ -860,6 +861,30 @@
       let timerId = null;
       let startTime = null;
       let remainingTime = 0;
+
+      // DOM Elements to modify dynamically
+      const trialBadge = document.querySelector('.trial-badge');
+      const trialTitle = document.querySelector('.trial-title');
+      const trialSubtitle = document.querySelector('.trial-subtitle');
+      const trialSubmitBtn = document.getElementById('trialSubmitBtn');
+      const leadSourceInput = document.getElementById('leadSource');
+
+      // Intercept any "Contact Us" links globally using event delegation
+      document.addEventListener('click', function(e) {
+          const link = e.target.closest('a[href*="/contact-us/"], a[href$="/contact-us"]');
+          if (link) {
+              e.preventDefault();
+              
+              // Dynamic override for Contact Us
+              if (trialBadge) trialBadge.innerHTML = '<i class="fas fa-envelope me-1"></i> Get in Touch';
+              if (trialTitle) trialTitle.innerText = 'Contact Us';
+              if (trialSubtitle) trialSubtitle.innerText = 'Get in touch with our team.';
+              if (trialSubmitBtn) trialSubmitBtn.innerHTML = '<i class="fas fa-paper-plane me-1"></i> Send Message';
+              if (leadSourceInput) leadSourceInput.value = 'contact_modal';
+              
+              trialModal.show();
+          }
+      });
 
       function shouldShowModal() {
           // Do not show automatically if dismissed in this session
@@ -944,6 +969,7 @@
       trialForm.addEventListener('submit', function(e) {
           e.preventDefault();
           const submitBtn = document.getElementById('trialSubmitBtn');
+          const isContactMode = (leadSourceInput && leadSourceInput.value === 'contact_modal');
           submitBtn.disabled = true;
           submitBtn.innerText = "Submitting...";
 
@@ -958,7 +984,7 @@
           .then(r => r.json())
           .then(res => {
               submitBtn.disabled = false;
-              submitBtn.innerText = "Get Free Trial Now";
+              submitBtn.innerHTML = isContactMode ? '<i class="fas fa-paper-plane me-1"></i> Send Message' : '<i class="fas fa-paper-plane me-1"></i> Get Free Trial Now';
 
                if (res.success) {
                    trialForm.style.display = 'none';
@@ -992,7 +1018,7 @@
           })
           .catch(err => {
               submitBtn.disabled = false;
-              submitBtn.innerText = "Get Free Trial Now";
+              submitBtn.innerHTML = isContactMode ? '<i class="fas fa-paper-plane me-1"></i> Send Message' : '<i class="fas fa-paper-plane me-1"></i> Get Free Trial Now';
               msgArea.innerHTML = '<div class="alert alert-danger">There was an issue sending the request. Please try again.</div>';
           });
       });
@@ -1009,6 +1035,13 @@
       });
 
        trialModalEl.addEventListener('hidden.bs.modal', function () {
+           // Restore default text styling
+           if (trialBadge) trialBadge.innerHTML = '<i class="fas fa-fire me-1"></i> Exclusive Access';
+           if (trialTitle) trialTitle.innerText = 'Special Offer - Free Trial';
+           if (trialSubtitle) trialSubtitle.innerText = 'Experience AI-driven ERP today.';
+           if (trialSubmitBtn) trialSubmitBtn.innerHTML = '<i class="fas fa-paper-plane me-1"></i> Get Free Trial Now';
+           if (leadSourceInput) leadSourceInput.value = 'trial_modal';
+
            // Explicit cleanup of overlays & locks to completely prevent mobile black screen bugs
            document.querySelectorAll('.modal-backdrop').forEach(el => el.remove());
            document.body.classList.remove('modal-open');

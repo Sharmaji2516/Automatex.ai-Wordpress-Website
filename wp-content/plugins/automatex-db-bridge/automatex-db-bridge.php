@@ -258,19 +258,31 @@ class AutomateX_DB_Bridge {
         $contact  = sanitize_text_field( $_POST['contact'] ?? '' );
         $location = sanitize_text_field( $_POST['location'] ?? '' );
         $message  = sanitize_textarea_field( $_POST['message'] ?? '' );
+        $lead_source = sanitize_text_field( $_POST['lead_source'] ?? 'trial_modal' );
 
         if ( empty( $name ) || empty( $contact ) || empty( $email ) ) {
             wp_send_json_error( array( 'message' => 'Required fields are missing.' ) );
         }
 
+        // Differentiate message, subject, and remarks depending on lead_source
+        $message_with_source = $message;
+        if ( $lead_source === 'contact_modal' ) {
+            $message_with_source .= "\n[Source: Contact Us Modal]";
+            $subject = "[WordPress Contact Modal] Lead from " . $name;
+            $body_intro = "You have received a new contact request lead from the WordPress website:\n\n";
+        } else {
+            $message_with_source .= "\n[Source: Trial/Demo Modal]";
+            $subject = "[WordPress Trial Modal] Lead from " . $name;
+            $body_intro = "You have received a new trial request lead from the WordPress website:\n\n";
+        }
+
         // Save lead
-        $reference = $this->save_lead( $name, $email, $contact, $location, $industry, '', $firm, $message, '', true );
+        $reference = $this->save_lead( $name, $email, $contact, $location, $industry, '', $firm, $message_with_source, '', true );
 
         // Send Email
         $to = $this->get_notification_recipient();
-        $subject = "[WordPress Trial Modal] Lead from " . $name;
         
-        $body  = "You have received a new trial request lead from the WordPress website:\n\n";
+        $body  = $body_intro;
         $body .= "Name: $name\n";
         $body .= "Email: $email\n";
         $body .= "Company: $company\n";
