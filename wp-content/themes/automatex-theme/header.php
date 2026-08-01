@@ -138,19 +138,19 @@
            }
        }
 
-              /* Mobile Navigation Responsive Drawer Fix - Clean White Theme */
-       @media (max-width: 991.98px) {
-           .navbar-collapse, #navbarNav {
-               background: #ffffff !important;
-               border: 1px solid #e2e8f0 !important;
-               border-radius: 16px !important;
-               padding: 20px 16px !important;
-               margin-top: 12px !important;
-               box-shadow: 0 15px 45px rgba(0, 0, 0, 0.35) !important;
-               max-height: 90vh !important;
-               overflow-y: auto !important;
-               -webkit-overflow-scrolling: touch !important;
-           }
+           /* Mobile Navigation Responsive Drawer Fix - Clean White Theme */
+        @media (max-width: 991.98px) {
+            .navbar-collapse, #navbarNav {
+                background: #ffffff !important;
+                border: 1px solid #e2e8f0 !important;
+                border-radius: 16px !important;
+                padding: 20px 16px !important;
+                margin-top: 12px !important;
+                box-shadow: 0 15px 45px rgba(0, 0, 0, 0.35) !important;
+                max-height: calc(100vh - 150px) !important;
+                overflow-y: auto !important;
+                -webkit-overflow-scrolling: touch !important;
+            }
 
            .navbar-nav {
                align-items: stretch !important;
@@ -763,9 +763,18 @@
                         </li>
 
                         <li class="nav-item dropdown">
-                          <a class="nav-link" href="<?php echo esc_url( home_url( '/ai-business/' ) ); ?>">
-                            AI For Business
+                          <a class="nav-link" href="#">
+                            AI For Business <i class="fa-solid fa-angle-down"></i>
                           </a>
+                          <ul class="sub-menu">
+                            <li><a href="<?php echo esc_url( home_url( '/ai-chatbot-for-customer-support/' ) ); ?>"><i class="fa-solid fa-headset"></i> Customer Support</a></li>
+                            <li><a href="<?php echo esc_url( home_url( '/manufacturing-chatbot/' ) ); ?>"><i class="fa-solid fa-industry"></i> Manufacturing</a></li>
+                            <li><a href="<?php echo esc_url( home_url( '/sales-chatbot/' ) ); ?>"><i class="fa-solid fa-chart-line"></i> Sales</a></li>
+                            <li><a href="<?php echo esc_url( home_url( '/billing-chatbot/' ) ); ?>"><i class="fa-solid fa-file-invoice-dollar"></i> Billing</a></li>
+                            <li><a href="<?php echo esc_url( home_url( '/healthcare-chatbot/' ) ); ?>"><i class="fa-solid fa-heart-pulse"></i> Healthcare</a></li>
+                            <li><a href="<?php echo esc_url( home_url( '/enterprise-chatbot/' ) ); ?>"><i class="fa-solid fa-building"></i> Enterprise</a></li>
+                            <li><a href="<?php echo esc_url( home_url( '/education-chatbot/' ) ); ?>"><i class="fa-solid fa-graduation-cap"></i> Education</a></li>
+                          </ul>
                         </li>
 						 <li class="nav-item dropdown">
                           <a class="nav-link" href="<?php echo esc_url( home_url( '/blog/' ) ); ?>">

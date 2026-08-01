@@ -566,7 +566,7 @@ footer::before {
         padding: 16px 12px !important;
         margin-top: 10px !important;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15) !important;
-        max-height: 85vh !important;
+        max-height: calc(100vh - 150px) !important;
         overflow-y: auto !important;
         -webkit-overflow-scrolling: touch !important;
     }
