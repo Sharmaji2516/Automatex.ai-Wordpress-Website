@@ -13,7 +13,8 @@ $slugs_to_templates = [
     'e-commerce-website-development' => 'page-e-commerce-website-development.php',
     'ecommerce-website-development' => 'page-ecommerce-website-development.php',
     'off-page-seo-services' => 'page-off-page-seo-services.php',
-    'technical-seo-services' => 'page-technical-seo-services.php'
+    'technical-seo-services' => 'page-technical-seo-services.php',
+    'about-us' => 'page-about-us.php'
 ];
 
 foreach ($slugs_to_templates as $slug => $template) {
