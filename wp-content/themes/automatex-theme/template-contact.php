@@ -128,7 +128,8 @@ if ( isset( $_GET['success'] ) ) {
                 <div class="info-icon mx-auto mb-3" style="background: #f6a623;"><i class="fas fa-phone-alt"></i></div>
                 <div class="info-content">
                   <h5>Phone Number</h5>
-                  <a href="tel:+917425016636" class="fw-bold text-dark">+91 7425016636</a>
+                  <a href="tel:+917425016636" class="fw-bold text-dark d-block">+91 7425016636</a>
+                  <a href="tel:+919424466992" class="fw-bold text-dark d-block">+91 9424466992</a>
                 </div>
               </div>
             </div>
@@ -137,8 +138,9 @@ if ( isset( $_GET['success'] ) ) {
                 <div class="info-icon mx-auto mb-3" style="background: #28a745;"><i class="fas fa-map-marker-alt"></i></div>
                 <div class="info-content">
                   <h5>Our Presence</h5>
-                  <p class="mb-2 text-dark"><i class="fas fa-building me-2 text-muted"></i><strong>Noida Office:</strong><br>Knowledge Park V, Sector 12</p>
-                  <p class="mb-0 text-dark"><i class="fas fa-building me-2 text-muted"></i><strong>Jaipur Office:</strong><br>Akash Ganga, Civil Lines</p>
+                  <p class="mb-2 text-dark" style="font-size: 0.9rem;"><i class="fas fa-building me-2 text-muted"></i><strong>Noida Office:</strong><br>12126, 12th Floor, Gaur City Mall, Sector 4, Greater Noida - 201318, U.P.</p>
+                  <p class="mb-2 text-dark" style="font-size: 0.9rem;"><i class="fas fa-building me-2 text-muted"></i><strong>Jaipur Office:</strong><br>Akash Ganga, C-107, Keshav Nagar, Civil Lines, Jaipur - 302006, Rajasthan, India.</p>
+                  <p class="mb-0 text-dark" style="font-size: 0.9rem;"><i class="fas fa-building me-2 text-muted"></i><strong>Bhopal Office:</strong><br>H.No.79, Samanvay Nagar, Near Bikaner Sweets, Avadhpuri, BHEL, Bhopal, MP</p>
                 </div>
               </div>
             </div>

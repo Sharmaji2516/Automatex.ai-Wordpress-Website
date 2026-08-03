@@ -642,13 +642,7 @@
                             </ul>
                         </li> 
 
-                        <li class="nav-item position-relative">
-                          <a class="nav-link" href="#"> Functions <i class="fa-solid fa-angle-down"></i></a>
-                            <ul class="sub-menu">
-                                <li><a href="<?php echo esc_url( home_url( '/invoicing/' ) ); ?>">Invoicing</a></li>
-                                <li><a href="<?php echo esc_url( home_url( '/logistics/' ) ); ?>">Logistics</a></li>
-                            </ul>
-                        </li>
+
 
                         <!-- RETAIL -->
                       <li class="nav-item dropdown">
@@ -761,7 +755,7 @@
                           </div>
                         </li>
 
-                        <li class="nav-item dropdown">
+                        <li class="nav-item dropdown" style="position: relative;">
                           <a class="nav-link" href="#">
                             AI For Business <i class="fa-solid fa-angle-down"></i>
                           </a>

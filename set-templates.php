@@ -14,7 +14,23 @@ $slugs_to_templates = [
     'ecommerce-website-development' => 'page-ecommerce-website-development.php',
     'off-page-seo-services' => 'page-off-page-seo-services.php',
     'technical-seo-services' => 'page-technical-seo-services.php',
-    'about-us' => 'page-about-us.php'
+    'about-us' => 'page-about-us.php',
+    'crm' => 'page-crm.php',
+    'smart-retail' => 'page-smart-retail.php',
+    'lead-management' => 'page-lead-management.php',
+    'payroll' => 'page-payroll.php',
+    'education' => 'page-education.php',
+    'bridal-store' => 'page-bridal-store.php',
+    'boutique-store' => 'page-boutique-store.php',
+    'readymade-garment' => 'page-readymade-garment.php',
+    'footwear-store' => 'page-footwear-store.php',
+    'accounting' => 'page-accounting.php',
+    'android-application' => 'page-android-application.php',
+    'erp' => 'page-erp.php',
+    'inventory' => 'page-inventory.php',
+    'omnichannel' => 'page-omnichannel.php',
+    'pos' => 'page-pos.php',
+    'web-development-services' => 'page-web-development-services.php'
 ];
 
 foreach ($slugs_to_templates as $slug => $template) {

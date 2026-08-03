@@ -46,8 +46,6 @@
                    <h4>Useful Links</h4>
                    <ul class="footer-links">
                        <li><a href="<?php echo esc_url( home_url( '/about-us/' ) ); ?>">About us</a></li>
-                       <li><a href="<?php echo esc_url( home_url( '/invoicing/' ) ); ?>">Invoicing</a></li>
-                       <li><a href="<?php echo esc_url( home_url( '/logistics/' ) ); ?>">Logistics</a></li>
                        <li><a href="<?php echo esc_url( home_url( '/blog/' ) ); ?>">Blog</a></li>
                        <li><a href="<?php echo esc_url( home_url( '/contact-us/' ) ); ?>">Contact</a></li>
                      </ul>
@@ -75,24 +73,34 @@
                            <a href="mailto:support@digifysoft.in" class="contact-link" style="word-break: break-all;">support@digifysoft.in</a>
                        </div>
                        <div class="contact-item">
-                           <span class="contact-icon"><i class="fas fa-phone-alt"></i></span>
-                           <a href="tel:+917425016636" class="contact-link">+91 7425016636</a>
-                       </div>
-                       <hr class="contact-divider">
-                       <div class="contact-item align-items-start">
-                           <span class="contact-icon mt-1"><i class="fas fa-map-marker-alt"></i></span>
-                           <div>
-                               <strong style="color: #ffffff; font-size: 0.9rem;">India (Noida Office):</strong>
-                               <p class="contact-address-text">Knowledge Park V, Sector 12, Greater Noida, Uttar Pradesh, 203207</p>
-                           </div>
-                       </div>
-                       <div class="contact-item align-items-start mt-3">
-                           <span class="contact-icon mt-1"><i class="fas fa-map-marker-alt"></i></span>
-                           <div>
-                               <strong style="color: #ffffff; font-size: 0.9rem;">India (Jaipur Office):</strong>
-                               <p class="contact-address-text">Akash Ganga, C-107, Keshav Nagar, Civil Lines, Jaipur – 302006, Rajasthan, India.</p>
-                           </div>
-                       </div>
+                            <span class="contact-icon"><i class="fas fa-phone-alt"></i></span>
+                            <div class="d-flex flex-column">
+                                <a href="tel:+917425016636" class="contact-link">+91 7425016636</a>
+                                <a href="tel:+919424466992" class="contact-link">+91 9424466992</a>
+                            </div>
+                        </div>
+                        <hr class="contact-divider">
+                        <div class="contact-item align-items-start">
+                            <span class="contact-icon mt-1"><i class="fas fa-map-marker-alt"></i></span>
+                            <div>
+                                <strong style="color: #ffffff; font-size: 0.9rem;">India (Noida Office):</strong>
+                                <p class="contact-address-text">12126, 12th Floor, Gaur City Mall, Sector 4, Greater Noida - 201318, U.P.</p>
+                            </div>
+                        </div>
+                        <div class="contact-item align-items-start mt-3">
+                            <span class="contact-icon mt-1"><i class="fas fa-map-marker-alt"></i></span>
+                            <div>
+                                <strong style="color: #ffffff; font-size: 0.9rem;">India (Jaipur Office):</strong>
+                                <p class="contact-address-text">Akash Ganga, C-107, Keshav Nagar, Civil Lines, Jaipur – 302006, Rajasthan, India.</p>
+                            </div>
+                        </div>
+                        <div class="contact-item align-items-start mt-3">
+                            <span class="contact-icon mt-1"><i class="fas fa-map-marker-alt"></i></span>
+                            <div>
+                                <strong style="color: #ffffff; font-size: 0.9rem;">India (Bhopal Office):</strong>
+                                <p class="contact-address-text">H.No.79, Samanvay Nagar, Near Bikaner Sweets, Avadhpuri, BHEL, Bhopal, MP</p>
+                            </div>
+                        </div>
                    </div>
                 </div>
               </div>
@@ -105,46 +113,7 @@
               </div>
           </div>
 
-          <!-- Locations / Cities Expandable Section -->
-          <div class="row">
-              <div class="col-12">
-                  <div class="footer-cities-drawer">
-                      <button class="cities-drawer-toggleCollapsed cities-drawer-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#footerCitiesCollapse" aria-expanded="false" aria-controls="footerCitiesCollapse">
-                          <span><i class="fas fa-map-marked-alt me-2" style="color: #00f2fe;"></i> Browse ERP & POS Software by Location (72 Cities)</span>
-                          <i class="fas fa-chevron-down toggle-arrow"></i>
-                      </button>
-                      <div class="collapse" id="footerCitiesCollapse">
-                          <div class="cities-links-grid pt-3">
-                              <?php 
-                                  // Query custom cities post type dynamically
-                                  $cities_query = new WP_Query( array(
-                                      'post_type'      => 'cities',
-                                      'posts_per_page' => -1,
-                                      'orderby'        => 'title',
-                                      'order'          => 'ASC'
-                                  ) );
 
-                                  if ( $cities_query->have_posts() ) {
-                                      while ( $cities_query->have_posts() ) {
-                                          $cities_query->the_post();
-                                          echo '<a href="' . esc_url( get_permalink() ) . '" class="city-link">' . esc_html( get_the_title() ) . '</a>';
-                                      }
-                                      wp_reset_postdata();
-                                  } else {
-                                      // Staging Fallback if CPT holds no posts yet
-                                      $allCities = ["Mumbai", "Delhi", "Bengaluru", "Hyderabad", "Chennai", "Pune", "Ahmedabad", "Jaipur", "Surat", "Kolkata", "Noida", "Gurgaon", "Lucknow", "Indore", "Bhopal", "Nagpur", "Vadodara", "Nashik", "Coimbatore", "Kochi", "Visakhapatnam", "Vijayawada", "Chandigarh", "Ludhiana", "Ranchi", "Raipur", "Bhubaneswar", "Kanpur", "Agra", "Varanasi", "Meerut", "Faridabad", "Ghaziabad", "Jodhpur", "Udaipur", "Ajmer", "Kota", "Aurangabad", "Thane", "Mysuru", "Hubli", "Mangalore", "Trichy", "Madurai", "Salem", "Tiruppur", "Guwahati", "Dehradun", "Shimla", "Jammu", "Srinagar", "Amritsar", "Jalandhar", "Panipat", "Sonipat", "Dharwad", "Rajkot", "Jamnagar", "Gandhinagar", "Thrissur", "Kannur", "Warangal", "Nizamabad", "Karimnagar", "Belgaum", "Davanagere", "Tumakuru", "Anand", "Bhavnagar", "Junagadh", "Thiruvananthapuram"];
-                                      
-                                      foreach($allCities as $city) {
-                                          $slug = sanitize_title($city);
-                                          echo '<a href="' . esc_url( home_url( '/cities/' . $slug . '/' ) ) . '" class="city-link">' . esc_html( $city ) . '</a>';
-                                      }
-                                  }
-                              ?>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
       </div>
       <div class="footer-copyright-bar">
           <div class="container">

@@ -84,77 +84,7 @@ function automatex_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'automatex_scripts' );
 
-// Register CPT Cities
-function register_cities_cpt() {
-    $labels = array(
-        'name'                  => _x( 'Cities', 'Post type general name', 'automatex' ),
-        'singular_name'         => _x( 'City Page', 'Post type singular name', 'automatex' ),
-        'menu_name'             => _x( 'Cities', 'Admin Menu text', 'automatex' ),
-        'name_admin_bar'        => _x( 'City Page', 'Add New on Toolbar', 'automatex' ),
-        'add_new'               => __( 'Add New City', 'automatex' ),
-        'add_new_item'          => __( 'Add New City Page', 'automatex' ),
-        'new_item'              => __( 'New City Page', 'automatex' ),
-        'edit_item'             => __( 'Edit City Page', 'automatex' ),
-        'view_item'             => __( 'View City Page', 'automatex' ),
-        'all_items'             => __( 'All City Pages', 'automatex' ),
-        'search_items'          => __( 'Search Cities', 'automatex' ),
-        'not_found'             => __( 'No city pages found.', 'automatex' ),
-        'not_found_in_trash'    => __( 'No city pages found in Trash.', 'automatex' ),
-    );
 
-    $args = array(
-        'labels'             => $labels,
-        'public'             => true,
-        'publicly_queryable' => true,
-        'show_ui'            => true,
-        'show_in_menu'       => true,
-        'query_var'          => true,
-        'rewrite'            => array( 'slug' => 'cities', 'with_front' => false ),
-        'capability_type'    => 'post',
-        'has_archive'        => false,
-        'hierarchical'       => false,
-        'menu_position'      => 5,
-        'menu_icon'          => 'dashicons-admin-multisite',
-        'supports'           => array( 'title', 'editor', 'custom-fields' ),
-    );
-
-    register_post_type( 'cities', $args );
-}
-add_action( 'init', 'register_cities_cpt' );
-
-// Wildcard rewrite rules & template loader for all 72 City pages
-function automatex_cities_rewrite_rules() {
-    add_rewrite_rule( '^cities/([^/]+)/?', 'index.php?city_slug=$matches[1]', 'top' );
-}
-add_action( 'init', 'automatex_cities_rewrite_rules' );
-
-function automatex_cities_query_vars( $vars ) {
-    $vars[] = 'city_slug';
-    return $vars;
-}
-add_filter( 'query_vars', 'automatex_cities_query_vars' );
-
-function automatex_cities_template_include( $template ) {
-    $city_slug = get_query_var( 'city_slug' );
-    if ( ! empty( $city_slug ) ) {
-        $single_city = get_template_directory() . '/single-cities.php';
-        if ( file_exists( $single_city ) ) {
-            return $single_city;
-        }
-    }
-    return $template;
-}
-add_filter( 'template_include', 'automatex_cities_template_include' );
-
-// Auto flush rewrite rules on theme setup
-function automatex_flush_rewrite_rules_once() {
-    if ( ! get_option( 'automatex_cities_rules_flushed_v3' ) ) {
-        automatex_cities_rewrite_rules();
-        flush_rewrite_rules();
-        update_option( 'automatex_cities_rules_flushed_v3', 1 );
-    }
-}
-add_action( 'init', 'automatex_flush_rewrite_rules_once', 99 );
 
 /**
  * Auto Template Interceptor: Maps any URL slug directly to theme page template (e.g. page-search-engine-optimization.php)
@@ -219,8 +149,6 @@ function automatex_auto_create_pages() {
         'lead-management' => 'Lead Management',
         'payroll' => 'Payroll',
         'education' => 'Education',
-        'invoicing' => 'Invoicing',
-        'logistics' => 'Logistics',
         'ai-chatbot-for-customer-support' => 'AI Chatbot for Customer Support',
         'manufacturing-chatbot' => 'Manufacturing Chatbot',
         'sales-chatbot' => 'Sales Chatbot',
