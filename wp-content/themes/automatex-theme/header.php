@@ -604,7 +604,6 @@
                                   <ul>
                                     <strong><i class="fa-solid fa-mobile-screen"></i> Mobile Application</strong>
                                     <li><a href="<?php echo esc_url( home_url( '/android-application/' ) ); ?>"><i class="fa-brands fa-android"></i> Android Application</a></li>
-                                    <li><a href="<?php echo esc_url( home_url( '/ios-application/' ) ); ?>"><i class="fa-brands fa-apple"></i> IOS Application</a></li>
                                   </ul>
                                 </div>
                               </div>

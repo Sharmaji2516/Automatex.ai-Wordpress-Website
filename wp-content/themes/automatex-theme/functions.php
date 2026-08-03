@@ -209,7 +209,6 @@ function automatex_auto_create_pages() {
         'custom-crm-solutions' => 'Custom CRM Solutions',
         'web-development-services' => 'Web Development Services',
         'android-application' => 'Android Application',
-        'ios-application' => 'IOS Application',
         'pos' => 'POS',
         'erp' => 'ERP',
         'accounting' => 'Accounting',
