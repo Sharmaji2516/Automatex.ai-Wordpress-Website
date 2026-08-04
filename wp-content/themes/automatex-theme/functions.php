@@ -122,7 +122,7 @@ add_filter( 'template_include', 'automatex_page_template_interceptor', 98 );
  * Auto-create WordPress pages in database so all custom service & product routes exist in WP
  */
 function automatex_auto_create_pages() {
-    if ( get_option( 'automatex_pages_created_v3' ) ) {
+    if ( get_option( 'automatex_pages_created_v31' ) ) {
         return;
     }
 
@@ -149,6 +149,10 @@ function automatex_auto_create_pages() {
         'lead-management' => 'Lead Management',
         'payroll' => 'Payroll',
         'education' => 'Education',
+        'schools-educational-institutions' => 'School & Educational Institution ERP Software',
+        'employee-background-verification' => 'Employee Background Verification ERP Software',
+        'hospitals' => 'Hospital & Healthcare ERP Software',
+        'hospital' => 'Hospital & Healthcare ERP Software',
         'ai-chatbot-for-customer-support' => 'AI Chatbot for Customer Support',
         'manufacturing-chatbot' => 'Manufacturing Chatbot',
         'sales-chatbot' => 'Sales Chatbot',
@@ -156,6 +160,39 @@ function automatex_auto_create_pages() {
         'healthcare-chatbot' => 'Healthcare Chatbot',
         'enterprise-chatbot' => 'Enterprise Chatbot',
         'education-chatbot' => 'Education Chatbot',
+        'book-store' => 'Book Store',
+        'bridal-store' => 'Bridal Store',
+        'boutique-store' => 'Boutique Store',
+        'readymade-garment' => 'Readymade Garment',
+        'footwear-store' => 'Footwear Store',
+        'stationery-store' => 'Stationery Store',
+        'cosmetic-store' => 'Cosmetic Store',
+        'home-decor-furniture' => 'Home Decor & Furniture',
+        'imitation-jewellery' => 'Imitation Jewellery',
+        'india-temple' => 'India Temple',
+        'convenience-store' => 'Convenience Store',
+        'departmental-hypermarket-store' => 'Departmental Store',
+        'fruits-vegetable-shop' => 'Fruits & Vegetable Shop',
+        'grocery-store' => 'Grocery Store',
+        'kirana-store' => 'Kirana Store',
+        'supermarket' => 'Supermarket',
+        'gift-toy-sports-shop' => 'Gift, Toy & Sports Shop',
+        'hardware-shopping-store' => 'Hardware & Shopping Store',
+        'retaile-store' => 'AI Retail Store',
+        'ai-manufactoring' => 'AI Manufacturing ERP',
+        'ai-manufacturing' => 'AI Manufacturing ERP',
+        'textile' => 'Textile Manufacturing ERP',
+        'textile-manufacturing' => 'Textile Manufacturing ERP',
+        'pharma' => 'Pharma Manufacturing ERP',
+        'consumer-goods' => 'Consumer Goods Manufacturing ERP',
+        'garments' => 'Garment Manufacturing ERP',
+        'electronics-smartphones' => 'Electronics & Smartphone Manufacturing ERP',
+        'electronics' => 'Electronics & Smartphone Manufacturing ERP',
+        'industrial-products' => 'Industrial Products Manufacturing ERP',
+        'trading' => 'Trading Business ERP',
+        'trading-overview' => 'Trading Business ERP',
+        'after-sale-service' => 'After-Sales Service & Warranty Fulfilment Software',
+        'after-sales-service' => 'After-Sales Service & Warranty Fulfilment Software',
     ];
 
     foreach ( $pages_to_create as $slug => $title ) {
@@ -170,7 +207,7 @@ function automatex_auto_create_pages() {
             ) );
         }
     }
-    update_option( 'automatex_pages_created_v3', 1 );
+    update_option( 'automatex_pages_created_v31', 1 );
 }
 add_action( 'init', 'automatex_auto_create_pages' );
 

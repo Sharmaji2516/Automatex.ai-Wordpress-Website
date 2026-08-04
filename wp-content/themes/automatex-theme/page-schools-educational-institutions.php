@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: School & Educational Institution ERP Software (Alias)
+ * Template Name: School & Educational Institution ERP Software
  * Description: AI-Powered School & Educational Institution ERP Software Template
  */
 
