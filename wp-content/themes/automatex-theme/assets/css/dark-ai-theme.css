@@ -1009,10 +1009,87 @@ body.blog b,
     color: #475569 !important;
 }
 
+/* Custom override to make the entire blog archive/index page background white and text black */
+body.blog,
+body.blog main,
+body.blog section.blog-section,
+body.blog #main-content,
+body.blog .container,
+body.blog .row,
+body.blog .blog-card,
+body.page-template-page-blog,
+body.page-template-page-blog main,
+body.page-template-page-blog section.blog-section,
+body.page-template-page-blog #main-content,
+body.page-template-page-blog .container,
+body.page-template-page-blog .row,
+body.page-template-page-blog .blog-card {
+    background-color: #ffffff !important;
+    background: #ffffff !important;
+    color: #111111 !important;
+}
 
+body.blog .card,
+body.page-template-page-blog .card {
+    background-color: #ffffff !important;
+    background: #ffffff !important;
+    border: 1px solid #e0e0e0 !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05) !important;
+}
 
+body.blog .card-body,
+body.page-template-page-blog .card-body {
+    background-color: #ffffff !important;
+    background: #ffffff !important;
+    border: 1px solid #e0e0e0 !important;
+    border-top: none !important;
+}
 
+body.blog h1,
+body.blog h2,
+body.blog h3,
+body.blog h4,
+body.blog h5,
+body.blog h6,
+body.blog p,
+body.blog span,
+body.blog a:not(.btn),
+body.page-template-page-blog h1,
+body.page-template-page-blog h2,
+body.page-template-page-blog h3,
+body.page-template-page-blog h4,
+body.page-template-page-blog h5,
+body.page-template-page-blog h6,
+body.page-template-page-blog p,
+body.page-template-page-blog span,
+body.page-template-page-blog a:not(.btn) {
+    color: #111111 !important;
+    -webkit-text-fill-color: #111111 !important;
+}
 
+body.blog .text-muted,
+body.page-template-page-blog .text-muted {
+    color: #6c757d !important;
+    -webkit-text-fill-color: #6c757d !important;
+}
 
-
-
+body.blog .blog-card .btn,
+body.page-template-page-blog .blog-card .btn {
+    background: linear-gradient(to right, #e06930, #fbc145) !important;
+    color: #ffffff !important;
+    border: none !important;
+}
+body.blog .blog-card .btn:hover,
+body.page-template-page-blog .blog-card .btn:hover {
+    background: #2f2e2e !important;
+    color: #ffffff !important;
+}
+#loadMoreBtn {
+    background: linear-gradient(to right, #e06930, #fbc145) !important;
+    color: #ffffff !important;
+    border: none !important;
+}
+#loadMoreBtn:hover {
+    background: #2f2e2e !important;
+    color: #ffffff !important;
+}

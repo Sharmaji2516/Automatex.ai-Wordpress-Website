@@ -5,6 +5,53 @@
 
 get_header(); ?>
 
+<style>
+    /* OVERRIDE ALL DARK THEME STYLES FOR THIS PAGE ONLY */
+    html, body, main, .site-main, .blog-details-sec {
+        background-color: #ffffff !important;
+        background: #ffffff !important;
+        color: #111111 !important;
+    }
+    
+    .blog-details-sec * {
+        color: #111111 !important;
+        -webkit-text-fill-color: #111111 !important;
+    }
+
+    .blog-details-sec .text-muted,
+    .blog-details-sec p.text-muted,
+    .blog-details-sec span.text-muted,
+    .blog-details-sec .author,
+    .blog-details-sec .date {
+        color: #6c757d !important;
+        -webkit-text-fill-color: #6c757d !important;
+    }
+    
+    /* Force all divs to be white inside the blog section */
+    .blog-details-sec,
+    .blog-details-sec div,
+    .blog-details-sec .container,
+    .blog-details-sec .row,
+    .blog-details-sec article {
+        background-color: #ffffff !important;
+        background: #ffffff !important;
+    }
+
+    .blog-details-sec .entry-content,
+    .blog-details-sec .entry-content p,
+    .blog-details-sec .entry-content span,
+    .blog-details-sec .entry-content h1,
+    .blog-details-sec .entry-content h2,
+    .blog-details-sec .entry-content h3,
+    .blog-details-sec .entry-content h4,
+    .blog-details-sec .entry-content h5,
+    .blog-details-sec .entry-content h6,
+    .blog-details-sec .entry-content li {
+        color: #111111 !important;
+        -webkit-text-fill-color: #111111 !important;
+    }
+</style>
+
 <section class="blog-details-sec" style="margin-top: 80px;">
     <div class="container">
         <div class="row justify-content-center">

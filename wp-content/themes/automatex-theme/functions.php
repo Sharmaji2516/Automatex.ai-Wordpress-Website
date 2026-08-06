@@ -62,7 +62,7 @@ function automatex_scripts() {
     }
 
     // Comprehensive Dark AI Theme (load last for priority)
-    wp_enqueue_style( 'automatex-dark-ai-style', get_template_directory_uri() . '/assets/css/dark-ai-theme.css', array(), '3.0.1' );
+    wp_enqueue_style( 'automatex-dark-ai-style', get_template_directory_uri() . '/assets/css/dark-ai-theme.css', array(), '3.0.3' );
 
     // 4. Scripts (enqueue in footer)
     wp_enqueue_script( 'jquery' ); // Standard WordPress jQuery
