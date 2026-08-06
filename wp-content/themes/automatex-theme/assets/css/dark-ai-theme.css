@@ -837,26 +837,34 @@ button.btn-hero-secondary:hover i,
     letter-spacing: normal !important;
 }
 
-/* Neutralize ugly black inline background boxes copied from WP editor / Docs */
+/* Neutralize ugly black inline background boxes and force high-contrast text color */
 .entry-content span,
 .entry-content p span,
 .entry-content mark,
-.entry-content strong,
 .entry-content em,
-.entry-content a,
 .entry-content div,
 .blog-details-wrap span,
 .blog-details-wrap mark,
-.blog-details-wrap strong,
 .blog-details-wrap em,
 .blog-details-wrap div,
 .has-black-background-color,
 .has-very-dark-gray-background-color {
     background-color: transparent !important;
     background: transparent !important;
-    color: inherit !important;
+    color: var(--text-high-contrast) !important;
     box-shadow: none !important;
     letter-spacing: normal !important;
+    word-spacing: normal !important;
+}
+
+.entry-content strong,
+.entry-content p strong,
+.entry-content b,
+.blog-details-wrap strong,
+.blog-details-wrap b {
+    color: var(--text-pure-white) !important;
+    background-color: transparent !important;
+    background: transparent !important;
 }
 
 /* Ensure headings in blog details are clean white */
@@ -872,6 +880,7 @@ button.btn-hero-secondary:hover i,
     color: #00f2fe !important;
     font-weight: 600;
 }
+
 
 
 
