@@ -88,6 +88,7 @@ add_action( 'wp_enqueue_scripts', 'automatex_scripts' );
 
 /**
  * Auto Template Interceptor: Maps any URL slug directly to theme page template (e.g. page-search-engine-optimization.php)
+ * And ensures WordPress query does not treat valid template routes as 404.
  */
 function automatex_page_template_interceptor( $template ) {
     if ( is_admin() ) {
@@ -110,6 +111,15 @@ function automatex_page_template_interceptor( $template ) {
     foreach ( $possible_files as $file_name ) {
         $file_path = get_template_directory() . '/' . $file_name;
         if ( file_exists( $file_path ) ) {
+            global $wp_query;
+            if ( is_object( $wp_query ) ) {
+                $wp_query->is_404 = false;
+                $wp_query->is_page = true;
+                $wp_query->is_singular = true;
+                $wp_query->is_home = false;
+                $wp_query->is_archive = false;
+                status_header( 200 );
+            }
             return $file_path;
         }
     }
@@ -119,10 +129,40 @@ function automatex_page_template_interceptor( $template ) {
 add_filter( 'template_include', 'automatex_page_template_interceptor', 98 );
 
 /**
+ * Filter document title to prevent 'Page not found' in browser tabs and SEO tags
+ */
+function automatex_fix_document_title( $title ) {
+    $request_uri = trim( parse_url( $_SERVER['REQUEST_URI'], PHP_URL_PATH ), '/' );
+    if ( ! empty( $request_uri ) ) {
+        $slug = basename( $request_uri );
+        $slug = preg_replace( '/\.php$/i', '', $slug );
+
+        $possible_files = [
+            get_template_directory() . "/page-{$slug}.php",
+            get_template_directory() . "/template-{$slug}.php"
+        ];
+
+        foreach ( $possible_files as $file_path ) {
+            if ( file_exists( $file_path ) ) {
+                $page = get_page_by_path( $slug );
+                if ( $page && ! empty( $page->post_title ) ) {
+                    return $page->post_title . ' - AutomateX';
+                }
+                $formatted_title = ucwords( str_replace( ['-', '_'], ' ', $slug ) );
+                return $formatted_title . ' - AutomateX';
+            }
+        }
+    }
+    return $title;
+}
+add_filter( 'pre_get_document_title', 'automatex_fix_document_title', 999 );
+add_filter( 'wp_title', 'automatex_fix_document_title', 999 );
+
+/**
  * Auto-create WordPress pages in database so all custom service & product routes exist in WP
  */
 function automatex_auto_create_pages() {
-    if ( get_option( 'automatex_pages_created_v31' ) ) {
+    if ( get_option( 'automatex_pages_created_v35' ) ) {
         return;
     }
 
@@ -135,8 +175,11 @@ function automatex_auto_create_pages() {
         'off-page-seo-services' => 'Off Page SEO Services',
         'technical-seo-services' => 'Technical SEO Services',
         'modern-responsive-website-design' => 'Modern & Responsive Website Design',
+        'responsive-website-design' => 'Responsive Website Design',
         'e-commerce-website-development' => 'E-Commerce Website Development',
+        'ecommerce-website-development' => 'E-Commerce Website Development',
         'custom-crm-solutions' => 'Custom CRM Solutions',
+        'crm-software-development' => 'CRM Software Development',
         'web-development-services' => 'Web Development Services',
         'android-application' => 'Android Application',
         'pos' => 'POS',
@@ -193,21 +236,29 @@ function automatex_auto_create_pages() {
         'trading-overview' => 'Trading Business ERP',
         'after-sale-service' => 'After-Sales Service & Warranty Fulfilment Software',
         'after-sales-service' => 'After-Sales Service & Warranty Fulfilment Software',
+        'about-us' => 'About Us',
+        'blog' => 'Blog'
     ];
 
     foreach ( $pages_to_create as $slug => $title ) {
         $page = get_page_by_path( $slug );
+        $template = "page-{$slug}.php";
         if ( ! $page ) {
             wp_insert_post( array(
-                'post_title'     => $title,
-                'post_name'      => $slug,
-                'post_status'    => 'publish',
-                'post_type'      => 'page',
-                'post_content'   => '',
+                'post_title'   => $title,
+                'post_name'    => $slug,
+                'post_status'  => 'publish',
+                'post_type'    => 'page',
+                'post_content' => '',
+                'meta_input'   => array(
+                    '_wp_page_template' => $template
+                )
             ) );
+        } else {
+            update_post_meta( $page->ID, '_wp_page_template', $template );
         }
     }
-    update_option( 'automatex_pages_created_v31', 1 );
+    update_option( 'automatex_pages_created_v35', 1 );
 }
 add_action( 'init', 'automatex_auto_create_pages' );
 
@@ -215,12 +266,75 @@ add_action( 'init', 'automatex_auto_create_pages' );
 function automatex_safe_template_setter() {
     if ( isset( $_GET['run_template_setter'] ) && $_GET['run_template_setter'] === 'sync123' ) {
         $slugs_to_templates = [
+            'search-engine-optimization' => 'page-search-engine-optimization.php',
+            'seo' => 'page-seo.php',
+            'digital-marketing-services' => 'page-digital-marketing-services.php',
+            'social-media-optimization' => 'page-social-media-optimization.php',
+            'on-page-seo-services' => 'page-on-page-seo-services.php',
+            'off-page-seo-services' => 'page-off-page-seo-services.php',
+            'technical-seo-services' => 'page-technical-seo-services.php',
             'modern-responsive-website-design' => 'page-modern-responsive-website-design.php',
             'responsive-website-design' => 'page-responsive-website-design.php',
             'e-commerce-website-development' => 'page-e-commerce-website-development.php',
             'ecommerce-website-development' => 'page-ecommerce-website-development.php',
-            'off-page-seo-services' => 'page-off-page-seo-services.php',
-            'technical-seo-services' => 'page-technical-seo-services.php',
+            'custom-crm-solutions' => 'page-custom-crm-solutions.php',
+            'crm-software-development' => 'page-crm-software-development.php',
+            'web-development-services' => 'page-web-development-services.php',
+            'android-application' => 'page-android-application.php',
+            'pos' => 'page-pos.php',
+            'erp' => 'page-erp.php',
+            'accounting' => 'page-accounting.php',
+            'inventory' => 'page-inventory.php',
+            'omnichannel' => 'page-omnichannel.php',
+            'crm' => 'page-crm.php',
+            'smart-retail' => 'page-smart-retail.php',
+            'lead-management' => 'page-lead-management.php',
+            'payroll' => 'page-payroll.php',
+            'education' => 'page-education.php',
+            'schools-educational-institutions' => 'page-schools-educational-institutions.php',
+            'employee-background-verification' => 'page-employee-background-verification.php',
+            'hospitals' => 'page-hospitals.php',
+            'hospital' => 'page-hospital.php',
+            'ai-chatbot-for-customer-support' => 'page-ai-chatbot-for-customer-support.php',
+            'manufacturing-chatbot' => 'page-manufacturing-chatbot.php',
+            'sales-chatbot' => 'page-sales-chatbot.php',
+            'billing-chatbot' => 'page-billing-chatbot.php',
+            'healthcare-chatbot' => 'page-healthcare-chatbot.php',
+            'enterprise-chatbot' => 'page-enterprise-chatbot.php',
+            'education-chatbot' => 'page-education-chatbot.php',
+            'book-store' => 'page-book-store.php',
+            'bridal-store' => 'page-bridal-store.php',
+            'boutique-store' => 'page-boutique-store.php',
+            'readymade-garment' => 'page-readymade-garment.php',
+            'footwear-store' => 'page-footwear-store.php',
+            'stationery-store' => 'page-stationery-store.php',
+            'cosmetic-store' => 'page-cosmetic-store.php',
+            'home-decor-furniture' => 'page-home-decor-furniture.php',
+            'imitation-jewellery' => 'page-imitation-jewellery.php',
+            'india-temple' => 'page-india-temple.php',
+            'convenience-store' => 'page-convenience-store.php',
+            'departmental-hypermarket-store' => 'page-departmental-hypermarket-store.php',
+            'fruits-vegetable-shop' => 'page-fruits-vegetable-shop.php',
+            'grocery-store' => 'page-grocery-store.php',
+            'kirana-store' => 'page-kirana-store.php',
+            'supermarket' => 'page-supermarket.php',
+            'gift-toy-sports-shop' => 'page-gift-toy-sports-shop.php',
+            'hardware-shopping-store' => 'page-hardware-shopping-store.php',
+            'retaile-store' => 'page-retaile-store.php',
+            'ai-manufactoring' => 'page-ai-manufactoring.php',
+            'ai-manufacturing' => 'page-ai-manufacturing.php',
+            'textile' => 'page-textile.php',
+            'textile-manufacturing' => 'page-textile.php',
+            'pharma' => 'page-pharma.php',
+            'consumer-goods' => 'page-consumer-goods.php',
+            'garments' => 'page-garments.php',
+            'electronics-smartphones' => 'page-electronics-smartphones.php',
+            'electronics' => 'page-electronics-smartphones.php',
+            'industrial-products' => 'page-industrial-products.php',
+            'trading' => 'page-trading.php',
+            'trading-overview' => 'page-trading-overview.php',
+            'after-sale-service' => 'page-after-sale-service.php',
+            'after-sales-service' => 'page-after-sales-service.php',
             'about-us' => 'page-about-us.php'
         ];
 
@@ -251,5 +365,6 @@ function automatex_safe_template_setter() {
     }
 }
 add_action( 'init', 'automatex_safe_template_setter' );
+
 
 
