@@ -824,6 +824,56 @@ button.btn-hero-secondary:hover i,
     color: #000000 !important;
 }
 
+/* ==========================================================================
+   📖 FIX FOR WORDPRESS BLOG ENTRY INLINE HIGHLIGHTS & SPACING ISSUES
+   ========================================================================== */
+.entry-content,
+.blog-details-wrap,
+.entry-content p,
+.blog-details-wrap p {
+    color: var(--text-high-contrast) !important;
+    line-height: 1.8 !important;
+    word-spacing: normal !important;
+    letter-spacing: normal !important;
+}
+
+/* Neutralize ugly black inline background boxes copied from WP editor / Docs */
+.entry-content span,
+.entry-content p span,
+.entry-content mark,
+.entry-content strong,
+.entry-content em,
+.entry-content a,
+.entry-content div,
+.blog-details-wrap span,
+.blog-details-wrap mark,
+.blog-details-wrap strong,
+.blog-details-wrap em,
+.blog-details-wrap div,
+.has-black-background-color,
+.has-very-dark-gray-background-color {
+    background-color: transparent !important;
+    background: transparent !important;
+    color: inherit !important;
+    box-shadow: none !important;
+    letter-spacing: normal !important;
+}
+
+/* Ensure headings in blog details are clean white */
+.entry-content h1, .entry-content h2, .entry-content h3, .entry-content h4, .entry-content h5, .entry-content h6,
+.blog-details-wrap h1, .blog-details-wrap h2, .blog-details-wrap h3, .blog-details-wrap h4 {
+    color: var(--text-pure-white) !important;
+    background: transparent !important;
+    background-color: transparent !important;
+}
+
+/* Highlight styling if mark tags are used */
+.entry-content mark, .blog-details-wrap mark {
+    color: #00f2fe !important;
+    font-weight: 600;
+}
+
+
 
 
 
