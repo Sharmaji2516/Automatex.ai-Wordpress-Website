@@ -877,9 +877,118 @@ button.btn-hero-secondary:hover i,
 
 /* Highlight styling if mark tags are used */
 .entry-content mark, .blog-details-wrap mark {
-    color: #00f2fe !important;
+    color: #ea580c !important;
     font-weight: 600;
 }
+
+/* ==========================================================================
+   📖 WHITE BACKGROUND OVERRIDE FOR INDIVIDUAL BLOG PAGES & ARCHIVES
+   ========================================================================== */
+/* Force light/white background on blog layouts */
+body.single-post,
+body.blog,
+.blog-details-sec,
+.blog-details-wrap,
+section.blog-details-sec,
+article.blog-details-wrap {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    color: #1e293b !important;
+}
+
+/* Override global black background for blog tags */
+body.single-post section, 
+body.single-post div, 
+body.single-post article, 
+body.blog section, 
+body.blog div, 
+body.blog article {
+    background-color: transparent !important;
+    color: #1e293b !important;
+}
+
+/* White bg container border adjustments */
+.blog-details-wrap {
+    border: 1px solid #e2e8f0 !important;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -1px rgba(0,0,0,0.02) !important;
+    border-radius: 12px !important;
+    padding: 30px !important;
+}
+
+/* Headings color in light theme */
+body.single-post h1, 
+body.single-post h2, 
+body.single-post h3, 
+body.single-post h4, 
+body.single-post h5, 
+body.single-post h6,
+body.blog h1, 
+body.blog h2, 
+body.blog h3, 
+body.blog h4,
+.blog-details-wrap h1,
+.blog-details-wrap h2,
+.blog-details-wrap h3,
+.entry-content h1,
+.entry-content h2,
+.entry-content h3,
+.entry-content h4 {
+    color: #0f172a !important;
+    background: transparent !important;
+    background-color: transparent !important;
+}
+
+/* Text styles in white background */
+.entry-content,
+.blog-details-wrap,
+.entry-content p,
+.blog-details-wrap p,
+.entry-content span,
+.entry-content p span,
+.entry-content li,
+.entry-content div,
+.blog-details-wrap span,
+.blog-details-wrap p span,
+.blog-details-wrap li,
+.blog-details-wrap div,
+.post-meta,
+.post-meta span {
+    color: #334155 !important;
+    background-color: transparent !important;
+    background: transparent !important;
+    word-spacing: normal !important;
+    letter-spacing: normal !important;
+    line-height: 1.8 !important;
+}
+
+/* Bold text color */
+.entry-content strong,
+.entry-content p strong,
+.entry-content b,
+.blog-details-wrap strong,
+.blog-details-wrap b {
+    color: #0f172a !important;
+    font-weight: 700 !important;
+    background-color: transparent !important;
+    background: transparent !important;
+}
+
+/* Quote styling */
+.entry-content blockquote,
+.blog-details-wrap blockquote {
+    border-left: 4px solid #ea580c !important;
+    background: #f8fafc !important;
+    padding: 15px 20px !important;
+    margin: 20px 0 !important;
+    border-radius: 4px !important;
+}
+
+.entry-content blockquote p,
+.blog-details-wrap blockquote p {
+    font-style: italic !important;
+    color: #475569 !important;
+}
+
 
 
 
