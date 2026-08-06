@@ -886,7 +886,14 @@ button.btn-hero-secondary:hover i,
    ========================================================================== */
 /* Force light/white background on blog layouts */
 body.single-post,
+body.single-post main,
+body.single-post section,
+body.single-post article,
+body.single-post div.entry-content,
 body.blog,
+body.blog main,
+body.blog section,
+body.blog article,
 .blog-details-sec,
 .blog-details-wrap,
 section.blog-details-sec,
@@ -896,15 +903,13 @@ article.blog-details-wrap {
     color: #1e293b !important;
 }
 
-/* Override global black background for blog tags */
-body.single-post section, 
-body.single-post div, 
-body.single-post article, 
-body.blog section, 
-body.blog div, 
-body.blog article {
-    background-color: transparent !important;
-    color: #1e293b !important;
+/* Force light background inside post containers */
+body.single-post .blog-details-wrap,
+body.single-post .entry-content,
+body.blog .blog-details-wrap,
+body.blog .entry-content {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
 }
 
 /* White bg container border adjustments */
@@ -936,9 +941,18 @@ body.blog h4,
     color: #0f172a !important;
     background: transparent !important;
     background-color: transparent !important;
+    -webkit-text-fill-color: #0f172a !important;
 }
 
 /* Text styles in white background */
+body.single-post p,
+body.single-post span,
+body.single-post li,
+body.single-post div,
+body.blog p,
+body.blog span,
+body.blog li,
+body.blog div,
 .entry-content,
 .blog-details-wrap,
 .entry-content p,
@@ -959,9 +973,14 @@ body.blog h4,
     word-spacing: normal !important;
     letter-spacing: normal !important;
     line-height: 1.8 !important;
+    -webkit-text-fill-color: #334155 !important;
 }
 
 /* Bold text color */
+body.single-post strong,
+body.single-post b,
+body.blog strong,
+body.blog b,
 .entry-content strong,
 .entry-content p strong,
 .entry-content b,
@@ -971,6 +990,7 @@ body.blog h4,
     font-weight: 700 !important;
     background-color: transparent !important;
     background: transparent !important;
+    -webkit-text-fill-color: #0f172a !important;
 }
 
 /* Quote styling */
@@ -988,6 +1008,7 @@ body.blog h4,
     font-style: italic !important;
     color: #475569 !important;
 }
+
 
 
 
