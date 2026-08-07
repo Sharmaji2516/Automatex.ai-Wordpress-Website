@@ -575,7 +575,7 @@
                           </a>
                           <div class="mega-menu">
                             <div class="row">
-                              <div class="col-md-3">
+                              <div class="col-md-4">
                                 <div class="mega-menu-wrap">
                                   <ul>
                                     <strong><i class="fa-solid fa-bullhorn"></i> Digital Marketing</strong>
@@ -588,7 +588,7 @@
                                   </ul>
                                 </div>
                               </div>
-                              <div class="col-md-3">
+                              <div class="col-md-4">
                                 <div class="mega-menu-wrap">
                                   <ul>
                                     <strong><i class="fa-solid fa-globe"></i> Website Design & Development</strong>
@@ -599,25 +599,11 @@
                                   </ul>
                                 </div>
                               </div>
-                              <div class="col-md-3">
+                              <div class="col-md-4">
                                 <div class="mega-menu-wrap">
                                   <ul>
                                     <strong><i class="fa-solid fa-mobile-screen"></i> Mobile Application</strong>
                                     <li><a href="<?php echo esc_url( home_url( '/android-application/' ) ); ?>"><i class="fa-brands fa-android"></i> Android Application</a></li>
-                                  </ul>
-                                </div>
-                              </div>
-                              <div class="col-md-3">
-                                <div class="mega-menu-wrap">
-                                  <ul>
-                                    <strong><i class="fa-solid fa-robot"></i> AI Automation & Chatbot</strong>
-                                    <li><a href="<?php echo esc_url( home_url( '/ai-chatbot-for-customer-support/' ) ); ?>"><i class="fa-solid fa-headset"></i> AI Chatbot for Customer Support</a></li>
-                                    <li><a href="<?php echo esc_url( home_url( '/manufacturing-chatbot/' ) ); ?>"><i class="fa-solid fa-industry"></i> Manufacturing Chatbot</a></li>
-                                    <li><a href="<?php echo esc_url( home_url( '/sales-chatbot/' ) ); ?>"><i class="fa-solid fa-chart-line"></i> Sales Chatbot</a></li>
-                                    <li><a href="<?php echo esc_url( home_url( '/billing-chatbot/' ) ); ?>"><i class="fa-solid fa-file-invoice-dollar"></i> Billing Chatbot</a></li>
-                                    <li><a href="<?php echo esc_url( home_url( '/healthcare-chatbot/' ) ); ?>"><i class="fa-solid fa-heart-pulse"></i> Healthcare Chatbot</a></li>
-                                    <li><a href="<?php echo esc_url( home_url( '/enterprise-chatbot/' ) ); ?>"><i class="fa-solid fa-building"></i> Enterprise Chatbot</a></li>
-                                    <li><a href="<?php echo esc_url( home_url( '/education-chatbot/' ) ); ?>"><i class="fa-solid fa-graduation-cap"></i> Education Chatbot</a></li>
                                   </ul>
                                 </div>
                               </div>
@@ -755,11 +741,11 @@
                           </div>
                         </li>
 
-                        <li class="nav-item dropdown" style="position: relative;">
+                        <li class="nav-item dropdown position-relative">
                           <a class="nav-link" href="#">
-                            AI For Business <i class="fa-solid fa-angle-down"></i>
+                            AI Automation & Chatbot <i class="fa-solid fa-angle-down"></i>
                           </a>
-                          <ul class="sub-menu">
+                          <ul class="sub-menu" style="left: 50%; transform: translateX(-50%); width: 250px;">
                             <li><a href="<?php echo esc_url( home_url( '/ai-chatbot-for-customer-support/' ) ); ?>"><i class="fa-solid fa-headset"></i> Customer Support</a></li>
                             <li><a href="<?php echo esc_url( home_url( '/manufacturing-chatbot/' ) ); ?>"><i class="fa-solid fa-industry"></i> Manufacturing</a></li>
                             <li><a href="<?php echo esc_url( home_url( '/sales-chatbot/' ) ); ?>"><i class="fa-solid fa-chart-line"></i> Sales</a></li>
