@@ -25,6 +25,10 @@ class AutomateX_DB_Bridge {
         add_action( 'wp_ajax_nopriv_automatex_submit_lead', array( $this, 'handle_trial_form_ajax' ) );
         add_action( 'wp_ajax_automatex_submit_lead', array( $this, 'handle_trial_form_ajax' ) );
 
+        // Async email sending via AJAX
+        add_action( 'wp_ajax_nopriv_automatex_async_send_email', array( $this, 'handle_async_email' ) );
+        add_action( 'wp_ajax_automatex_async_send_email', array( $this, 'handle_async_email' ) );
+
         // Register custom WP REST API endpoint for WhatsApp leads
         add_action( 'rest_api_init', array( $this, 'register_rest_routes' ) );
 
@@ -112,6 +116,27 @@ class AutomateX_DB_Bridge {
             return SMTP_TO_EMAIL;
         }
         return "gautamalik1@gmail.com,pragatimodi10@gmail.com,webdev.digifysoft@gmail.com";
+    }
+
+    /**
+     * Handle asynchronous email sending endpoint
+     */
+    public function handle_async_email() {
+        $secret = wp_hash( 'automatex_async_email' );
+        if ( empty( $_POST['token'] ) || $_POST['token'] !== $secret ) {
+            wp_die();
+        }
+
+        $to = sanitize_text_field( wp_unslash( $_POST['to'] ?? '' ) );
+        $subject = sanitize_text_field( wp_unslash( $_POST['subject'] ?? '' ) );
+        $body = sanitize_textarea_field( wp_unslash( $_POST['body'] ?? '' ) );
+
+        $headers = array(
+            'Content-Type: text/plain; charset=UTF-8',
+            'From: Automatex.ai Website <support-noreply@automatexai.co.in>'
+        );
+        wp_mail( $to, $subject, $body, $headers );
+        wp_die();
     }
 
     /**
@@ -234,12 +259,19 @@ class AutomateX_DB_Bridge {
         }
         $body .= "\nMessage:\n$remark\n";
 
-        $headers = array(
-            'Content-Type: text/plain; charset=UTF-8',
-            'From: Automatex.ai Website <support-noreply@automatexai.co.in>'
+        $post_args = array(
+            'timeout'   => 0.01,
+            'blocking'  => false,
+            'body'      => array(
+                'action'  => 'automatex_async_send_email',
+                'to'      => $to,
+                'subject' => $subject,
+                'body'    => $body,
+                'token'   => wp_hash( 'automatex_async_email' )
+            ),
+            'sslverify' => false
         );
-
-        wp_mail( $to, $subject, $body, $headers );
+        wp_remote_post( admin_url( 'admin-ajax.php' ), $post_args );
 
         // Redirect back to referring page with success code and reference ID
         wp_safe_redirect( add_query_arg( array( 'success' => '1', 'ref' => $reference ), wp_get_referer() ) );
@@ -292,12 +324,19 @@ class AutomateX_DB_Bridge {
         $body .= "Location: $location\n";
         $body .= "\nMessage:\n$message\n";
 
-        $headers = array(
-            'Content-Type: text/plain; charset=UTF-8',
-            'From: Automatex.ai Website <support-noreply@automatexai.co.in>'
+        $post_args = array(
+            'timeout'   => 0.01,
+            'blocking'  => false,
+            'body'      => array(
+                'action'  => 'automatex_async_send_email',
+                'to'      => $to,
+                'subject' => $subject,
+                'body'    => $body,
+                'token'   => wp_hash( 'automatex_async_email' )
+            ),
+            'sslverify' => false
         );
-
-        wp_mail( $to, $subject, $body, $headers );
+        wp_remote_post( admin_url( 'admin-ajax.php' ), $post_args );
 
         wp_send_json_success( array( 'message' => 'Lead saved successfully.', 'ref' => $reference ) );
     }
